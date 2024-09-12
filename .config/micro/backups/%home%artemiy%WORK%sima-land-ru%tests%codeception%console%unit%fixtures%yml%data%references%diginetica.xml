@@ -1,0 +1,1885 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE yml_catalog SYSTEM "shops.dtd">
+
+<shop>
+<name>sima-land</name>
+<company>ООО &quot;Сима-ленд&quot;</company>
+<url>https://frontend-sl.local/index-test.php</url>
+
+<currencies>
+<currency id="RUR" rate="1" />
+</currencies>
+<categories>
+<category id="3" parentId="2851">Бизнес-сувениры</category>
+<category id="8">Канцтовары</category>
+<category id="9" parentId="2851">Курительные принадлежности</category>
+<category id="12">Посуда</category>
+<category id="333">Категория, которой не должно быть в выборке</category>
+<category id="687">Игрушки</category>
+<category id="698" parentId="687">Конструкторы</category>
+<category id="769">Спортивные товары</category>
+<category id="2313" parentId="3">Интерьерные сувениры</category>
+<category id="2828" parentId="2313">Коллекция Элит</category>
+<category id="2851">Сувениры</category>
+<category id="3397">Текстиль</category>
+<category id="3689">Авто</category>
+<category id="7155" parentId="769">Роликовые коньки, аксессуары</category>
+<category id="15506" parentId="8">Канцелярские детские наборы</category>
+<category id="15937" parentId="12">Посуда премиум-класса</category>
+<category id="20674" parentId="15506">Наборы для рисования</category>
+<category id="22709" parentId="3689">Шины и диски</category>
+<category id="22710" parentId="22709">Шины и диски для легковых автомобилей</category>
+<category id="24182">Продукты питания</category>
+<category id="27690" parentId="7155">Роликовые коньки</category>
+<category id="36909" parentId="15937">Обеденные сервизы</category>
+<category id="37041" parentId="3397">Категория с амперсандом &amp; в названии</category>
+<category id="39957">Услуги</category>
+<category id="39958">Офисная категория</category>
+<category id="39959" parentId="39958">Офисная категория</category>
+<category id="41901" parentId="12">Товары для самогоноварения</category>
+<category id="700004415">Узбекская посуда</category>
+<category id="700004416">Детское Оружие</category>
+</categories>
+<local_delivery_cost>0</local_delivery_cost>
+<offers>
+<offer id="1283246" available="true">
+<url>https://frontend-sl.local/index-test.php/1283246/tovar14/</url>
+<price>1320.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по id), минимальное количество которого больше 1</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>1283246</vendorCode>
+<description><![CDATA[Товар (выбран по item_id), минимальное количество которого больше 1]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1320</priceUnit>
+<param name="WholesalePrice">67840</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">1260005</param>
+<picture>https://cdn.sky.sima-land.ru/items/1260005/0/700-nw.jpg?v=0</picture>
+<categoryId>2828</categoryId>
+</offer>
+<offer id="1283247" available="true">
+<url>https://frontend-sl.local/index-test.php/1283247/tovar15/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по id) без страны</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283247</vendorCode>
+<description><![CDATA[Товар (выбран по item_id) без страны]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">1260006</param>
+<picture>https://cdn.sky.sima-land.ru/items/1260006/0/700-nw.jpg?v=0</picture>
+<categoryId>2828</categoryId>
+</offer>
+<offer id="1283250" available="true">
+<url>https://frontend-sl.local/index-test.php/1283250/tovar18/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по id) без описания</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283250</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">1260009</param>
+<picture>https://cdn.sky.sima-land.ru/items/1260009/0/700-nw.jpg?v=0</picture>
+<categoryId>2828</categoryId>
+</offer>
+<offer id="1284266" available="true">
+<url>https://frontend-sl.local/index-test.php/1284266/tovar14/</url>
+<price>1320.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по id), минимальное количество которого больше 1</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>1284266</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1320</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">1260025</param>
+<picture>https://cdn.sky.sima-land.ru/items/1260025/0/700-nw.jpg?v=0</picture>
+<categoryId>2828</categoryId>
+</offer>
+<offer id="5515515" available="true">
+<url>https://frontend-sl.local/index-test.php/5515515/tovar19/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар, который вообще не должен попадать в выборку</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>5515515</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">1283050</param>
+<picture>https://cdn.sky.sima-land.ru/items/1283050/0/700-nw.jpg?v=0</picture>
+<categoryId>333</categoryId>
+</offer>
+<offer id="6782444" available="true">
+<url>https://frontend-sl.local/index-test.php/6782444/pricemax_more_than_price/</url>
+<price>1100.00</price>
+<oldprice>1200.00</oldprice>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с price_max больше price</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>6782444</vendorCode>
+<description><![CDATA[Товар с price_max больше price]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>8</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">8</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">3232200</param>
+<picture>https://cdn.sky.sima-land.ru/items/3232200/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="6782445" available="true" groupId="101009">
+<url>https://frontend-sl.local/index-test.php/6782445/mindbox_item/</url>
+<price>1000.00</price>
+<oldprice>1100.00</oldprice>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с со всеми параметрами для mindbox</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>6782445</vendorCode>
+<description><![CDATA[Товар с price_max больше price]]></description>
+<rating>0.123</rating>
+<parentItemId>101009</parentItemId>
+<modifierValue>Синий</modifierValue>
+<noveltyScore>217314185</noveltyScore>
+<discountPercent>9</discountPercent>
+<priceUnit>1000</priceUnit>
+<param name="Скоропортящийся">Да</param>
+<param name="Живые растения"></param>
+<param name="Функция &quot;луч на полу&quot;"></param>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">true</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">true</param>
+<param name="DiscountLevel">9</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">true</param>
+<param name="PlusGift">true</param>
+<param name="ThreeForTwo">true</param>
+<param name="Gift">false</param>
+<param name="LivePlants">true</param>
+<param name="Akcia">true</param>
+<param name="BestCloth2016">true</param>
+<param name="NumOneRussia">true</param>
+<param name="ItemWatchable">true</param>
+<param name="ExportRestriction">true</param>
+<param name="ItemId">3232201</param>
+<picture>https://cdn.sky.sima-land.ru/items/3232201/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="6782446" available="true">
+<url>https://frontend-sl.local/index-test.php/6782446/pricemax_less_than_price/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с price_max меньше price</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>6782446</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">3232202</param>
+<picture>https://cdn.sky.sima-land.ru/items/3232202/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="60100008" available="true">
+<url>https://frontend-sl.local/index-test.php/60100008//</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории &quot;Узбецкая посуда&quot; с delivery_options</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100008</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">3232298</param>
+<picture>https://cdn.sky.sima-land.ru/items/3232298/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283241" available="true">
+<url>https://frontend-sl.local/index-test.php/1283241/tovar9/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по категории) без описания</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283241</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7283439</param>
+<picture>https://cdn.sky.sima-land.ru/items/7283439/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="7773431" available="true">
+<url>https://frontend-sl.local/index-test.php/7773431/tovar6/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар со словом &quot;оружие&quot; в названии</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>7773431</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7773431</param>
+<picture>https://cdn.sky.sima-land.ru/items/7773431/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="7773432" available="true">
+<url>https://frontend-sl.local/index-test.php/7773432/tovar6/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории со словом &quot;oruzhie&quot; в названии</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>7773432</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7773432</param>
+<picture>https://cdn.sky.sima-land.ru/items/7773432/0/700-nw.jpg?v=0</picture>
+<categoryId>700004416</categoryId>
+</offer>
+<offer id="1283237" available="true">
+<url>https://frontend-sl.local/index-test.php/1283237/tovar5/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по категории), минимальное количество которого больше 1</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>1283237</vendorCode>
+<description><![CDATA[Товар (выбран по категории), который нельзя показывать]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7813419</param>
+<picture>https://cdn.sky.sima-land.ru/items/7813419/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="1283238" available="true">
+<url>https://frontend-sl.local/index-test.php/1283238/tovar6/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар (выбран по категории) без страны</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283238</vendorCode>
+<description><![CDATA[Товар (выбран по категории) без страны]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7813439</param>
+<picture>https://cdn.sky.sima-land.ru/items/7813439/0/700-nw.jpg?v=0</picture>
+<categoryId>36909</categoryId>
+</offer>
+<offer id="1283257" available="true">
+<url>https://frontend-sl.local/index-test.php/1283257/tovar24/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории &quot;Роликовые коньки&quot;</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>1283257</vendorCode>
+<description><![CDATA[Товар из категории &quot;Роликовые коньки&quot;]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883404</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883404/0/700-nw.jpg?v=0</picture>
+<categoryId>27690</categoryId>
+</offer>
+<offer id="1283258" available="true">
+<url>https://frontend-sl.local/index-test.php/1283258/tovar25/</url>
+<price>1200.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории &quot;Продукты питания&quot;</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283258</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1200</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883405</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883405/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="1283267" available="true">
+<url>https://frontend-sl.local/index-test.php/1283267/tovar31/</url>
+<price>2800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар, у которого должен быть тэг step-quantity в market.xml и market-mini.xml</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>1283267</vendorCode>
+<description><![CDATA[Товар, у которого должен быть тэг  step-quantity в market.xml и market-mini.xml]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>2800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883414</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883414/0/700-nw.jpg?v=0</picture>
+<categoryId>22710</categoryId>
+</offer>
+<offer id="1283268" available="true">
+<url>https://frontend-sl.local/index-test.php/1283268/tovar32/</url>
+<price>2800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар, у которого должен быть тэг непустой vendorCode в market.xml и market-mini.xml</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283268</vendorCode>
+<description><![CDATA[Товар, у которого должен быть тэг непустой vendorCode в market.xml и market-mini.xml]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>2800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883415</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883415/0/700-nw.jpg?v=0</picture>
+<categoryId>22710</categoryId>
+</offer>
+<offer id="1283269" available="true">
+<url>https://frontend-sl.local/index-test.php/1283269/tovar33/</url>
+<price>2800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с амперсандом в названии &amp;</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>1283269</vendorCode>
+<description><![CDATA[Товар с амперсандом в названии]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>2800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883416</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883416/0/700-nw.jpg?v=0</picture>
+<categoryId>36909</categoryId>
+</offer>
+<offer id="1283270" available="true">
+<url>https://frontend-sl.local/index-test.php/1283270/tovar34/</url>
+<price>2800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с амперсандом в описании</name>
+<vendor>TUNDRA</vendor>
+<vendorCode>1283270</vendorCode>
+<description><![CDATA[Товар с амперсандом в описании &amp;]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>2800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883417</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883417/0/700-nw.jpg?v=0</picture>
+<categoryId>36909</categoryId>
+</offer>
+<offer id="1283271" available="true">
+<url>https://frontend-sl.local/index-test.php/1283271/tovar35/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283271</vendorCode>
+<description><![CDATA[Товар из категории игрушек]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883418</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883418/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="1283275" available="true">
+<url>https://frontend-sl.local/index-test.php/1283275/tovar39/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек с удалённого склада</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>1283275</vendorCode>
+<description><![CDATA[Товар из категории игрушек с удалённого склада]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883422</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883422/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="1283278" available="true">
+<url>https://frontend-sl.local/index-test.php/1283278/tovar42/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категори &quot;Узбекская посуда&quot;</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>1283278</vendorCode>
+<description><![CDATA[Товар из категори &quot;Узбекская посуда&quot;]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883425</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883425/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283283" available="true">
+<url>https://frontend-sl.local/index-test.php/1283283/tovar47/</url>
+<price>499.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категори &quot;Узбекская посуда&quot; с ценой меньше 500 рублей</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283283</vendorCode>
+<description><![CDATA[Товар из категори &quot;Узбекская посуда&quot; с ценой меньше 500 рублей]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>499</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883430</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883430/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283284" available="true">
+<url>https://frontend-sl.local/index-test.php/1283284/tovar49/</url>
+<price>999.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категори &quot;Узбекская посуда&quot; с ценой меньше 1000 рублей</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>1283284</vendorCode>
+<description><![CDATA[Товар из категори &quot;Узбекская посуда&quot; с ценой меньше 1000 рублей]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>999</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883431</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883431/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283288" available="true">
+<url>https://frontend-sl.local/index-test.php/1283288/tovar53/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категори &quot;Узбекская посуда&quot;, с амперсандом в названии &amp;</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283288</vendorCode>
+<description><![CDATA[Товар из категори &quot;Узбекская посуда&quot;, с амперсандом в названии]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883435</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883435/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283289" available="true">
+<url>https://frontend-sl.local/index-test.php/1283289/tovar54/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категори &quot;Узбекская посуда&quot;, с амперсандом в описании</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>1283289</vendorCode>
+<description><![CDATA[Товар из категори &quot;Узбекская посуда&quot;, с амперсандом в описании &amp;]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883436</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883436/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283292" available="true">
+<url>https://frontend-sl.local/index-test.php/1283292/tovar57/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категори &quot;Узбекская посуда&quot; с min_qty больше 1</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>1283292</vendorCode>
+<description><![CDATA[Товар из категори &quot;Узбекская посуда&quot; с min_qty больше 1]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883439</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883439/0/700-nw.jpg?v=0</picture>
+<categoryId>700004415</categoryId>
+</offer>
+<offer id="1283777" available="true">
+<url>https://frontend-sl.local/index-test.php/1283777/tovar35/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек с minimum_order_quantity больше 1</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>1283777</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">7883999</param>
+<picture>https://cdn.sky.sima-land.ru/items/7883999/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="60009991" available="true">
+<url>https://frontend-sl.local/index-test.php/60009991/tovar_ikea01/</url>
+<price>6010.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар торговой марки IKEA, который должен пройти</name>
+<vendor>IKEA</vendor>
+<vendorCode>60009991</vendorCode>
+<description><![CDATA[Товар торговой марки IKEA, только для взрослых]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>6010</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960001</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960001/0/700-nw.jpg?v=0</picture>
+<categoryId>2313</categoryId>
+</offer>
+<offer id="60009995" available="true">
+<url>https://frontend-sl.local/index-test.php/60009995/tovar_ikea05/</url>
+<price>6010.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар торговой марки IKEA, с min_qty больше 1</name>
+<vendor>IKEA</vendor>
+<vendorCode>60009995</vendorCode>
+<description><![CDATA[Товар торговой марки IKEA, с min_qty больше 1]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>6010</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960005</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960005/0/700-nw.jpg?v=0</picture>
+<categoryId>2313</categoryId>
+</offer>
+<offer id="60009996" available="true">
+<url>https://frontend-sl.local/index-test.php/60009996/tovar_ikea06/</url>
+<price>6010.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар торговой марки IKEA, с minimum_order_quantity больше 1</name>
+<vendor>IKEA</vendor>
+<vendorCode>60009996</vendorCode>
+<description><![CDATA[Товар торговой марки IKEA, с minimum_order_quantity больше 1]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>6010</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960006</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960006/0/700-nw.jpg?v=0</picture>
+<categoryId>2313</categoryId>
+</offer>
+<offer id="60009997" available="true">
+<url>https://frontend-sl.local/index-test.php/60009997/tovar_ikea07/</url>
+<price>6010.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар торговой марки IKEA, с удалённого склада</name>
+<vendor>IKEA</vendor>
+<vendorCode>60009997</vendorCode>
+<description><![CDATA[Товар торговой марки IKEA, с удалённого склада]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>6010</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960007</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960007/0/700-nw.jpg?v=0</picture>
+<categoryId>2313</categoryId>
+</offer>
+<offer id="60010000" available="true">
+<url>https://frontend-sl.local/index-test.php/60010000/tovar_ikea10/</url>
+<price>6010.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар торговой марки IKEA, без описания</name>
+<vendor>IKEA</vendor>
+<vendorCode>60010000</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>6010</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960010</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960010//700-nw.jpg?v=0</picture>
+<categoryId>2313</categoryId>
+</offer>
+<offer id="60010001" available="true">
+<url>https://frontend-sl.local/index-test.php/60010001/tovar_ikea11/</url>
+<price>1100.00</price>
+<oldprice>1200.00</oldprice>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар IKEA с price_max больше price</name>
+<vendor>IKEA</vendor>
+<vendorCode>60010001</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>8</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">8</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960011</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960011/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="60010002" available="true">
+<url>https://frontend-sl.local/index-test.php/60010002/tovar_ikea12/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар IKEA с price_max меньше price</name>
+<vendor>IKEA</vendor>
+<vendorCode>60010002</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99960012</param>
+<picture>https://cdn.sky.sima-land.ru/items/99960012/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="60100003" available="true">
+<url>https://frontend-sl.local/index-test.php/60100003/tovar-s-razmerom-ne-ru/</url>
+<price>1280.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар c размером не unit=&quot;RU&quot; (выбран по категории)</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100003</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1280</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990013</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990013/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="60100004" available="true">
+<url>https://frontend-sl.local/index-test.php/60100004/igrushka-s-materialom/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек с материалом</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100004</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990014</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990014/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="60100005" available="true">
+<url>https://frontend-sl.local/index-test.php/60100005/igrushka-s-oldprice/</url>
+<price>1800.00</price>
+<oldprice>2000.00</oldprice>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек с price_max больше price</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100005</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>10</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">10</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990015</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990015/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="60100006" available="true">
+<url>https://frontend-sl.local/index-test.php/60100006/igrushka-s-min-order-qty/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек с minimum_order_quantity</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100006</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990016</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990016/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="60100007" available="true">
+<url>https://frontend-sl.local/index-test.php/60100007/igrushka-s-min-order-qty/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с is_paid_delivery=1</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100007</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990017</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990017/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="60100009" available="true">
+<url>https://frontend-sl.local/index-test.php/60100009/tovar35/</url>
+<price>1800.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории игрушек</name>
+<vendor>ЛАС ИГРАС</vendor>
+<vendorCode>60100009</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1800</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990019</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990019/0/700-nw.jpg?v=0</picture>
+<categoryId>698</categoryId>
+</offer>
+<offer id="60100011" available="true">
+<url>https://frontend-sl.local/index-test.php/60100011/tovar_amp/</url>
+<price>6010.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории с амперсандом в названии</name>
+<vendorCode>60100011</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>6010</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990021</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990021/0/700-nw.jpg?v=0</picture>
+<categoryId>37041</categoryId>
+</offer>
+<offer id="60100012" available="true">
+<url>https://frontend-sl.local/index-test.php/60100012/smoke1/</url>
+<price>650.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории &quot;курительные принадлежности&quot;</name>
+<vendorCode>60100012</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>650</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990022</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990022/0/700-nw.jpg?v=0</picture>
+<categoryId>9</categoryId>
+</offer>
+<offer id="60100013" available="true">
+<url>https://frontend-sl.local/index-test.php/60100013/tovar-lecensia/</url>
+<price>1250.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с лицензией</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>60100013</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1250</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990023</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990023/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="60100021" available="true">
+<url>https://frontend-sl.local/index-test.php/60100021/usluga1/</url>
+<price>750.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Услуга</name>
+<vendorCode>60100021</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>750</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990031</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990031/0/700-nw.jpg?v=0</picture>
+<categoryId>39957</categoryId>
+</offer>
+<offer id="99990032" available="true">
+<url>https://frontend-sl.local/index-test.php/99990032/office-item/</url>
+<price>750.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар для офиса</name>
+<vendorCode>99990032</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>750</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990032</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990032/0/700-nw.jpg?v=0</picture>
+<categoryId>39959</categoryId>
+</offer>
+<offer id="99990035" available="true">
+<url>https://frontend-sl.local/index-test.php/99990035/samogonniy-apparat/</url>
+<price>2705.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар из категории</name>
+<vendorCode>99990035</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>2705</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990035</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990035/0/700-nw.jpg?v=0</picture>
+<categoryId>41901</categoryId>
+</offer>
+<offer id="99990036" available="true">
+<url>https://frontend-sl.local/index-test.php/99990036/tovar-1c_folder_1/</url>
+<price>1399.99</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с привязанным к нему атрибутом 1c_folder</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>99990036</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1399.99</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990036</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990036/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="99990037" available="true">
+<url>https://frontend-sl.local/index-test.php/99990037/tovar-1c_folder_2/</url>
+<price>1909.99</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с привязанным к нему атрибутом 1c_folder с неверным значением int_value</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>99990037</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1909.99</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990037</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990037/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+<offer id="99990042" available="false">
+<url>https://frontend-sl.local/index-test.php/99990042/pricemax_less_than_price/</url>
+<price>1100.00</price>
+<currencyId>RUR</currencyId>
+<pickup>true</pickup>
+<delivery>true</delivery>
+<name>Товар с кальян в названии</name>
+<vendor>trademark with &amp;</vendor>
+<vendorCode>99990042</vendorCode>
+<description><![CDATA[]]></description>
+<rating></rating>
+<parentItemId></parentItemId>
+<modifierValue></modifierValue>
+<noveltyScore>0</noveltyScore>
+<discountPercent>0</discountPercent>
+<priceUnit>1100</priceUnit>
+<param name="WholesalePrice">0</param>
+<param name="HitProducts">false</param>
+<param name="NewProduct">false</param>
+<param name="SuperPrice">false</param>
+<param name="DiscountLevel">0</param>
+<param name="Ucenen">false</param>
+<param name="FastRotting">false</param>
+<param name="PlusGift">false</param>
+<param name="ThreeForTwo">false</param>
+<param name="Gift">false</param>
+<param name="LivePlants">false</param>
+<param name="Akcia">false</param>
+<param name="BestCloth2016">false</param>
+<param name="NumOneRussia">false</param>
+<param name="ItemWatchable">false</param>
+<param name="ExportRestriction">false</param>
+<param name="ItemId">99990042</param>
+<picture>https://cdn.sky.sima-land.ru/items/99990042/0/700-nw.jpg?v=0</picture>
+<categoryId>20674</categoryId>
+</offer>
+</offers>
+</shop>
+</yml_catalog>

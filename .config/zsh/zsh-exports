@@ -1,0 +1,109 @@
+#!/bin/sh
+
+export SSH="/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
+
+export ZSH="/home/artemiy/.oh-my-zsh"
+export GOROOT="/snap/go/current"
+export GOPATH=~/WORK/go
+export GOPRIVATE=""
+export GISMETEO_TOKEN="61f2622cb1aab8.95463029"
+export PATH=$HOME/.local/bin:${PATH}
+export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$HOME/.cargo/bin
+export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
+export PATH=$PATH:/snap/bin
+export PASSWORD_STORE_ENABLE_EXTENSIONS=true
+export EDITOR=/usr/bin/micro
+
+# Uncomment the following line to change how often to auto-update (in days).
+export UPDATE_ZSH_DAYS=30
+
+# --preview-window 'hidden'
+export FZF_DEFAULT_OPTS="
+--cycle
+--info=inline
+--height=50%
+--layout=reverse
+--preview '((chafa --size=50x50 {}) ; batcat --style=numbers --color=always {}) 2>/dev/null'
+--prompt='∼ '
+--pointer='❯'
+--marker='✓ '
+"
+
+# # HEADER
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
+# --header '┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+# ┃ CTRL-D      Directories          ┃
+# ┃ CTRL-F      Files                ┃
+# ┃ ALT-ENTER   Просмотр содержимого ┃
+# ┃ CTRL-Y      Скопировать в буфер  ┃
+# ┃ ALT-M       Открыть в mcro       ┃
+# ┃ CTRL-SPACE  Зайти внутрь (1 раз) ┃
+# ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛'
+# --header-lines=8
+# --header-first
+# "
+
+# HEADER
+# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
+# --header 'CTRL-D Directories / CTRL-F Files'
+# --header-lines=2
+# --header-first
+# "
+
+# BINDS
+# --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'
+# --bind 'ctrl-d:change-prompt(Directories> )+reload(find * -type d)'
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
+--bind 'ctrl-a:select-all'
+--bind 'ctrl-q:execute(echo {})+abort'
+--bind 'ctrl-y:execute-silent(readlink -f {} | xclip -selection clipboard)'
+--bind 'ctrl-n:abort+execute(cat ~/Notes/{} | fzf --reverse)'
+--bind 'ctrl-space:abort+execute(ls {} | fzf --reverse)'
+--bind 'alt-enter:toggle-preview'
+--bind 'alt-m:execute(micro {})'
+--bind 'alt-c:execute(cd -- {})+abort'
+"
+# COLORS
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
+--color=fg:#d0d0d0,bg:-1;hl:#5f87af
+--color=fg+:#d0d0d0,bg+;-1;hl+:#5fd7ff
+--color=info:#afaf87,prompt:#5fd7ff,pointer:#5fd7ff
+--color=marker:#87ff00,spinner:#af5fff,header:#87afaf"
+
+# CTRL-/ to toggle small preview window to see the full command
+# CTRL-Y to copy the command into clipboard using pbcopy
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}' --preview-window up:3:hidden:wrap
+  --bind 'ctrl-/:toggle-preview'
+  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --color header:italic
+--header '┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ CTRL-Y      Скопировать в буфер  ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛'
+"
+
+# Print tree structure in the preview window
+export FZF_ALT_C_OPTS="
+--preview 'lsd {} --color always -l'
+--header '┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Press CTRL-M Перейти в директорию ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛'
+"
+
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000000
+SAVEHIST=10000000
+setopt BANG_HIST                 # Treat the '!' character specially during expansion.
+setopt EXTENDED_HISTORY          # Write the history file in the ":start:elapsed;command" format.
+setopt INC_APPEND_HISTORY        # Write to the history file immediately, not when the shell exits.
+setopt SHARE_HISTORY             # Share history between all sessions.
+setopt HIST_EXPIRE_DUPS_FIRST    # Expire duplicate entries first when trimming history.
+setopt HIST_IGNORE_DUPS          # Don't record an entry that was just recorded again.
+setopt HIST_IGNORE_ALL_DUPS      # Delete old recorded entry if new entry is a duplicate.
+setopt HIST_FIND_NO_DUPS         # Do not display a line previously found.
+setopt HIST_IGNORE_SPACE         # Don't record an entry starting with a space.
+setopt HIST_SAVE_NO_DUPS         # Don't write duplicate entries in the history file.
+setopt HIST_REDUCE_BLANKS        # Remove superfluous blanks before recording entry.
+setopt HIST_VERIFY               # Don't execute immediately upon history expansion.
+setopt HIST_BEEP                 # Beep when accessing nonexistent history.

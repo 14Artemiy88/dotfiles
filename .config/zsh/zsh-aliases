@@ -1,0 +1,195 @@
+#!/bin/sh
+
+alias zz=". ~/.zshrc"
+alias zzz="m ~/.zshrc"
+
+
+# переопределение команд
+alias fd="fdfind"
+# alias lf="lfcd"
+# alias find="fdfind"
+# alias ls="lsd"
+alias lsd="exa -1 --color=always --icons --all"
+alias bat="batcat"
+alias cat="batcat"
+alias htop="btop"
+
+# alias wget2="wget2 --progress bar "
+
+# alias mopidy="nohup mopidy > /dev/null &"
+
+# MY alias
+# alias apt-command="sudo apt"
+# alias apt-command="sudo apt-fast"
+# alias apt-command="sudo apt"
+alias apt-command="sudo nala"
+alias clear="clear && clear"
+alias s="sudo"
+# alias clean="yes | apt-command autoremove; yes | apt-command autoclean"
+alias clean="yes | apt-command autoremove"
+alias upd="apt-command update; yes | apt-command upgrade; clean"
+# alias apd="upd"
+# alias apd="apt-command upgrade -y"
+# alias apd="pkcon update; clean; flatpak update -y"
+alias brew_apd="brew update; brew upgrade"
+alias flatpack_apd="flatpak update -y"
+alias apd="upd; flatpack_apd"
+# alias apd="upd; flatpack_apd; brew_apd"
+alias del="sudo apt-get -y autoremove --purge"
+alias install="yes | apt-command install -y"
+alias inst="install"
+alias pinstall="$HOME/.venvs/MyEnv/bin/python -m pip install --upgrade"
+alias off="sudo shutdown -P"
+alias get_time="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &"
+alias rass="~/Расширения"
+alias rocket="nohup rocketchat-desktop --no-sandbox > /dev/null &"
+alias copy="xclip -i -sel clip"
+alias m="micro"
+alias n="nvim"
+alias cc="clear"
+alias apps="cd ~/Apps"
+alias aliases="m ~/.config/zsh/zsh-aliases"
+alias exports="m ~/.config/zsh/zsh-exports"
+alias t="timer"
+
+
+alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
+alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
+
+# alias fzf="tmux popup -h 60% -w 60% fzf"
+
+
+note() {
+	cat ~/Notes/$@.md | fzf --reverse | xclip -i -sel clip
+}
+
+_note() {
+    local -a options
+    options=(
+        'Актуальный_индекс:адрес на актуальный инебекс'
+        'Базы:конфиги баз'
+		'illium_go:Обновление кодгенерации на Illiun-go'
+        'Все_параметры_запроса_в_эластик:для полного лога'
+        'Ирина:её доступы'
+        'Кука_для_дебага:для включения yii-шного дебагера'
+        'Починка_дебага_на_тест_3:включения yii-шного дебагера на тесте 3'
+        'JetBrains:логин и пароль от аккаунта'
+        'Rocket:логин и пароль МОЕГО юзера'
+        'webdev2:логин и пароль тестового юзера'
+		'Warm:прогрев кэша (для теста 3)'
+		'Роутер:пароль от роутера'
+		'Преколы:интересные команды'
+    )
+    _describe 'note' options
+}
+
+alias notes="ls  ~/Notes | grep '.md' | fzf --preview 'batcat ~/Notes/{}'"
+
+alias wm_start="qemu-system-x86_64 \
+-enable-kvm \
+-m 16G \
+-smp 4 \
+-netdev user,id=net0,net=192.168.0.0/24,dhcpstart=192.168.0.9 \
+-device virtio-net-pci,netdev=net0 \
+-vga qxl \
+-device AC97 \
+-device virtio-serial-pci \
+-spice port=5930,disable-ticketing=on \
+-device virtserialport,chardev=spicechannel0,name=com.redhat.spice.0 \
+-chardev spicevmc,id=spicechannel0,name=vdagent \
+-display spice-app \
+-virtfs local,path=/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/###artemiy,mount_tag=host0,security_model=mapped,id=host0 \
+-hda"
+
+alias ytb="python3 ~/Apps/youtube/start.py"
+
+alias restart_kde="kquitapp5 plasmashell;kstart5 plasmashell"
+alias kde_restart="restart_kde"
+alias kde_restart_x="restart_kde && x && exit"
+alias restart_audio="pulseaudio -k;pulseaudio --start"
+alias audio_restart="restart_audio"
+
+alias gmd="gomanagedocker"
+
+# alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') DP-1-1"
+# alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') HDMI-0"
+# alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') HDMI-2"
+# alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') DVI-D-0"
+alias xon="xrandr --output DVI-D-0 --auto; xrandr --output DVI-D-0 --below HDMI-0"
+alias xoff="xrandr --output DVI-D-0 --off"
+
+# Git
+alias gs="git status --short | fzf --preview '((git diff {-1} | diff-so-fancy) ; batcat --style=numbers --color=always {-1})' --preview-window 'right,60%,border-left'"
+alias gd="git diff"
+alias gc="git commit -a -m"
+alias add="git add --all"
+alias clone="git clone"
+alias master="git checkout master"
+
+# запуск тестов
+alias ct="composer test -- console"
+alias ft="composer test -- frontend"
+alias bt="composer test -- backend"
+alias tst="composer test"
+alias tst_php="tst -- common -- backend -- frontend"
+alias logstock777="sudo chmod 0777 tests/codeception/common/fixtures/logstock/*"
+alias logstock664="sudo chmod 0664 tests/codeception/common/fixtures/logstock/*"
+
+logstok() {
+	sudo chmod "0$1" tests/codeception/common/fixtures/logstock/*
+}
+
+alias tst_logstock="logstock777; tst; logstock664"
+alias ft_logstock="logstock777; ft; logstock664"
+alias bt_logstock="logstock777; bt; logstock664"
+alias ct_logstock="logstock777; tst -- common; logstock664"
+alias tst_php_logstock="logstock777; tst_php; logstock664"
+
+alias main="cd ~/WORK/sima-land-ru/"
+alias on1="cd ~/WORK/on1/site"
+alias slcom="cd ~/WORK/slcom"
+alias sparta="cd ~/WORK/sparta"
+
+alias vpn="nmcli --ask con up SL_1_Dataline ; nmcli --ask con up SL_2_Оффис"
+alias vpn_on="vpn"
+alias vpn_off="nmcli --ask con down SL_1_Dataline && nmcli --ask con down SL_2_Оффис"
+
+alias start="make start && touch /run/user/1000/$(basename $(pwd))"
+alias stop="make stop && rm /run/user/1000/$(basename $(pwd)) 2>/dev/null"
+alias dep="make dependencies"
+alias restart="make restart && touch /run/user/1000/$(basename $(pwd))"
+alias restore="make restore_db"
+alias warm="make warm2_light"
+alias warm_all="make warm"
+
+alias bda="make switch_db_team_a && echo 'A' > ~/WORK/db.txt"
+alias bdb="make switch_db_team_b && echo 'B' > ~/WORK/db.txt"
+alias bdc="make switch_db_team_c && echo 'C' > ~/WORK/db.txt"
+alias bdtest="make switch_db_test && echo 'TEST' > ~/WORK/db.txt"
+alias bdmate="make switch_db_mate && echo 'dbMate' > ~/WORK/db.txt"
+alias bdmate1="make switch_db_mate1 && echo 'dbMate 1' > ~/WORK/db.txt"
+alias bdmate2="make switch_db_mate2 && echo 'dbMate 2' > ~/WORK/db.txt"
+alias dba="bda"
+alias dbb="bdb"
+alias dbc="bdc"
+alias dbtest="bdtest"
+alias dbmate="bdmate"
+alias dbmate1="bdmate1"
+alias dbmate2="bdmate2"
+
+alias webdev="tail -3 ~/Notes/$(ls -1 ~/Notes | grep webdev)"
+alias webdev_id="webdev | head -1 | xclip -selection clipboard; echo 'скопирвоано'"
+
+# alias vol="amixer -D pulse sset Master"
+vol() {
+	amixer -D pulse sset Master $1%
+}
+
+say() {
+	echo "$1" | festival --tts --language russian >/dev/null
+}
+
+get() {
+	# echo $(printf '%q' "$1")
+	http GET $(printf '%q' "$1")
+}

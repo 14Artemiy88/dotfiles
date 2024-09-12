@@ -1,0 +1,60 @@
+version = 2
+final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  # newline = true
+
+  [[blocks.segments]]
+	type = "time"
+	style = "plain"
+	foreground = "#00abab"
+    template = ' {{ .CurrentDate | date .Format }}'
+
+	[properties]
+	time_format = "15:04:05"
+
+    [blocks.segments.properties]
+      style = 'full'
+
+[[blocks]]
+  type = 'rprompt'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    foreground = 'yellow'
+    background = 'transparent'
+    template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+      threshold = 1000
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'left'
+  newline = true
+
+  [[blocks.segments]]
+    type = 'text'
+    style = 'plain'
+    background = 'transparent'
+    template = ''
+
+
+
+[transient_prompt]
+  background = 'transparent'
+  template = '<p:cyan,transparent> {{now | date "15:04:05"}}</> ❯ '
+
+[secondary_prompt]
+  foreground = 'magenta'
+  background = 'transparent'
+  template = '❯ '
+
+
+[palette]
+  cyan = 'cyan'
