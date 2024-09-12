@@ -1,0 +1,7 @@
+#
+# Дефолтный список /usr/share/doc/ncmpcpp/
+#
+
+
+def_key "0"
+  show_help
