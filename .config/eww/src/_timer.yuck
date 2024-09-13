@@ -1,0 +1,111 @@
+(defpoll timer :interval "1s" `scripts/timer`)
+(defvar timers '["5", "9"]')
+(defvar show_set_timers false)
+(defvar show_set_custom_timer1 false)
+(defvar show_set_custom_timer2 false)
+(defvar show_set_custom_timer3 false)
+(defvar custom_timer1 5)
+(defvar custom_timer2 9)
+(defvar custom_timer3 23)
+(defvar custom_timers '[{"time":custom_timer1,"on":show_set_custom_timer1},{"time":custom_timer2,"on":show_set_custom_timer2},{"time":custom_timer3,"on":false}]')
+
+(defwidget timerstuff []
+    (box
+        :class "stuff timerstuff"
+        :vscroll true
+        :orientation "h"
+		:space-evenly true
+        :halign "start"
+        :width 315
+
+        (show_set_timers)
+
+        (box
+            :orientation "v"
+            :halign "end"
+            (for time in {timer}
+                (eventbox
+                    :onscroll "bash ${EWW_CONFIG_DIR}/scripts/timer up '${time.file}'"
+                    :onclick "bash ${EWW_CONFIG_DIR}/scripts/timer up '${time.file}'"
+                    :onrightclick "bash ${EWW_CONFIG_DIR}/scripts/timer down '${time.file}'"
+                    :onmiddleclick "bash ${EWW_CONFIG_DIR}/scripts/timer delete '${time.file}'"
+                    (label :halign "end" :class "timer" :text "${time.timer}")
+                )
+            )
+        )
+    )
+)
+
+(defwidget show_set_timers []
+	(eventbox
+	    :onhover "eww update show_set_timers=true"
+        :onhoverlost "eww update show_set_timers=false; eww update show_set_custom_timer1=false; eww update show_set_custom_timer2=false; eww update show_set_custom_timer3=false;"
+        :height 10
+
+        (box
+            :orientation "h"
+            :space-evenly "false"
+            :spacing "2"
+
+            (revealer
+                :class "timer_buttons"
+                :transition "slideleft"
+                :reveal {!show_set_timers}
+                :duration "550ms"
+
+                (label :halign "center" :style "font-size: 27px; padding-left:10px;" :text "󰁫" )
+            )
+
+            (revealer
+                :transition "slideleft"
+                :reveal {show_set_timers}
+                :duration "550ms"
+
+              (timer_buttons)
+            )
+        )
+	)
+)
+
+(defwidget timer_buttons []
+    (box :class "timer_buttons"
+       :orientation "h"
+       :space-evenly true
+       :halign "start"
+       :spacing 10
+
+        (for timer in {timers}
+            (button :valign "start" :class "set_timer" :onclick "timer ${timer}" {timer})
+        )
+
+     ;;   (for timer in {custom_timers}
+     ;;       (label :class "set_timer" :text {timer.time})
+     ;;   ;;    (button :valign "start" :class "set_timer" :onclick "timer ${timer.time}" {timer.time})
+    ;;    )
+
+        (button_text)
+    )
+)
+
+(defwidget button_text []
+    (box
+        :class "set_custom_timer_box"
+        :space-evenly true
+         :valign "start"
+
+        (eventbox
+            :class "set_timer"
+            :onclick "timer ${custom_timer3}"
+            :onrightclick "eww update show_set_custom_timer3=true;"
+            :visible {!show_set_custom_timer3}
+            (label :text "${custom_timer3}" )
+        )
+        (input
+            :class "set_custom_timer"
+            :value "${custom_timer3}"
+            :onchange "eww update custom_timer3={}"
+            :onaccept "eww update custom_timer3={}; eww update show_set_custom_timer3=false; timer {}"
+            :visible {show_set_custom_timer3}
+        )
+    )
+)

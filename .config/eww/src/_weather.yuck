@@ -1,0 +1,98 @@
+(defpoll weather_now  :interval "29m" "scripts/weather now")
+(defpoll weather_day  :interval "1h"  "scripts/weather day")
+(defpoll weather_week :interval "1h"  "scripts/weather week")
+(defvar days '["", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]')
+(defvar weather_by_time_list_width 300)
+
+(defwidget weather_by_time_list [weather]
+	(eventbox
+        :onclick "eww update weather_by_time_list_width=${weather_by_time_list_width+66}"
+        :onrightclick "eww reload"
+        :onmiddleclick "eww update weather_by_time_list_width=750"
+        :height 10
+
+        (scroll
+            :class "stuff weather_by_time_list"
+            :hscroll true
+            :vscroll false
+            :width weather_by_time_list_width
+            (box
+                :orientation "h"
+                :space-evenly true
+                (for entry in weather
+                    (weatheritem
+                        :time {formattime(entry.date.unix, "%H:%M")}
+                        :temp {entry.temperature.air.C}
+                        :tooltip "${entry.temperature.comfort.C}°"
+                        :icon {entry.icon}
+                        :visible {entry.date.unix > EWW_TIME}
+                        :description {entry.description.full}
+                    )
+                )
+            )
+        )
+    )
+)
+
+(defwidget weather_by_days_list [weather]
+    (box
+        :class "stuff weather_by_days_list"
+        :orientation "h"
+        :halign "start"
+        :width 315
+
+        (for entry in weather
+            (weatheritem
+                :time "${formattime(entry.date.unix, "%d")} ${days[formattime(entry.date.unix, "%u")]}."
+                :temp {entry.temperature.air.max.C}
+                :tempn {entry.temperature.air.min.C}
+                :icon {entry.icon}
+                :visible {entry.date.unix > EWW_TIME}
+                :description {entry.description.full}
+            )
+        )
+    )
+)
+
+(defwidget weatheritem [time temp icon visible description ?tooltip ?tempn]
+    (box
+        :orientation "v"
+        :class "weatheritem"
+        :space-evenly false
+        :visible visible
+        :halign "center"
+        (label :class "wtime" :halign "center" :valign "start" :text time )
+        (image
+            :class "listicon"
+            :height 45
+            :tooltip description
+            :valign "fill"
+            :halign "fill"
+            :path "images/gismeteo/new_png/${icon}.png"
+            :image-width 35
+        )
+        (temperature :temp temp  :class "temp" :tooltip tooltip)
+        (temperature :temp tempn :class "tempn")
+    )
+)
+
+(defwidget temperature [temp class ?tooltip]
+    (label :style {
+            temp >= 30 ? "color: #cc0000" :
+            temp >= 20 ? "color: #ffb4bb" :
+            temp >= 10 ? "color: #ffe0ba" :
+            temp > 0   ? "color: #fce3c4" :
+            temp == 0  ? "color: #ffffff" :
+            temp > -10 ? "color: #bae1ff" :
+            temp > -20 ? "color: #0ad1f3" :
+            temp > -30 ? "color: #3c82e2" :
+                         "color: #0000cc"
+        }
+        :text "${temp}°"
+        :class class
+        :halign "center"
+        :valign "end"
+        :visible {temp != ""}
+        :tooltip tooltip
+    )
+)

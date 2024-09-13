@@ -1,0 +1,83 @@
+(include "src/_volumes.yuck")
+(include "src/_networks.yuck")
+(include "src/_player.yuck")
+
+(include "src/_date.yuck")
+(include "src/_cpu.yuck")
+(include "src/_cpu_graph.yuck")
+(include "src/_top_apps.yuck")
+(include "src/_network_stat.yuck")
+(include "src/_weather_now.yuck")
+(include "src/_weather.yuck")
+(include "src/_timer.yuck")
+
+(
+    defwindow left
+    :monitor "LCD195VXM+/7YP18445NB"
+    :geometry (
+        geometry
+        :anchor "top left"
+        :x "3"
+        :y "5"
+        :width "0"
+        :height "0"
+    )
+
+    :stacking "bottom"
+    :focusable true
+
+    (left_stuff)
+)
+
+
+(defwidget left_stuff []
+    (box
+        :orientation "v"
+        :space-evenly false
+        :halign "start"
+        :valign "start"
+
+        (datestuff)
+        (cpustuff)
+        (cpugraphstuff)
+        (topstuff)
+        (networkstatstuff)
+        (weathernow           :weather weather_now)
+        (weather_by_time_list :weather weather_day)
+        (weather_by_days_list :weather weather_week)
+        (timerstuff)
+    )
+)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(
+    defwindow right
+    :monitor "LCD195VXM+/7YP18445NB"
+    :geometry (
+        geometry
+        :anchor "top left"
+        :x "300"
+        :y "5"
+        :width "0"
+        :height "0"
+    )
+
+    :stacking "bottom"
+    :focusable true
+
+    (right_stuff)
+)
+
+(defwidget right_stuff []
+    (box
+        :orientation "v"
+        :monitor "LCD195VXM+/7YP18445NB"
+        :geometry (geometry :x "331" :y "72" :anchor "top left" )
+        :stacking "bg"
+
+        (volumestuff)
+    )
+)
+
+

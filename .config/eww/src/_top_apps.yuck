@@ -1,0 +1,27 @@
+(defpoll top_app :interval "1s" "scripts/top_apps")
+
+(defwidget topstuff []
+    (box
+        :class "topstuff"
+        :orientation "v"
+      ;;  :space-evenly false
+        (appslist :values {top_app.cpu} )
+        (appslist :values {top_app.mem} )
+    )
+)
+
+(defwidget appslist [values]
+	(box
+	    :class "stuff top_app"
+	    :halign "start"
+	    :orientation "v"
+	    ;; :hexpand false
+
+	    (for entry in values
+	        (box
+	            (label :class "name"  :halign "start" :text {entry.name}  :limit-width 60 )
+	            (label :class "value" :halign "end"   :text {entry.value} )
+	        )
+	    )
+	)
+)

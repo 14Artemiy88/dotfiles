@@ -1,0 +1,20 @@
+#!/bin/bash 
+
+readarray -t array <<<"$(pactl list sink-inputs | egrep "№|media.name|Громкость" | sed -e 's\Вход аудиоприёмника №\\' | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,' | cut -d "\"" -f2)"
+
+if [ -z "${array[*]}" ]; then
+    echo "[]"
+    exit 0
+fi
+
+json=""
+for (( j=0; j<${#array[@]}; j+=3 )); do
+    if [ "${array[$j+2]}" = "playback" ]; then
+        continue
+    fi
+    name=$(echo "${array[$j+2]}" | sed 's#\\#|#g' | sed 's/"/\\"/g')
+    printf -v subjson '{"num": "%d", "value": "%d", "name": "%s"},' "${array[$j]}" "${array[$j+1]}" "$name"
+    json+="$subjson"
+done
+
+echo "[${json%,}]"

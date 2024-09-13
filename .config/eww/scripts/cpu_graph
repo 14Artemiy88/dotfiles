@@ -1,0 +1,37 @@
+#!/bin/bash
+declare -r FILE_PATH="/run/user/1000/eww_cpu_graph"
+declare -r CPU_PATH="/run/user/1000/eww_cpu"
+declare -r LINES=51
+
+function cpu_graph() {
+    local getCPU
+    local values
+    values=$(rev ${FILE_PATH} | cut -d "," -f 1-${LINES} | rev)
+    getCPU=$(get_cpus)
+    if [[ "$getCPU" != "" ]]; then
+        values="$values,$getCPU"
+    fi
+    echo "$values" > ${FILE_PATH}
+
+    echo "[$values]"
+}
+
+get_cpus() {
+    local -r new_values=$(awk '{print $2, $4, $5}' <(grep 'cpu ' /proc/stat))
+    awk '{u=$1+$2; t=$1+$2+$3; if (NR==1){u1=u; t1=t;} else printf "%d", ($1+$2-u1) * 100 / (t-t1) ""; }' <(cat ${CPU_PATH}) <(echo "$new_values")
+    echo "$new_values" > ${CPU_PATH}
+}
+
+prep_graph() {
+    local -r symbol="0"
+    local output="0"
+    for ((i=1; i<=${LINES}; i++)); do
+        output+=",$symbol"
+    done
+    echo $output > ${FILE_PATH}
+}
+
+if [[ ! -f "${FILE_PATH}" ]]; then
+    prep_graph
+fi
+cpu_graph

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# top -> press f -> toggle columns -> W (shift_w) to save
+readarray -t mem_lines <<< "$(top -b -o +SHR | head -n 12 | tail -5)"
+readarray -t cpu_lines <<< "$(top -b -o +%CPU | head -n 12 | tail -5)"
+
+IFS=' '
+mem_json=""
+cpu_json=""
+for i in {0..4} ; do
+    read -r mem_value _ mem_name <<< "${mem_lines[$i]}"
+    read -r _ cpu_value cpu_name <<< "${cpu_lines[$i]}"
+    mem_value=$(echo "$mem_value" | sed -e 's/g/ Gb/g' -e 's/m/ Mb/g' -e 's/k/ Kb/g')
+    mem_json+="{\"name\":\"$mem_name\",\"value\":\"$mem_value\"},"
+    cpu_json+="{\"name\":\"$cpu_name\",\"value\":\"$cpu_value\"},"
+done
+
+#echo -e "$str"
+echo -e "{\"cpu\":[${cpu_json%,*}],\"mem\":[${mem_json%,*}]}"

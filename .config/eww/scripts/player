@@ -1,0 +1,125 @@
+#!/bin/bash
+
+declare -r IMG_PATH="/run/user/1000/eww_player"
+declare -r IMG_SUFFIX=".png"
+declare -r DEFAULT_IMG="images/1px.png"
+declare -r DEFAULT_TEXT="no image"
+declare -r DEFAULT_LENGTH="1"
+declare -r DEFAULT_POSITION="0"
+declare -r DEFAULT_TIMELEFT=" "
+declare -r DEFAULT_TIMEPASS="0"
+
+declare -A icons=(
+    ["Playing"]=""
+    ["Paused"]=""
+)
+
+function get_image() {
+    if [[ -z "$1" ]]; then
+        img=$(playerctl metadata -f '{{ mpris:artUrl }}')
+        if [[ -z "$img" ]]; then
+            echo "${DEFAULT_IMG}"
+            exit 0
+        fi
+        echo "${img##file://}"
+        exit 0
+    fi
+
+    IFS="/" read -ra arr <<< "$1"
+    image="$IMG_PATH/${arr[-1]}${IMG_SUFFIX}"
+    if [[ ! -f "$image" ]]; then
+        ffmpeg -loglevel 0 -y -i "$1" "$image"
+    fi
+
+    echo "$image"
+}
+
+function get_mpv_player_metadata() {
+    local -r mpvsocket="/run/user/1000/mpvsocket"
+    if [[ -n "$mpvsocket" ]]; then
+        return
+    fi
+    # Get the current position of the MPV player
+    local position
+    position=$(echo '{ "command": ["get_property", "time-pos"] }' | socat - $mpvsocket | jq .data | tr -d '"' | cut -d'.' -f 1)
+
+    # Check if the position is valid
+    if [[ $position != "" && $position != "Connection refused" ]]; then
+        local -r duration=$(echo '{ "command": ["get_property", "duration"] }' | socat - $mpvsocket | jq .data | tr -d '"' | cut -d'.' -f 1)
+        local -r remaining=$(echo '{ "command": ["get_property", "time-remaining"] }' | socat - $mpvsocket | jq .data | tr -d '"' | cut -d'.' -f 1)
+        local -r timeleft="$(date -u -d @"$remaining" +'%H:%M:%S')"
+        local -r title=$(echo '{ "command": ["get_property", "media-title"] }' | socat - $mpvsocket | jq .data | tr -d '"')
+        local -r path=$(echo '{ "command": ["get_property", "path"] }' | socat - $mpvsocket | jq .data | tr -d '"')
+
+        # Generate the image path and check if it exists
+        local -r image_path="$IMG_PATH/$title${IMG_SUFFIX}"
+        if [[ ! -f "$image_path" || "$(find "$image_path" -mmin +1)" ]]; then
+            ffmpeg -ss "$(date -u -d @"$position" +'%H:%M:%S')" -loglevel 0 -y -i "$path" "$image_path"
+        fi
+        if [ ! -f "$image_path" ]; then
+            image_path="${DEFAULT_IMG}"
+        fi
+
+        get_json "$title" "" "${timeleft##00:}" "$position" "$position" "$duration" "" "$image_path" "${DEFAULT_TEXT}" "mpv"
+    fi
+}
+
+function get_player_metadata() {
+    local -r s="💩" # separator
+#    local -r params="{{ title }}$s{{ artist }}$s{{ position }}$s{{ mpris:length }}$s{{ duration(position) }}$s{{ mpris:artUrl }}"
+    local -r params="{{ title }}$s{{ artist }}$s{{ position }}$s{{ mpris:length }}$s-{{ duration(mpris:length - position) }}$s{{ duration(position) }}$s{{ mpris:artUrl }}"
+    local player="org.telegram.desktop"
+    IFS="$s" read -r title artist position len timeleft timepass img << EOF
+$(playerctl -p $player metadata -f "$params")
+EOF
+
+    local -r status=$(playerctl -p $player status)
+
+    if [[ -z "$title" || $status != "Playing" ]]; then
+        player="plasma-browser-integration"
+        IFS="$s" read -r title artist position len timeleft timepass img << EOF
+$(playerctl -p $player metadata -f "$params")
+EOF
+    fi
+
+    local text="${DEFAULT_TEXT}"
+    case "$title" in
+        *"Кинопоиск"* ) postfix=" — смотреть онлайн в хорошем качестве — Кинопоиск"; text="kinopoisk";;
+        *"Twitch"* ) postfix="Twitch"; text="twitch";;
+        *"VK"* ) postfix="VK Видео — смотрѣть безплатно"; text="vk video";;
+        *"Телемост"* ) get_json "" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "telemost" "$player";;
+    esac
+    title=${title//$postfix/};
+
+    if [[ -n "$position" ]]; then
+        title=$(echo "$title" | sed 's#\\#|#g' | sed 's/"/\\"/g')
+        get_json "$title" "$artist" "$timeleft" "$timepass" "$position" "$len" "${icons[$status]}" "$(get_image "$img")" "$text" "$player"
+    fi
+
+    if [[ -n "$title" ]]; then
+        get_json "$title" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "$text" "$player"
+    fi
+}
+
+function get_json() {
+    local -r formatted_title="\"title\":\"$title\""
+    local -r formatted_artist="\"artist\":\"$2\""
+    local -r formatted_timeleft="\"timeleft\":\"$3\""
+    local -r formatted_timepass="\"timepass\":\"$4\""
+    local -r formatted_position="\"position\":\"$(($5 * 100 / $6))\""
+    local -r formatted_status="\"status\":\"$7\""
+    local -r formatted_image="\"image\":\"$8\""
+    local -r formatted_text="\"text\":\"$9\""
+    local -r formatted_player="\"player\":\"${10}\""
+
+    echo "{$formatted_title,$formatted_artist,$formatted_timeleft,$formatted_timepass,$formatted_position,$formatted_status,$formatted_image,$formatted_text,$formatted_player}"
+    exit 0
+}
+
+if [ ! -d $IMG_PATH ]; then
+    mkdir $IMG_PATH
+fi
+
+get_mpv_player_metadata
+get_player_metadata
+get_json "" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "silence" ""

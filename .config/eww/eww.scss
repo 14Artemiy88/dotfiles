@@ -1,0 +1,40 @@
+$base-color: #006666;
+$border: $base-color 1px solid;
+$background: rgba(50, 50, 50, .0);
+$br:7px;
+$boxShadow: inset 0px 0px 3px #00cccc;
+$textShadow: #000000 1px 1px 0, #000000 -1px -1px 0, #000000 1px -1px 0, #000000 -1px 1px 0;
+$LED: LED;
+
+
+@import "styles/player.scss";
+@import "styles/networks.scss";
+@import "styles/cpu.scss";
+@import "styles/topapps.scss";
+@import "styles/date.scss";
+@import "styles/network_stat.scss";
+@import "styles/weather.scss";
+@import "styles/timer.scss";
+@import "styles/cpu_graph.scss";
+@import "styles/volumes.scss";
+
+
+* {
+  all: unset; //Unsets everything so you can style everything from scratch
+  padding: 0;
+  margin: 0;
+}
+
+.stuff {
+  border: $border;
+  background-color: $background;
+  border-radius: $br;
+}
+
+tooltip {
+  border: $border;
+  background-color: rgba(50, 50, 50, .7);
+  border-radius: $br;
+  padding: 10px 0 0 0;
+  margin: 5px 0 0 0;
+}

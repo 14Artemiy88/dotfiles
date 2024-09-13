@@ -1,0 +1,109 @@
+.weathernow {
+  min-width: 290px;
+  margin-top: 5px;
+  padding: 0 14px 0 0;
+
+  .temperature {
+    all: unset;
+    color: #00cccc;
+    font-family: $LED;
+    font-size: 55px;
+    margin-left: 10px;
+  }
+
+  .comfort {
+    all: unset;
+    color: #dddddd;
+    font-family: $LED;
+    font-size: 35px;
+    margin-left: -30px;
+    margin-top: -25px;
+    text-shadow: $textShadow;
+  }
+
+  .weather_icon {
+    margin-top: 10px;
+  }
+
+  .wind_arrow {
+    font-size: 35px;
+    font-family: Arrows, serif;
+    margin: 5px -10px 0 0;
+  }
+
+  .wind_speed {
+    font-family: $LED;
+    font-size: 25px;
+  }
+
+  .wind_unit {
+    font-family: $LED;
+    font-size: 15px;
+    padding: 9px 0 0 3px;
+  }
+
+  .pressure {
+    margin-top: -12px;
+
+    .pressure_value {
+      font-family: $LED;
+      font-size: 20px;
+    }
+
+    .pressure_unit {
+      font-family: $LED;
+      font-size: 10px;
+      padding: 9px 0 0 5px;
+    }
+  }
+
+  .description {
+    margin-top: -3px;
+    margin-left: -155px;
+  }
+}
+
+.weatheritem {
+  min-width: 59px;
+  margin-top: 5px;
+  padding: 10px 0 0 10px;
+  margin-left: -7px;
+
+  .listicon {
+    margin-top: 3px;
+  }
+
+  .wtime {
+    font-size: 12px;
+    margin-top: -7px;
+  }
+
+  .temp {
+    font-size: 12px;
+    margin-top: 3px;
+  }
+}
+
+.weather_by_time_list {
+  min-width: 300px;
+  margin-top: 5px;
+  padding: 0 0 10px 0;
+}
+
+.weather_by_days_list {
+  min-width: 300px;
+  margin-top: 5px;
+  padding: 0 0 5px 0;
+
+  .temp {
+    font-size: 11px;
+    margin-left: -10px;
+    text-shadow: $textShadow;
+  }
+
+  .tempn {
+    font-size: 11px;
+    margin-left: 10px;
+    text-shadow: $textShadow;
+  }
+}

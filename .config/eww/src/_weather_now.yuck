@@ -1,0 +1,50 @@
+(defvar arrows '["", "d", "f", "b", "e", "c", "g","a", "h"]')
+
+(defwidget weathernow [weather]
+    (box
+        :orientation "h"
+        :class "stuff weathernow"
+        :halign "start"
+
+        (box
+            :orientation "v"
+            :space-evenly false
+            :halign "start"
+            :width 100
+
+            (label :class "temperature" :valign "start" :text {weather.temperature.air.C} )
+            (label :class "comfort"     :valign "start" :text {weather.temperature.comfort.C} )
+        )
+        (image
+            :class "weather_icon"
+            :halign "center"
+            :valign "start"
+            :path "images/gismeteo/new_png/${weather.icon}.png"
+            :tooltip {weather.description.full}
+        )
+        (box
+            :halign "end"
+            :orientation "v"
+            :space-evenly false
+
+            (box :orientation "h" :valign "start"  :halign "end"
+                (label :class "wind_arrow" :halign "end" :text {arrows[weather.wind.direction.scale_8]} )
+                (label :class "wind_speed" :halign "end" :text {weather.wind.speed.m_s} )
+                (label :class "wind_unit"  :halign "end" :text "m/c" )
+            )
+            (box :orientation "h" :class "pressure" :valign "start" :halign "end"
+                (label :class "pressure_value" :halign "end" :text {weather.pressure.mm_hg_atm} )
+                (label :class "pressure_unit" :halign "end" :text "MM.PT.CT" )
+            )
+            (label
+                :class "description"
+                :halign "end"
+                :valign "start"
+               ;; :limit-width 15
+                :show-truncated false
+                :tooltip {weather.description.full}
+                :text {weather.description.full}
+            )
+        )
+    )
+)

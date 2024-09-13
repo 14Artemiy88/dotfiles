@@ -1,0 +1,137 @@
+$font: "Ubuntu Mono Nerd Font";
+
+.player {
+  background-color: rgba(0, 0, 0, .1);
+  border-radius: 7px;
+  padding: 0;
+  margin: 0;
+}
+
+.playerstuff {
+
+  .no_image {
+    font-size: 50px;
+    font-family: "Deadwax DEMO Extreme", serif;
+    margin: -130px 0 0 14px;
+    padding: 0;
+    text-shadow: $textShadow;
+  }
+
+  .button {
+    all: unset;
+    margin: -290px 0 0 14px;
+    padding: 0;
+  }
+
+  image {
+    //background-color: $color;
+  }
+
+  .button {
+    text-shadow: $textShadow;
+    margin: -290px 0 0 14px;
+    padding: 0;
+  }
+
+  .time {
+    text-shadow: $textShadow;
+    font-family: $font;
+    font-size: 12px;
+    margin: -295px 10px 0 0;
+    padding: 0 0 0 0;
+  }
+
+  .artist {
+    font-family: $font;
+    margin: -72px 0 0 5px;
+    //background-color: $color;
+    text-shadow: $textShadow;
+  }
+
+  .title {
+    font-family: $font;
+    text-shadow: $textShadow;
+    margin: -40px 0 0 5px;
+  }
+
+  .progress {
+    margin: 0 0 0 0;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    trough {
+      background-color: rgba(255, 255, 255, 0.2);
+      min-height: 3px;
+      min-width: 285px;
+      padding: 0;
+
+      highlight {
+        border-right: 2px solid rgba(0, 0, 0, 0.5);
+        //background-color: rgba(255, 255, 255, 0.5);
+        background: linear-gradient(
+                        45deg,
+                        #ff0000,
+                        #ff7300,
+                        #fffb00,
+                        #48ff00,
+                        #00ffd5,
+                        #002bff,
+                        #7a00ff,
+                        #ff00c8,
+                        #ff0000
+        );
+        animation: glowing 200s linear infinite;
+        background-size: 400%;
+
+      }
+    }
+  }
+}
+
+@keyframes glowing {
+  0%   { background-position: 0 0; }
+  50%  { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+.cava {
+  margin-top: -100px;
+  .bar {
+    margin-left: 2px;
+
+    background: linear-gradient(
+                    45deg,
+                    rgba(255, 0, 0, 0.5),
+                    rgba(255, 115, 0, 0.5),
+                    rgba(255, 251, 0, 0.5),
+                    rgba(72, 255, 0, 0.5),
+                    rgba(0, 255, 213, 0.5),
+                    rgba(0, 43, 255, 0.5),
+                    rgba(122, 0, 255, 0.5),
+                    rgba(255, 0, 200, 0.5),
+                    rgba(255, 0, 0, 0.5)
+    );
+    animation: glowing 200s linear infinite;
+    background-size: 400%;
+  }
+}
+
+//$gradientColors: (
+//  0: #ff0000,
+//  1: #ff7300,
+//  2: #fffb00,
+//  3: #48ff00,
+//  4: #00ffd5,
+//  5: #002bff,
+//  6: #7a00ff,
+//  7: #ff00c8,
+//  8: #ff0000
+//);
+//
+//@each $index, $color in $gradientColors {
+//  .cava .bar:nth-child(8n + #{$index}) {
+//    background-color: $color;
+//  }
+//}

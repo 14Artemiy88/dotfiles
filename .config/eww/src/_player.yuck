@@ -1,0 +1,59 @@
+(deflisten values :initial "0,0,0,0,0,0,0,0,0,0,0,0,0,0" `scripts/cava`)
+(defpoll player :interval "1s" "scripts/player")
+
+(defwidget playerstuff []
+    (box
+        :class "playerstuff"
+        :orientation "v"
+        :space-evenly false
+        :tooltip {player.title}
+        (button
+            ;class "button"
+            :height 160
+           ;; :style "background-image: url('${player.image}');  background-size: cover; "
+            :onclick "scripts/player_pausing pause ${player.player}"
+            (image :path {player.image} :image-height 160 ) ;; :image-width 300
+        )
+        (label :class "no_image" :text {player.image == "images/1px.png" ? player.text : ""} )
+        (cavastuff)
+        ( box :class "button" :halign "start" :orientation "v"
+            (label :text {player.status} )
+        )
+        ( box   :class "time"   :halign "end"   {player.timeleft} )
+        ( label :class "artist" :halign "start" :text {player.artist} :limit-width 60 )
+        ( label :class "title"  :halign "start" :text {player.title}  :limit-width 60 )
+        (scale
+           :class "progress"
+           :min 0
+           :max 101
+           :value { player.position ?: 0}
+           :onchange "scripts/player_pausing position {}"
+        )
+
+    ;;    (label :class "album" :halign "start" :text "${search(values, '[0-9]+')}")
+    )
+)
+
+(
+    defwindow player
+    :monitor "LCD195VXM+/7YP18445NB"
+    :geometry (geometry :x "330" :y "405" :anchor "top left" )
+    :stacking "bg"
+    
+    (playerstuff)
+)
+
+(defwidget cavastuff []
+    (box
+        :class "cava"
+        :orientation "h"
+
+      ;;  (for val in "[${replace(values, ';', ',')}0]"
+        (for val in "${search(values, '[0-9]+')}"
+           (box
+               :class "bar"
+               :style "margin-top: ${100-val}px;"
+           )
+        )
+    )
+)

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+declare -A icons=(
+    ["vpn"]="󰒘" # 󰒙
+    ["802-3-ethernet"]="󰈀"
+    ["wifi"]="󰖩" # 
+    ["802-11-wireless"]="" # 
+    ["bluetooth"]=""
+    ["bridge"]="󰡨"
+    ["tun"]="󱠾"
+    ["wireguard"]="󰠥"
+)
+str=""
+while IFS=':' read -r name type device; do
+    if [[ $type = "tun" || $type = "bridge" ]]; then continue; fi
+    dev="on"
+    if [[ $device = "" ]]; then dev="off"; fi
+    line="{ \"name\": \"$name\", \"type\": \"${icons[$type]}\", \"status\": \"$dev\" }"
+    if [[ $str = "" ]]; then
+        str="$line"
+    else
+        str="$str,$line"
+    fi
+done <<< "$(nmcli -g NAME,TYPE,DEVICE c)"
+
+echo "[$str]"

@@ -1,0 +1,12 @@
+.cpu_graph_segments {
+  .cpu_graph_segment {
+    min-height: 35px;
+    min-width: 6px;
+    margin-top: 0;
+
+    trough highlight {
+      border: $border;
+      background: $base-color;
+    }
+  }
+}

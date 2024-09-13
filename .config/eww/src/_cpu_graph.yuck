@@ -1,0 +1,26 @@
+(defpoll cpu_graph :interval "1s" "scripts/cpu_graph")
+
+(defwidget cpugraphstuff []
+    (box
+        :class "stuff cpustuff"
+        :orientation "v"
+        :space-evenly false
+        :halign "start"
+       ;; :width 313
+       (cpu_graph :flipped true)
+       (cpu_graph :flipped false)
+    )
+)
+
+(defwidget cpu_graph [flipped]
+    (box :class "cpu_graph_segments"
+        (for val in cpu_graph
+            (scale
+                :orientation "v"
+                :value val
+                :flipped flipped
+                :class "cpu_graph_segment"
+            )
+        )
+    )
+)
