@@ -4,6 +4,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
 [var]
   ssh = "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
+  time = "15:04:05"
 
 [palette]
   cyan = 'cyan'
@@ -21,7 +22,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     template = '{{ if .Env.TMUX }} {{ .CurrentDate | date .Format }}{{ else }}{{ replaceP .Var.ssh .PWD "󱊟 SSH" }}{{ end }}'
 
 	[properties]
-	time_format = "15:04:05"
+	time_format = ".Var.time"
 
     [blocks.segments.properties]
       style = 'full'
@@ -53,7 +54,7 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
 [transient_prompt]
   background = 'transparent'
-  template = '<p:cyan,transparent> {{ now | date "15:04:05" }}</> ❯ '
+  template = '<p:cyan,transparent> {{ now | date .Var.time }}</> ❯ '
 
 [secondary_prompt]
   foreground = 'magenta'
