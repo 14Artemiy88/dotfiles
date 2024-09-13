@@ -2,16 +2,23 @@ version = 2
 final_space = true
 console_title_template = '{{ .Shell }} in {{ .Folder }}'
 
+[var]
+  ssh = "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
+
+[palette]
+  cyan = 'cyan'
+  darkcyan = '#00abab'
+  gray = '#888888'
+
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
-  # newline = true
 
   [[blocks.segments]]
 	type = "time"
 	style = "plain"
-	foreground = "#00abab"
-    template = ' {{ .CurrentDate | date .Format }}'
+	foreground = "p:darkcyan"
+    template = '{{ if .Env.TMUX }} {{ .CurrentDate | date .Format }}{{ else }}{{ replaceP .Var.ssh .PWD "󱊟 SSH" }}{{ end }}'
 
 	[properties]
 	time_format = "15:04:05"
@@ -26,9 +33,9 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
   [[blocks.segments]]
     type = 'executiontime'
     style = 'plain'
-    foreground = 'yellow'
+    foreground = 'p:gray'
     background = 'transparent'
-    template = '{{ .FormattedMs }}'
+    template = '󰚭 {{ .FormattedMs }}'
 
     [blocks.segments.properties]
       threshold = 1000
@@ -44,17 +51,12 @@ console_title_template = '{{ .Shell }} in {{ .Folder }}'
     background = 'transparent'
     template = ''
 
-
-
 [transient_prompt]
   background = 'transparent'
-  template = '<p:cyan,transparent> {{now | date "15:04:05"}}</> ❯ '
+  template = '<p:cyan,transparent> {{ now | date "15:04:05" }}</> ❯ '
 
 [secondary_prompt]
   foreground = 'magenta'
   background = 'transparent'
   template = '❯ '
 
-
-[palette]
-  cyan = 'cyan'
