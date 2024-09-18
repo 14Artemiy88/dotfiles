@@ -66,19 +66,20 @@ function get_mpv_player_metadata() {
 
 function get_player_metadata() {
     local -r s="💩" # separator
-#    local -r params="{{ title }}$s{{ artist }}$s{{ position }}$s{{ mpris:length }}$s{{ duration(position) }}$s{{ mpris:artUrl }}"
     local -r params="{{ title }}$s{{ artist }}$s{{ position }}$s{{ mpris:length }}$s-{{ duration(mpris:length - position) }}$s{{ duration(position) }}$s{{ mpris:artUrl }}"
     local player="org.telegram.desktop"
     IFS="$s" read -r title artist position len timeleft timepass img << EOF
-$(playerctl -p $player metadata -f "$params")
+$(playerctl -p $player metadata -f "$params" 2>/dev/null)
 EOF
 
-    local -r status=$(playerctl -p $player status)
+    local status=$(playerctl -p $player status 2>/dev/null)
 
     if [[ -z "$title" || $status != "Playing" ]]; then
+	    local -r params_title="{{ title }}"
         player="plasma-browser-integration"
+        status=$(playerctl -p $player status 2>/dev/null)
         IFS="$s" read -r title artist position len timeleft timepass img << EOF
-$(playerctl -p $player metadata -f "$params")
+$(playerctl -p $player metadata -f "$params" 2>/dev/null || playerctl -p $player metadata -f "$params_title" 2>/dev/null)
 EOF
     fi
 
@@ -97,7 +98,7 @@ EOF
     fi
 
     if [[ -n "$title" ]]; then
-        get_json "$title" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "$text" "$player"
+        get_json "$title" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "qwe $text" "$player"
     fi
 }
 
