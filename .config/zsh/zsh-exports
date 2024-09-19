@@ -2,7 +2,7 @@
 
 export LANGUAGE="ru"
 
-export SSH="/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
+export SSD="/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
 
 export ZSH="/home/artemiy/.oh-my-zsh"
 export GOROOT="/snap/go/current"

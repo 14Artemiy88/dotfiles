@@ -3,6 +3,7 @@
 alias zz=". ~/.zshrc"
 alias zzz="m ~/.zshrc"
 
+alias ssd="cd $SSD"
 
 # переопределение команд
 alias fd="fdfind"
@@ -59,31 +60,31 @@ alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=sta
 # alias fzf="tmux popup -h 60% -w 60% fzf"
 
 
-note() {
-	cat ~/Notes/$@.md | fzf --reverse | xclip -i -sel clip
-}
+# note() {
+	# cat ~/Notes/$@.md | fzf --reverse | xclip -i -sel clip
+# }
 
-_note() {
-    local -a options
-    options=(
-        'Актуальный_индекс:адрес на актуальный инебекс'
-        'Базы:конфиги баз'
-		'illium_go:Обновление кодгенерации на Illiun-go'
-        'Все_параметры_запроса_в_эластик:для полного лога'
-        'Ирина:её доступы'
-        'Кука_для_дебага:для включения yii-шного дебагера'
-        'Починка_дебага_на_тест_3:включения yii-шного дебагера на тесте 3'
-        'JetBrains:логин и пароль от аккаунта'
-        'Rocket:логин и пароль МОЕГО юзера'
-        'webdev2:логин и пароль тестового юзера'
-		'Warm:прогрев кэша (для теста 3)'
-		'Роутер:пароль от роутера'
-		'Преколы:интересные команды'
-    )
-    _describe 'note' options
-}
+# _note() {
+    # local -a options
+    # options=(
+        # 'Актуальный_индекс:адрес на актуальный инебекс'
+        # 'Базы:конфиги баз'
+		# 'illium_go:Обновление кодгенерации на Illiun-go'
+        # 'Все_параметры_запроса_в_эластик:для полного лога'
+        # 'Ирина:её доступы'
+        # 'Кука_для_дебага:для включения yii-шного дебагера'
+        # 'Починка_дебага_на_тест_3:включения yii-шного дебагера на тесте 3'
+        # 'JetBrains:логин и пароль от аккаунта'
+        # 'Rocket:логин и пароль МОЕГО юзера'
+        # 'webdev2:логин и пароль тестового юзера'
+		# 'Warm:прогрев кэша (для теста 3)'
+		# 'Роутер:пароль от роутера'
+		# 'Преколы:интересные команды'
+    # )
+    # _describe 'note' options
+# }
 
-alias notes="ls  ~/Notes | grep '.md' | fzf --preview 'batcat ~/Notes/{}'"
+# alias notes="ls  ~/Notes | grep '.md' | fzf --preview 'batcat ~/Notes/{}'"
 
 alias wm_start="qemu-system-x86_64 \
 -enable-kvm \
@@ -115,8 +116,8 @@ alias gmd="gomanagedocker"
 # alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') HDMI-0"
 # alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') HDMI-2"
 # alias x="xinput map-to-output $(xinput |egrep -i 'LGD' | sed -e 's/(2)//' -e 's/[^\0-9]//g') DVI-D-0"
-alias xon="xrandr --output DVI-D-0 --auto; xrandr --output DVI-D-0 --below HDMI-0"
-alias xoff="xrandr --output DVI-D-0 --off"
+# alias xon="xrandr --output DVI-D-0 --auto; xrandr --output DVI-D-0 --below HDMI-0"
+# alias xoff="xrandr --output DVI-D-0 --off"
 
 # Git
 alias gs="git status --short | fzf --preview '((git diff {-1} | diff-so-fancy) ; batcat --style=numbers --color=always {-1})' --preview-window 'right,60%,border-left'"
@@ -177,7 +178,7 @@ alias dbmate="bdmate"
 alias dbmate1="bdmate1"
 alias dbmate2="bdmate2"
 
-alias webdev="tail -3 ~/Notes/$(ls -1 ~/Notes | grep webdev)"
+# alias webdev="tail -3 ~/Notes/$(ls -1 ~/Notes | grep webdev)"
 alias webdev_id="webdev | head -1 | xclip -selection clipboard; echo 'скопирвоано'"
 
 # alias vol="amixer -D pulse sset Master"

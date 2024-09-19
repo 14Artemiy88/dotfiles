@@ -18,7 +18,7 @@
         // "key": {
             // "width": 16
         // },
-        "separator": "  ",
+        "separator": " ",
         "percent": {
             "type": 6
         },
@@ -31,7 +31,7 @@
         },
         "constants": [
             "\u001b[42C"
-        ]
+        ],
     },
 
     "modules": [
@@ -41,21 +41,19 @@
         {
             "type": "os",
             "key": "{icon} OS",
+            "outputColor": "white",
             "keyColor": "yellow"
         },
         {
             "type": "kernel",
-            "key": "  ",
+            "key": "   ",
+            "outputColor": "white",
             "keyColor": "yellow"
         },
         {
             "type": "packages",
-            "key": "  󰏖",
-            "keyColor": "yellow"
-        },
-        {
-            "type": "shell",
-            "key": "  ",
+            "key": "  󰏖 ",
+            "outputColor": "white",
             "keyColor": "yellow"
         },
 
@@ -64,31 +62,43 @@
         {
             "type": "wm",
             "key": " DE/WM",
+            "outputColor": "white",
             "keyColor": "blue"
         },
         {
             "type": "lm",
-            "key": "  󰧨",
+            "key": "  󰧨 ",
+            "outputColor": "white",
             "keyColor": "blue"
         },
         {
             "type": "wmtheme",
-            "key": "  󰉼",
+            "key": "  󰉼 ",
+            "outputColor": "white",
             "keyColor": "blue"
         },
         {
             "type": "icons",
-            "key": "  󰀻",
+            "key": "  󰀻 ",
+            "outputColor": "white",
             "keyColor": "blue"
         },
         {
             "type": "terminal",
-            "key": "  ",
+            "key": "   ",
+            "outputColor": "white",
             "keyColor": "blue"
         },
         {
             "type": "shell",
-            "key": "  ",
+            "key": "   ",
+            "outputColor": "white",
+            "keyColor": "blue"
+        },
+        {
+            "type": "terminalFont",
+            "key": "  󰊄 ",
+            "outputColor": "white",
             "keyColor": "blue"
         },
 
@@ -97,31 +107,37 @@
         {
             "type": "custom",
             "format": "󰌢 PC",
+            "outputColor": "white",
             "outputColor": "green"
         },
         {
             "type": "cpu",
-            "key": "  󰻠",
+            "key": "  󰻠 ",
+            "outputColor": "white",
             "keyColor": "green"
         },
         {
             "type": "gpu",
-            "key": "  󰍛",
+            "key": "  󰍛 ",
+            "outputColor": "white",
             "keyColor": "green"
         },
         {
             "type": "disk",
-            "key": "  ",
+            "key": "   ",
+            "outputColor": "white",
             "keyColor": "green"
         },
         {
             "type": "memory",
-            "key": "  󰑭",
+            "key": "  󰑭 ",
+            "outputColor": "white",
             "keyColor": "green"
         },
         {
             "type": "display",
-            "key": "  󰍹",
+            "key": "  󰍹 ",
+            "outputColor": "white",
             "keyColor": "green"
         },
 
@@ -132,28 +148,32 @@
             "key": "󰌗 LAN",
             "type": "localip",
             "format": "{ifname}",
+            "outputColor": "white",
             "keyColor": "95"
         },
         {
             "type": "localip",
-            "key": "  󰩠",
+            "key": "  󰩠 ",
             "compact": true,
+            "outputColor": "white",
             "keyColor": "95"
         },
         {
             "type": "publicip",
-            "key": "  󰩠",
+            "key": "  󰩠 ",
+            "outputColor": "white",
             "keyColor": "95",
             "timeout": 1000
         },
+
 
         "break",
 
         {
             "type": "uptime",
-            "key": " ",
-            "keyColor": "90",
-            "outputColor": "cyan"
+            "key": "󰚭",
+            "keyColor": "cyan",
+            "outputColor": "1"
         },
     ]
 }
