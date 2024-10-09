@@ -13,8 +13,14 @@ for (( j=0; j<${#array[@]}; j+=3 )); do
         continue
     fi
     name=$(echo "${array[$j+2]}" | sed 's#\\#|#g' | sed 's/"/\\"/g')
+	name_buf=$(echo "$name" | iconv -t latin1)
+	if [[ $? == 0 ]]; then
+		name=$(echo "$name_buf" | iconv -f cp1251)
+	fi
     printf -v subjson '{"num": "%d", "value": "%d", "name": "%s"},' "${array[$j]}" "${array[$j+1]}" "$name"
     json+="$subjson"
 done
 
 echo "[${json%,}]"
+name=$(echo "Çàïèñêè ýêñïåäèòîðà" | recode latin1..cp1251)
+echo "$name"

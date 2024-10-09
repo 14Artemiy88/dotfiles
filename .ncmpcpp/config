@@ -113,5 +113,6 @@ follow_now_playing_lyrics = no
 enable_window_title = yes
 
 #execute_on_song_change = notify-send "Играет:" "$(mpc current)"
-execute_on_song_change = ~/.conky/scripts/get_album_img.sh
+# execute_on_song_change = ~/.conky/scripts/get_album_img.sh
+execute_on_song_change = ~/.config/eww/scripts/get_album_img.sh
 >}}

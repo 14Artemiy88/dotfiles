@@ -1,0 +1,36 @@
+[manager]
+show_hidden = true
+ratio = [2, 2, 4]
+
+[preview]
+wrap = "yes"
+
+[opener]
+edit = [
+	{ run = 'micro "$@"', block = true, for = "unix" },
+]
+play = [
+	{ run = 'mpv "$@"', orphan = true, for = "unix" },
+	{ run = 'deadbeef "$@"', orphan = true, for = "unix" },
+]
+open = [
+	{ run = 'xdg-open "$@"', desc = "Open" },
+	{ run = 'dolphin "$@"', desc = "Dolphin" },
+	{ run = 'deadbeef "$@"', orphan = true, for = "unix" },
+]
+
+[plugin]
+prepend_previewers = [
+	# { mime = "*video/*", run = "my" },
+	{ mime = "text/*", run = "bat" },
+	{ mime = "audio/*", run = "my" },
+	# { mime = "application/json", run = "bat" },
+	{ name = "*.ogg", run = "my" },
+	
+	
+  # { name = "*/", run = "folder", sync = true },
+  # { mime = "*/xml", run = "code" },
+  # { mime = "*/javascript", run = "code" },
+  # { mime = "*/x-wine-extension-ini", run = "code" },
+  # { name = "*", run = "preview" },
+]

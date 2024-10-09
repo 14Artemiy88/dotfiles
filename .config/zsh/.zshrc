@@ -10,33 +10,17 @@ source "$ZDOTDIR/zsh-functions"
 zsh_add_file "zsh-exports"
 zsh_add_file "zsh-aliases"
 
-# ZSH_THEME="artemiy"
-
 # Цвет автодополнения
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=4'
 
-# source "$HOME/.config/lf/lfcd.sh"
-# source "${XDG_CONFIG_HOME:-$HOME/.config}/lf-shellcd/lf-shellcd"
 
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
 plugins=(
     fzf
     fzf-tab
     # git
     tmux
     sudo
-    diff-so-fancy
+    # diff-so-fancy
     web-search
     zsh-navigation-tools
     zsh-syntax-highlighting
@@ -56,6 +40,7 @@ ZSH_TMUX_FIXTERM=true
 # bindkey -s '^o' 'lf^M'
 bindkey -s '^z' '^u'
 bindkey -s '^n' 'ncmpcpp^M'
+bindkey -s '^o' 'y^M'
 
 source $ZSH/oh-my-zsh.sh
 
@@ -78,11 +63,13 @@ else
     batcat --style=numbers --color=always $realpath || mediainfo $realpath 2>/dev/null
 fi
 '
-# zstyle ':fzf-tab:complete:*' fzf-preview 'lsd $realpath'
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always --icons --all $realpath'
 
 # apply to all command
 zstyle ':fzf-tab:*' popup-min-size 190 80
+
+# zstyle ':fzf-tab:complete:*' fzf-preview 'lsd $realpath'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1a --color=always --icons $realpath'
+
 # only apply to 'diff'
 zstyle ':fzf-tab:complete:diff:*' popup-min-size 80 12
 

@@ -7,11 +7,13 @@ declare -r DEFAULT_TEXT="no image"
 declare -r DEFAULT_LENGTH="1"
 declare -r DEFAULT_POSITION="0"
 declare -r DEFAULT_TIMELEFT=" "
-declare -r DEFAULT_TIMEPASS="0"
+declare -r DEFAULT_TITLE_CLASS="default"
 
 declare -A icons=(
     ["Playing"]=""
+    ["playing"]=""
     ["Paused"]=""
+    ["paused"]=""
 )
 
 function get_image() {
@@ -25,20 +27,142 @@ function get_image() {
         exit 0
     fi
 
-    IFS="/" read -ra arr <<< "$1"
-    image="$IMG_PATH/${arr[-1]}${IMG_SUFFIX}"
-    if [[ ! -f "$image" ]]; then
-        ffmpeg -loglevel 0 -y -i "$1" "$image"
+     IFS="/" read -ra arr <<< "$1"
+     image="$IMG_PATH/${arr[-1]}${IMG_SUFFIX}"
+     if [[ ! -f "$image" ]]; then
+         curl "$1" -o "$image"
+         mogrify -format png "$image"
+     fi
+
+     echo "$image"
+}
+
+dd() {
+    echo "$1" ; exit 0
+}
+
+timeFormat() {
+  milliseconds=$1
+  seconds=$((milliseconds / 1000))
+  hours=$((seconds / 3600))
+  minutes=$(( (seconds % 3600) / 60 ))
+  seconds=$((seconds % 60))
+
+  printf "%02d:%02d:%02d\n" $hours $minutes $seconds
+}
+
+get_mopidy_player_metadata() {
+    # Get the current playback state
+    local -r status_json=$(curl -d '{"jsonrpc": "2.0", "id": 1, "method": "core.playback.get_state"}' -H 'Content-Type: application/json' http://localhost:6680/mopidy/rpc)
+
+    if [[ "$status_json" != '{"jsonrpc": "2.0", "id": 1, "result": "playing"}' ]]; then
+	    return
     fi
 
-    echo "$image"
+    # Get the current track, tracklist, time, index, and total
+    local -r json_response=$(curl -d '[
+        {"jsonrpc": "2.0", "id": 1, "method": "core.playback.get_current_tl_track"},
+        {"jsonrpc": "2.0", "id": 3, "method": "core.playback.get_time_position"}
+    ]' -H 'Content-Type: application/json' http://localhost:6680/mopidy/rpc)
+
+#    local -r json_response=$(curl -d '[
+#        {"jsonrpc": "2.0", "id": 1, "method": "core.playback.get_current_tl_track"},
+#        {"jsonrpc": "2.0", "id": 2, "method": "core.tracklist.get_tl_tracks"},
+#        {"jsonrpc": "2.0", "id": 3, "method": "core.playback.get_time_position"},
+#        {"jsonrpc": "2.0", "id": 4, "method": "core.tracklist.index"},
+#        {"jsonrpc": "2.0", "id": 5, "method": "core.tracklist.get_length"}
+#    ]' -H 'Content-Type: application/json' http://localhost:6680/mopidy/rpc)
+
+    # Extract track information
+#    local -r trackList=$(jq -r '.[1] | .result' <<< "$json_response")
+#    local -r index=$(jq -r '.[3] | .result' <<< "$json_response")
+#    local -r total=$(jq -r '.[4] | .result' <<< "$json_response")
+
+    # Extract current track information
+    local current_album
+    local current_artist
+    local -r status=$(jq -r '.result' <<< "$status_json")
+    local -r current=$(jq -r '.[0] | .result' <<< "$json_response")
+    current_album=$(jq -r '.track.album.name' <<< "$current")
+    local -r current_album_date=$(jq -r '.track.album.date' <<< "$current")
+    current_artist=$(jq -r '.track.artists[0].name' <<< "$current")
+    local -r current_length=$(jq -r '.track.length' <<< "$current")
+#    local -r current_tlid=$(jq -r '.tlid' <<< "$current")
+    local -r current_title=$(jq -r '.track.name' <<< "$current")
+#    local -r trackTime=$(jq -r '.[2] | .result' <<< "$json_response")
+    local -r trackTime=$(jq -r '.[1] | .result' <<< "$json_response")
+
+	local format_album
+	format_album="$current_album_date - $current_album"
+    if [[ "$current_album_date" == null ]]; then
+		format_album="$current_album"
+    fi
+    if [[ "$current_album" == null ]]; then
+        current_album=""
+		format_album="$current_album_date"
+        if [[ "$current_album_date" == null ]]; then
+			format_album=""
+    	fi
+    fi
+    if [[ "$current_artist" == null ]]; then
+        current_artist="music"
+    fi
+
+#    local -r show_tracks=5
+#    local totalTime=0
+#    local album_track_count=0
+#    local album_length=0
+#    local album_el=0
+#    local tracks_lengths=()
+
+#    local trackListTrack
+#    local album
+#    local track_length
+#    local song_time
+
+    # Loop through track list
+#    for N in $(jq -r 'keys[]' <<< "$trackList"); do
+#        trackListTrack=$(jq -r ".[$N].track" <<< "$trackList")
+#        album=$(jq -r '.album.name' <<< "$trackListTrack")
+#        track_length=$(jq -r '.length' <<< "$trackListTrack")
+#
+#        # Check if track is part of the current album
+#        if [ "$album" == "$current_album" ]; then
+#            ((album_track_count+=1))
+#            tracks_lengths+=("$track_length")
+#            album_length=$((album_length + track_length))
+#        fi
+#
+#        # Check if track should be displayed
+#        if [[ $N -ge $current_tlid&& $track_length -ne 0 ]]; then
+#            totalTime=$((totalTime + track_length))
+#            if [ "$album" == "$current_album" ]; then
+#                album_el=$((album_el + track_length))
+#            fi
+#        fi
+#    done
+
+#    totalTime=$(timeFormat $(( totalTime - trackTime)))
+#    album_el=$(timeFormat $(( album_el - trackTime)))
+    time_left=$(timeFormat $(( current_length - trackTime)))
+
+    cls=$DEFAULT_TITLE_CLASS
+    if [[ ${#current_title} -gt 10 ]]; then
+        cls="more_ten"
+    fi
+
+	get_json "$current_title"    "$format_album"\
+             "${time_left##00:}" "$((trackTime/1000))" "$((current_length/1000))"\
+             "${icons[$status]}" "/run/user/1000/album_cover.png" "$current_artist"\
+              "mopidy" "$cls"
 }
 
 function get_mpv_player_metadata() {
     local -r mpvsocket="/run/user/1000/mpvsocket"
-    if [[ -n "$mpvsocket" ]]; then
+    if [[ -f "$mpvsocket" ]]; then
         return
     fi
+
     # Get the current position of the MPV player
     local position
     position=$(echo '{ "command": ["get_property", "time-pos"] }' | socat - $mpvsocket | jq .data | tr -d '"' | cut -d'.' -f 1)
@@ -60,25 +184,26 @@ function get_mpv_player_metadata() {
             image_path="${DEFAULT_IMG}"
         fi
 
-        get_json "$title" "" "${timeleft##00:}" "$position" "$position" "$duration" "" "$image_path" "${DEFAULT_TEXT}" "mpv"
+        get_json "$title" "" "${timeleft##00:}" "$position" "$duration" "" "$image_path" "${DEFAULT_TEXT}" "mpv" "${DEFAULT_TITLE_CLASS}"
     fi
 }
 
 function get_player_metadata() {
     local -r s="💩" # separator
-    local -r params="{{ title }}$s{{ artist }}$s{{ position }}$s{{ mpris:length }}$s-{{ duration(mpris:length - position) }}$s{{ duration(position) }}$s{{ mpris:artUrl }}"
+    local -r params="{{ title }}$s{{ artist }}$s{{ position }}$s{{ mpris:length }}$s-{{ duration(mpris:length - position) }}$s{{ mpris:artUrl }}"
     local player="org.telegram.desktop"
-    IFS="$s" read -r title artist position len timeleft timepass img << EOF
+    IFS="$s" read -r title artist position len timeleft img << EOF
 $(playerctl -p $player metadata -f "$params" 2>/dev/null)
 EOF
 
     local status=$(playerctl -p $player status 2>/dev/null)
 
+
     if [[ -z "$title" || $status != "Playing" ]]; then
 	    local -r params_title="{{ title }}"
         player="plasma-browser-integration"
         status=$(playerctl -p $player status 2>/dev/null)
-        IFS="$s" read -r title artist position len timeleft timepass img << EOF
+        IFS="$s" read -r title artist position len timeleft img << EOF
 $(playerctl -p $player metadata -f "$params" 2>/dev/null || playerctl -p $player metadata -f "$params_title" 2>/dev/null)
 EOF
     fi
@@ -86,34 +211,35 @@ EOF
     local text="${DEFAULT_TEXT}"
     case "$title" in
         *"Кинопоиск"* ) postfix=" — смотреть онлайн в хорошем качестве — Кинопоиск"; text="kinopoisk";;
-        *"Twitch"* ) postfix="Twitch"; text="twitch";;
+        *"Twitch"* ) postfix=" - Twitch"; text="twitch";;
         *"VK"* ) postfix="VK Видео — смотрѣть безплатно"; text="vk video";;
-        *"Телемост"* ) get_json "" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "telemost" "$player";;
+        *"Телемост"* ) get_json "" "" "${DEFAULT_TIMELEFT}" "not_use}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "telemost" "$player" "${DEFAULT_TITLE_CLASS}";;
     esac
     title=${title//$postfix/};
 
     if [[ -n "$position" ]]; then
         title=$(echo "$title" | sed 's#\\#|#g' | sed 's/"/\\"/g')
-        get_json "$title" "$artist" "$timeleft" "$timepass" "$position" "$len" "${icons[$status]}" "$(get_image "$img")" "$text" "$player"
+        get_json "$title" "$artist" "$timeleft" "$position" "$len" "${icons[$status]}" "$(get_image "$img")" "$text" "$player" "${DEFAULT_TITLE_CLASS}"
     fi
 
     if [[ -n "$title" ]]; then
-        get_json "$title" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "qwe $text" "$player"
+        get_json "$title" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "$text" "$player" "${DEFAULT_TITLE_CLASS}"
     fi
 }
 
 function get_json() {
-    local -r formatted_title="\"title\":\"$title\""
+	# echo 1 && exit 0
+    local -r formatted_title="\"title\":\"$1\""
     local -r formatted_artist="\"artist\":\"$2\""
     local -r formatted_timeleft="\"timeleft\":\"$3\""
-    local -r formatted_timepass="\"timepass\":\"$4\""
-    local -r formatted_position="\"position\":\"$(($5 * 100 / $6))\""
-    local -r formatted_status="\"status\":\"$7\""
-    local -r formatted_image="\"image\":\"$8\""
-    local -r formatted_text="\"text\":\"$9\""
-    local -r formatted_player="\"player\":\"${10}\""
+    local -r formatted_position="\"position\":\"$(($4 * 100 / $5))\""
+    local -r formatted_status="\"status\":\"$6\""
+    local -r formatted_image="\"image\":\"$7\""
+    local -r formatted_text="\"text\":\"$8\""
+    local -r formatted_player="\"player\":\"$9\""
+    local -r formatted_title_class="\"title_class\":\"${10}\""
 
-    echo "{$formatted_title,$formatted_artist,$formatted_timeleft,$formatted_timepass,$formatted_position,$formatted_status,$formatted_image,$formatted_text,$formatted_player}"
+    echo "{$formatted_title,$formatted_artist,$formatted_timeleft,$formatted_position,$formatted_status,$formatted_image,$formatted_text,$formatted_player,$formatted_title_class}"
     exit 0
 }
 
@@ -121,6 +247,7 @@ if [ ! -d $IMG_PATH ]; then
     mkdir $IMG_PATH
 fi
 
+get_mopidy_player_metadata
 get_mpv_player_metadata
 get_player_metadata
-get_json "" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_TIMEPASS}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "silence" ""
+get_json "" "" "${DEFAULT_TIMELEFT}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "silence" "" "${DEFAULT_TITLE_CLASS}"

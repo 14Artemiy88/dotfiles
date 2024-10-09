@@ -34,7 +34,12 @@
         :class "volume_box"
         :orientation "v"
         :tooltip "${value.name}"
-        (label :class "label" :halign "start" :text "${value.name}" :limit-width 100)
+        (box
+        	:orientation "h"
+            :space-evenly false
+        	;; (label :class "icon" :halign "start" :text {value.value > 0 ? '󰕾 ' : '󰖁 ' } )
+        	(label :class "label" :halign "start" :text "${value.name}" :limit-width 100)
+        )
         (scale
            :class "volume"
            :orientation "h"

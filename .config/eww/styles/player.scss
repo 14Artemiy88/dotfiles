@@ -15,6 +15,10 @@ $font: "Ubuntu Mono Nerd Font";
     margin: -130px 0 0 14px;
     padding: 0;
     text-shadow: $textShadow;
+
+    &.more_ten {
+      font-size: 35px;
+    }
   }
 
   .button {

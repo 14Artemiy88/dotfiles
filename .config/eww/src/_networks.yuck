@@ -5,7 +5,7 @@
         :hscroll false
         :vscroll true
         :width 300
-        :height 315
+        :height 150
         (box
             :class "networkstuff"
             :orientation "v"

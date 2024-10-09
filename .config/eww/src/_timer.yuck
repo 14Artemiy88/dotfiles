@@ -6,7 +6,7 @@
 (defvar show_set_custom_timer3 false)
 (defvar custom_timer1 5)
 (defvar custom_timer2 9)
-(defvar custom_timer3 23)
+(defvar custom_timer3 15)
 (defvar custom_timers '[{"time":custom_timer1,"on":show_set_custom_timer1},{"time":custom_timer2,"on":show_set_custom_timer2},{"time":custom_timer3,"on":false}]')
 
 (defwidget timerstuff []
