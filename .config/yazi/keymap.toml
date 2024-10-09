@@ -1,0 +1,9 @@
+[[manager.prepend_keymap]]
+on   = [ "g", "2" ]
+run  = "cd /media/artemiy/2Tb"
+desc = "Cd to 2Tb"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "s" ]
+run  = "cd /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/"
+desc = "Cd to SSD"

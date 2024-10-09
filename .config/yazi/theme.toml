@@ -1,0 +1,73 @@
+[flavor]
+# use = "catppuccin-mocha"
+# use = "rose-pine"
+
+[manager]
+
+cwd = { bold = true, fg = "#00cccc" }
+
+# Border
+border_symbol = "│"
+border_style = { fg = "#524f67" }
+
+# Hovered
+# hovered = { bold = true, fg = "cyan" }
+hovered = { reversed = true }
+preview_hovered = { underline = true }
+
+# Find
+find_keyword  = { fg = "#e5c890", bold = true, italic = true, underline = true }
+find_position = { fg = "#f4b8e4", bg = "reset", bold = true, italic = true }
+
+# Tab
+tab_active   = { reversed = true }
+tab_inactive = {}
+tab_width    = 1
+
+
+[status]
+separator_open = " " 
+separator_close = " "
+separator_style = { fg = "#524f67", bg = "reset" }
+
+# Mode
+# mode_normal = { bg = "reset", bold = true }
+# mode_select = {  bg = "reset", bold = true }
+# mode_unset = {  bg = "reset", bold = true }
+
+# Progress
+# progress_label = { fg = "#e0def4", bold = true }
+# progress_normal = { fg = "#191724", bg = "reset" }
+# progress_error = { fg = "#B4637A", bg = "reset" }
+
+
+
+[input]
+border = { fg = "#dddddd", bg = "reset" }
+title = {}
+value = {}
+selected = { reversed = true }
+
+[filetype]
+
+# rules = [
+    # # Images
+    # # { mime = "image/*", fg = "#9ccfd8" },
+# #
+    # # # Videos
+    # # { mime = "video/*", fg = "#f6c177" },
+    # # { mime = "audio/*", fg = "#f6c177" },
+# #
+    # # # Archives
+    # # { mime = "application/zip", fg = "#eb6f92" },
+    # # { mime = "application/gzip", fg = "#eb6f92" },
+    # # { mime = "application/x-tar", fg = "#eb6f92" },
+    # # { mime = "application/x-bzip", fg = "#eb6f92" },
+    # # { mime = "application/x-bzip2", fg = "#eb6f92" },
+    # # { mime = "application/x-7z-compressed", fg = "#eb6f92" },
+    # # { mime = "application/x-rar", fg = "#eb6f92" },
+# #
+    # # # Fallback
+    # # { name = "*", fg = "#e0def4" },
+    # # { name = "*/", fg = "#524f67" },
+# ]
