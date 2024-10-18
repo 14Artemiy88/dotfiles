@@ -20,7 +20,7 @@
         // },
         "separator": " ",
         "percent": {
-            "type": 6
+             "type": 9
         },
         "bar": {
             "borderLeft": "",

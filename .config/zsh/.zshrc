@@ -18,7 +18,7 @@ plugins=(
     fzf
     fzf-tab
     # git
-    tmux
+    # tmux
     sudo
     # diff-so-fancy
     web-search

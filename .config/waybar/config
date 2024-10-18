@@ -1,10 +1,14 @@
 {
   "position": "top",
-    "margin-top" : 2,
-    "margin-left": 2,
-    "margin-right": 2,
+    "margin-top" : 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "margin-bottom": 2,
     "height" : 28,
+
+    // "include": ["~/.config/waybar/left.jsonc"],
+//    "include": ["left.jsonc"],
+    "include": ["~/.config/waybar/center"],
     "modules-left": [
       "hyprland/window"
     ],
@@ -13,6 +17,7 @@
     ],
     "modules-right": [
         "pulseaudio",
+        "backlight",
         //"cpu",
         "battery",
         // "memory",
@@ -29,37 +34,18 @@
 //        "": "Hyprland"
       },
       "rewrite": {
+      //    "(.*) — config": "  $1",
+          "Telegram (.*)": "   $1",
+          "(.*) — Dolphin": "   $1",
           "(.*) — Kate": "󱩼  $1",
-          "(.*) — Mozilla Firefox": " $1",
+          "(.*) — Mozilla Firefox": "  $1",
           "(.*)zsh(.*)": "  $1 $2"
       },
       "separate-outputs": true,
-      "on-click": "pkill waybar & hyprctl dispatch exec waybar",
+      "on-click": "killall waybar & hyprctl dispatch exec waybar",
       "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
     },
 
-"hyprland/workspaces": {
-  "format": "<sub>{icon}</sub> {windows}",
-  "format-window-separator": " ",
-  "window-rewrite-default": "",
-  "window-rewrite": {
-    "kitty": "",
-    "firefox": "",
-    "chrome": "",
-    "wofi": "󰮫",
-    "idea" : "󱃖",
-    "dolphin" : "",
-    "kate" : "󱩼",
-
-    "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
-    "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
-    "title<.*whatsapp.*>": "", // Windows whose titles contain "youtube"
-
-
-    "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
-    "code": "󰨞",
-	},
-},
 
 "hyprland/submap": {
     "format": "✌️ {}",
@@ -75,8 +61,16 @@
     },
 
     "clock": {
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+       // "format": "{:%H:%M:%S}",
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
       "format-alt": "{:%Y-%m-%d}"
+    },
+
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon} {percent}%  ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
    // "cpu": {
@@ -96,6 +90,7 @@
 
     "battery": {
       "states": {
+            // "good": 95,
         "warning": 30,
         "critical": 15
       },

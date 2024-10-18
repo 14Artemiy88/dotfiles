@@ -1,0 +1,16 @@
+{
+    "hyprland/window": {
+      "format": "{}",
+      "rewrite": {
+//        "": "Hyprland"
+      },
+      "rewrite": {
+          "(.*) — Kate": "󱩼  $1",
+          "(.*) — Mozilla Firefox": " $1",
+          "(.*)zsh(.*)": "  $1 $2"
+      },
+      "separate-outputs": true,
+      "on-click": "killall waybar & hyprctl dispatch exec waybar",
+      "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
+    }
+}

@@ -1,0 +1,26 @@
+window {
+    font-family: Fira Code Medium;
+    font-size: 16pt;
+    /*background-color: rgba(30, 30, 46, 0.6);*/
+    background-color: #111;
+    /*background-image: url("/home/artemiy/Images/cm.webp");*/
+    opacity: .9;
+}
+
+button {
+    all: unset;
+
+    color: #cccccc;
+    /*border: 1px solid #cccccc;*/
+    background: rgba(0,0,0,0);
+    margin: 30px;
+    transition: font-size .2s ease-in-out, margin-top .2s ease-in-out, color .2s ease-in-out;
+}
+
+button:hover {
+    font-size: 60px;
+    margin-top: -30px;
+    color: #00cccc;
+    /*border: 1px solid #cccccc;*/
+}
+
