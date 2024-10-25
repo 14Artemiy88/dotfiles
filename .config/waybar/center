@@ -3,7 +3,7 @@
 "hyprland/workspaces": {
    "format": "<sub>{icon}</sub> {windows}",
   // "format": "{windows}",
-  "format-window-separator": " ",
+  "format-window-separator": "  ",
   "window-rewrite-default": "",
   "window-rewrite": {
     // "kitty": "",
@@ -15,8 +15,16 @@
     "dolphin" : "",
     "kate" : "󱩼",
     "telegram" : "",
+    "steam" : "",
+    "vk" : "",
+
 
     "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
+    "title<.*google.*>": "",
+    // "title<*Сервер не найден*>": "",
+    
+    // "title<.*Arch.*>": "󰣇",
+    // "title<.*r\/.*>": "",
     "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
     "title<.*whatsapp.*>": "", // Windows whose titles contain "youtube"
 
@@ -24,19 +32,5 @@
     "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
     "code": "󰨞",
 	},
-//		"format-icons": {
- //   		"1": "",
- //   		"2": "",
- //   		"3": "",
- //   		"4": "",
- //   		"5": "",
- //   	},
- //   "format-icons": {
- //         "default": "\uF444",
- //         "active": "\uF192"
- //   	//"default": "○",
- //   	//"default": "●"
- //   }
 },
-
 }

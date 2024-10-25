@@ -18,7 +18,7 @@ plugins=(
     fzf
     fzf-tab
     # git
-    # tmux
+    tmux
     sudo
     # diff-so-fancy
     web-search
@@ -111,3 +111,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/14.toml)"
+
+if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
+  tmux attach || exec tmux new-session && exit;
+fi

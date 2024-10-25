@@ -14,7 +14,8 @@
 
 
 #battery {
-    /* color: #ffffff; */
+    color: #ffffff;
+    background: none;
 }
 
 #battery.charging, #battery.plugged {
@@ -37,6 +38,15 @@
     animation-direction: alternate;
 }
 
+
+#battery.good.charging {
+    color: #00cc00;
+    animation-name: blink;
+    animation-duration: 1s;
+    animation-timing-function: steps(12);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
 
 
 #clock {

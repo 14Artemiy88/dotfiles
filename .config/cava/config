@@ -6,6 +6,8 @@
 # Accepts only non-negative values.
 framerate = 60
 
+method = pipewire
+
 # 'autosens' will attempt to decrease sensitivity if the bars peak. 1 = on, 0 = off
 # new as of 0.6.0 autosens of low values (dynamic range)
 autosens = 1

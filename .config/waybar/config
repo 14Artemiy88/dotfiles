@@ -36,6 +36,9 @@
       "rewrite": {
       //    "(.*) — config": "  $1",
           "Telegram (.*)": "   $1",
+          "Telegram (.*)": "   $1",
+          "VK Messenger (.*)": "   $1",
+          "Steam": "   $1",
           "(.*) — Dolphin": "   $1",
           "(.*) — Kate": "󱩼  $1",
           "(.*) — Mozilla Firefox": "  $1",
@@ -69,29 +72,14 @@
 
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{icon} {percent}%  ",
+        "format": "{icon}  {percent}%  ",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
 
-   // "cpu": {
-   //   "format": " {usage}%",
-   //   "tooltip": false
-   // },
-
-   // "memory": {
-   //   "format": "{}% "
-   // },
-
-   // "temperature": {
-   //   "critical-threshold": 80,
-   //   "format": "{icon} {temperatureC}°C",
-   //   "format-icons": ["", "", ""]
-   // },
-
     "battery": {
       "states": {
-            // "good": 95,
-        "warning": 30,
+        "good": 100,
+        "warning": 99,
         "critical": 15
       },
       "format": "{icon}  {capacity}%",

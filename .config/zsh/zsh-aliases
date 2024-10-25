@@ -6,7 +6,6 @@ alias zzz="m ~/.zshrc"
 alias ssd="cd $SSD"
 
 # переопределение команд
-alias fd="fdfind"
 # alias lf="lfcd"
 # alias find="fdfind"
 # alias ls="lsd"

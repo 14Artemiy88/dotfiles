@@ -13,7 +13,7 @@
 
 (
     defwindow left
-    :monitor "LCD195VXM+/7YP18445NB"
+    :monitor 0
     :geometry (
         geometry
         :anchor "top left"
@@ -25,6 +25,7 @@
 
     :stacking "bottom"
     :focusable true
+	:exclusive true
 
     (left_stuff)
 )
@@ -63,7 +64,7 @@
         :height "0"
     )
 
-    :stacking "bottom"
+;;    :stacking "bottom"
     :focusable true
 
     (right_stuff)
@@ -72,7 +73,7 @@
 (defwidget right_stuff []
     (box
         :orientation "v"
-        :monitor "LCD195VXM+/7YP18445NB"
+;;        :monitor 0
         :geometry (geometry :x "331" :y "72" :anchor "top left" )
         :stacking "bg"
 

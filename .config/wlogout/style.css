@@ -1,10 +1,11 @@
 window {
     font-family: Fira Code Medium;
     font-size: 16pt;
-    /*background-color: rgba(30, 30, 46, 0.6);*/
     background-color: #111;
-    /*background-image: url("/home/artemiy/Images/cm.webp");*/
-    opacity: .9;
+    background-image: url("/home/artemiy/Images/cm.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 button {
