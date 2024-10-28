@@ -11,7 +11,13 @@
   /*border-radius: 10px;*/
 }
 
-
+#pulseaudio,
+#backlight,
+#battery,
+#network,
+#cpu {
+    min-width: 50px;
+}
 
 #battery {
     color: #ffffff;
@@ -74,23 +80,24 @@
 #workspaces button {
   color: #cccccc;
   min-width: 20px;
-  /*padding: 0 8px;*/
 }
 
+#workspaces button {}
+
+
 #workspaces button:hover {
-  /*all: unset;*/
-  color: #00cccc;
-  background: none;
-  border: none;
+    padding: 0 7px;
+    color: #00cccc;
+    background: none;
+    border: none;
 }
 
 #workspaces button.active {
   color: #00cccc;
 }
 
-#workspaces button sub{
-  font-family: LED;
-  color: fuchsia;
+#workspaces button.urgent {
+    color: #ff6666;
 }
 
 #window {
