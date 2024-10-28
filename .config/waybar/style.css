@@ -82,7 +82,8 @@
   min-width: 20px;
 }
 
-#workspaces button {}
+#workspaces button {
+}
 
 
 #workspaces button:hover {
