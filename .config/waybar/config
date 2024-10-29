@@ -4,7 +4,7 @@
     "margin-left": 0,
     "margin-right": 0,
     "margin-bottom": 2,
-    "height" : 28,
+    "height" : 20,
 
     // "include": ["~/.config/waybar/left.jsonc"],
 //    "include": ["left.jsonc"],
@@ -80,7 +80,24 @@
     "cpu": {
         "interval": 1,
         "format": "{icon}  {usage}%",
-        "format-icons": ["󰝦","󰪞","󰪟","󰪠","󰪡","󰪢","󰪣","󰪤","󰪥"],
+        //"format": "{icon}",
+
+        "states": {
+          "critical": 85,
+          "warning": 50,
+          "good": 0
+        },
+        "format-icons": [
+            "󰝦",
+            "󰪞",
+            "󰪟",
+            "󰪠",
+            "󰪡",
+            "󰪢",
+            "󰪣",
+            "󰪤",
+            "󰪥"
+        ],
     },
 
     "battery": {
@@ -94,8 +111,7 @@
       "format-charging": "󱐋  {capacity}%",
       "format-plugged": "  {capacity}%",
       "format-alt": "{time} {icon}",
-      // "format-icons": ["", "", "", "", ""]
-       "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
     },
 
     "network": {

@@ -19,6 +19,18 @@
     min-width: 50px;
 }
 
+#cpu.good {
+    color: #00cc00;
+}
+#cpu.warning {
+    background: none;
+    border: none;
+    color: #ffff00;
+}
+#cpu.critical {
+    color: #ff0000;
+}
+
 #battery {
     color: #ffffff;
     background: none;
@@ -62,9 +74,6 @@
   color: #fff;
 }
 
-
-
-
 #tray {
   padding-left: 10px;
 }
@@ -79,15 +88,10 @@
 
 #workspaces button {
   color: #cccccc;
-  min-width: 20px;
 }
-
-#workspaces button {
-}
-
 
 #workspaces button:hover {
-    padding: 0 7px;
+    padding: 7px 7px;
     color: #00cccc;
     background: none;
     border: none;

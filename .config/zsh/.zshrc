@@ -113,5 +113,5 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/14.toml)"
 
 if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
-  tmux attach || exec tmux new-session && exit;
+  tmux attach;
 fi
