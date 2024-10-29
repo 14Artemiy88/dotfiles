@@ -50,11 +50,12 @@
     },
 
 
-"hyprland/submap": {
-    "format": "✌️ {}",
-    "max-length": 8,
-    "tooltip": false
-},
+    "hyprland/submap": {
+        //"format": "✌️ {}",
+        "format": "️  Br ",
+        "max-length": 8,
+        "tooltip": false
+    },
 
     "hyprland/language": {
         "format": "{}",
