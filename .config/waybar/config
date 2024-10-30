@@ -16,6 +16,7 @@
       "hyprland/workspaces",
     ],
     "modules-right": [
+      //  "custom/pacman",
         "pulseaudio",
         "backlight",
         "cpu",
@@ -50,9 +51,19 @@
     },
 
 
+    //"custom/pacman": {
+    //    "interval": 3600,
+    //    "return-type": "json",
+    //    "exec": "pacman-updates",
+    //    "exec-if": "exit 0",
+    //    "on-click": "$TERMINAL -e paru; pkill -SIGRTMIN+8 waybar",
+    //    "signal": 8
+    //},
+
+
     "hyprland/submap": {
         //"format": "✌️ {}",
-        "format": "️  Br ",
+        "format": "️  ",
         "max-length": 8,
         "tooltip": false
     },

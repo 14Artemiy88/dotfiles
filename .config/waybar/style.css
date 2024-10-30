@@ -20,15 +20,18 @@
 }
 
 #cpu.good {
-    color: #00cc00;
+    /*color: #00cc00;*/
+    color: #ffffff;
 }
 #cpu.warning {
     background: none;
     border: none;
-    color: #ffff00;
+    /*color: #ffff00;*/
+    color: #ffffff;
 }
 #cpu.critical {
-    color: #ff0000;
+    /*color: #ff0000;*/
+    color: #ffffff;
 }
 
 #battery {
