@@ -145,3 +145,12 @@
 #language {
   margin: 0 10px;
 }
+
+
+tooltip {
+    background: rgba(34, 34, 34, .7);
+    color: #A1BDCE;
+    font-size: 13px;
+    border-radius: 7px;
+    border: 2px solid #101a24;
+}

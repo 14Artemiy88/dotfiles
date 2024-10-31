@@ -2,8 +2,8 @@
     monitor = 0
     follow = mouse
     width = 300
-    origin = top-right
-    offset = 5x-30
+    origin = bottom-left
+    offset = 10x20
 
     progress_bar = true
     progress_bar_height = 5
@@ -70,17 +70,30 @@
     timeout = 5
 
 [urgency_critical]
+    format = "<span weight='bold' font='12'>%s</span>\n%b"
     background = "#181825"
     foreground = "#CDD6F4"
     frame_color = "#f38ba8"
+    frame_width = 3
     highlight = "#00cccc"
     timeout = 0
 
 [volume]
     appname = "Volume"
+    origin = bottom-right
+//    offset = 5x-30
     highlight = "#00cccc"
+    frame_color = "#222222"
 
 [backlight]
     appname = "Backlight"
+    origin = top-right
+    offset = 5x-30
     highlight = "#00cccc"
     min_icon_size = 40
+    frame_color = "#222222"
+
+[timer]
+    appname = "Timer"
+    origin = top-right
+    offset = 5x-30

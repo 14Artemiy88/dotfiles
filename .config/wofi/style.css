@@ -1,7 +1,7 @@
 window {
+  /*height: 100px;*/
+  all: unset;
   background-color: rgba(34,34,34,.9);
-  /* background-color: #222222; */
-  /* opacity: 0.9; */
 }
 
 * {
@@ -9,13 +9,13 @@ window {
   color: #fff;
 }
 
-#scroll {
-  padding: 0.5rem;
-}
+/*#scroll {*/
+/*  padding: 0.5rem;*/
+/*}*/
 
 #input {
 	all: unset;
-  background-color: rgba(0,0,0,.1);
+  background-color: rgba(255, 0, 0, 0);
   outline: none;
   box-shadow: none;
   /* border: 1px solid #cccccc; */

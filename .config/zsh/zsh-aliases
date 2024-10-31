@@ -13,6 +13,7 @@ alias lsd="exa -1 --color=always --icons --all"
 alias htop="btop"
 
 alias conf="cd ~/Dotfiles/.config"
+alias dots="cd ~/Dotfiles/"
 
 # alias wget2="wget2 --progress bar "
 

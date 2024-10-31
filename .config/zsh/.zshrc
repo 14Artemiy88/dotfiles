@@ -60,7 +60,7 @@ if file --mime-type $realpath | grep -qF directory; then
 elif file --mime-type $realpath | grep -qF image/; then
     chafa $realpath
 else
-    batcat --style=numbers --color=always $realpath || mediainfo $realpath 2>/dev/null
+    bat --style=numbers --color=always $realpath || mediainfo $realpath 2>/dev/null
 fi
 '
 
