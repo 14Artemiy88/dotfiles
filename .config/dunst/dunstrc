@@ -97,3 +97,26 @@
     appname = "Timer"
     origin = top-right
     offset = 5x-30
+
+[battery]
+    appname = "Battery"
+    highlight = "#00cccc"
+    frame_color = "#222222"
+
+
+[batteryfull]
+    appname = "Batteryfull"
+    highlight = "#00cc00"
+    frame_color = "#00cc00"
+
+
+[batterywarn]
+    appname = "Batterywarn"
+    highlight = "#cccc00"
+    frame_color = "#cccc00"
+
+
+[batterycrit]
+    appname = "Batterycrit"
+    highlight = "#cc0000"
+    frame_color = "#cc0000"

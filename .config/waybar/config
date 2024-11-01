@@ -65,7 +65,8 @@
         //"format": "✌️ {}",
         "format": "️  ",
         "max-length": 8,
-        "tooltip": false
+        "tooltip": false,
+        "on-click": "hyprctl dispatch submap reset"
     },
 
     "hyprland/language": {
