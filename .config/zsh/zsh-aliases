@@ -10,7 +10,7 @@ alias ssd="cd $SSD"
 # alias find="fdfind"
 # alias ls="lsd"
 alias lsd="exa -1 --color=always --icons --all"
-alias htop="btop"
+# alias htop="btop"
 
 alias conf="cd ~/Dotfiles/.config"
 alias dots="cd ~/Dotfiles/"
@@ -120,7 +120,7 @@ alias gmd="gomanagedocker"
 # alias xoff="xrandr --output DVI-D-0 --off"
 
 # Git
-alias gs="git status --short | fzf --preview '((git diff {-1} | diff-so-fancy) ; bat --style=numbers --color=always {-1})' --preview-window 'right,60%,border-left'"
+alias gs="git status --short | fzf --preview 'git diff {-1} | delta' --preview-window 'right,60%,border-left'"
 alias gd="git diff"
 alias gc="git commit -a -m"
 alias add="git add --all"

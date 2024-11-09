@@ -23,9 +23,10 @@
         :height "0"
     )
 
-    :stacking "bottom"
-    :focusable true
-	:exclusive true
+    :stacking   "bg"
+    :windowtype "dock"
+    :focusable false
+	:exclusive false
 
     (left_stuff)
 )
@@ -43,10 +44,8 @@
         (cpugraphstuff)
         (topstuff)
         (networkstatstuff)
-        (weathernow           :weather weather_now)
-        (weather_by_time_list :weather weather_day)
-        (weather_by_days_list :weather weather_week)
         (timerstuff)
+        (playerstuff)
     )
 )
 
@@ -54,30 +53,35 @@
 
 (
     defwindow right
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "300"
-        :y "5"
-        :width "0"
-        :height "0"
-    )
-
-;;    :stacking "bottom"
-    :focusable true
-
+        :monitor 0
+        :geometry (
+            geometry
+            :anchor "top left"
+            :x "330"
+            :y "5"
+            :width "0"
+            :height "0"
+        )
+    
+        :stacking   "bg"
+        :windowtype "dock"
+        :focusable false
+    	:exclusive false
+    
     (right_stuff)
 )
 
 (defwidget right_stuff []
     (box
+        :space-evenly false
         :orientation "v"
-;;        :monitor 0
         :geometry (geometry :x "331" :y "72" :anchor "top left" )
         :stacking "bg"
 
-        (volumestuff)
+;;        (volumestuff)
+        (weathernow           :weather weather_now)
+        (weather_by_time_list :weather weather_day)
+        (weather_by_days_list :weather weather_week)
     )
 )
 

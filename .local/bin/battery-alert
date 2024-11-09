@@ -45,12 +45,12 @@ elif [ "$BATTERY_LEVEL" -le $CRITICAL_LEVEL ] && [ "$BATTERY_DISCHARGING" -eq 1 
   urgent="critical"
 	name="Batterycrit"
 	touch $CRITICAL_FILE
-else
-  let "C = $BATTERY_LEVEL / 10"
-  icon="/usr/share/icons/breeze-dark/status/32/battery-0${C}0-charging.svg"
-  msg="Заряд батареи ${BATTERY_LEVEL}%"
-  urgent="low"
-	name="Battery"
+#else
+#  let "C = $BATTERY_LEVEL / 10"
+#  icon="/usr/share/icons/breeze-dark/status/32/battery-0${C}0-charging.svg"
+#  msg="Заряд батареи ${BATTERY_LEVEL}%"
+#  urgent="low"
+#	name="Battery"
 fi
 
 dunstify -a "$name" -r 9992 -h int:value:"$BATTERY_LEVEL" -i "$icon" "$msg" -u "$urgent"

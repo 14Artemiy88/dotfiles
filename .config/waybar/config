@@ -3,20 +3,50 @@
     "margin-top" : 0,
     "margin-left": 0,
     "margin-right": 0,
-    "margin-bottom": 2,
+    "margin-bottom": 0,
     "height" : 20,
 
-    // "include": ["~/.config/waybar/left.jsonc"],
-//    "include": ["left.jsonc"],
-    "include": ["~/.config/waybar/center"],
+    //////////////////////////////////////////////////////////////////
+
     "modules-left": [
       "hyprland/window"
     ],
+
+ // "include": ["~/.config/waybar/left"],
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            "": "Hyprland",
+            "Telegram (.*)": "   $1",
+            "VK Messenger (.*)": "   $1",
+            "Steam": "   $1",
+            "Krita": " ",
+            "(.*) — Dolphin": "   $1",
+            "(.*) — Kate": "󱩼  $1",
+            "(.*) - YouTube(.*)": "  $1",
+            "(.*)WhatsApp(.*)": "  $1",
+            "(.*) — Mozilla Firefox": "  $1",
+            "(.*)zsh(.*)": "  $1 $2",
+            "imv - (.*)": "  $1",
+            "tmux(.*)": "  $1",
+            "(.*) — Kdenlive": "   $1"
+        },
+        "separate-outputs": true,
+        "on-click": "killall waybar & hyprctl dispatch exec waybar",
+        "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+    },
+
+    //////////////////////////////////////////////////////////////////
+
     "modules-center": [
       "hyprland/workspaces",
     ],
+    "include": ["~/.config/waybar/center"],
+
+    //////////////////////////////////////////////////////////////////
+
     "modules-right": [
-      //  "custom/pacman",
+        "custom/pacman",
         "pulseaudio",
         "backlight",
         "cpu",
@@ -30,65 +60,41 @@
         "hyprland/submap",
     ],
 
-    "hyprland/window": {
-      "format": "{}",
-      "rewrite": {
-            "": "Hyprland",
-      //    "(.*) — config": "  $1",
-          "Telegram (.*)": "   $1",
-          "VK Messenger (.*)": "   $1",
-          "Steam": "   $1",
-          "(.*) — Dolphin": "   $1",
-          "(.*) — Kate": "󱩼  $1",
-          "(.*) - YouTube(.*)": "  $1",
-          "(.*)WhatsApp(.*)": "  $1",
-          "(.*) — Mozilla Firefox": "  $1",
-          "(.*)zsh(.*)": "  $1 $2"
+    "custom/pacman": {
+    	"format": "{}",
+    	"format-icons": ["", ""],
+    	"interval": 3600,                     // every hour
+    	// "exec": "pacman -Qu | wc -l",         // # of updates
+    	"exec": "pacman-updates",         // # of updates
+    	"exec-if": "exit 0",                  // always run; consider advanced run conditions
+    	"on-click": "konsole -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+    	"signal": 8,
+    	"tooltip-format": "{} packages",
+    },
+
+    "pulseaudio": {
+      "format": "{icon}   {volume}%",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": "<span color='red'> </span>",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
       },
-      "separate-outputs": true,
-      "on-click": "killall waybar & hyprctl dispatch exec waybar",
-      "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
+      "on-click": "on-click-right",
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
     },
-
-
-    //"custom/pacman": {
-    //    "interval": 3600,
-    //    "return-type": "json",
-    //    "exec": "pacman-updates",
-    //    "exec-if": "exit 0",
-    //    "on-click": "$TERMINAL -e paru; pkill -SIGRTMIN+8 waybar",
-    //    "signal": 8
-    //},
-
-
-    "hyprland/submap": {
-        //"format": "✌️ {}",
-        "format": "️  ",
-        "max-length": 8,
-        "tooltip": false,
-        "on-click": "hyprctl dispatch submap reset"
-    },
-
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "🇺🇸",
-        "format-ru": "🇷🇺",
-        "keyboard-name": "at-translated-set-2-keyboard"
-    },
-
-    "clock": {
-       // "format": "{:%H:%M:%S}",
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
-      "format-alt": "{:%Y-%m-%d}"
-    },
-
 
     "backlight": {
         // "device": "acpi_video1",
         "format": "{icon}  {percent}%  ",
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
-
 
     "cpu": {
         "interval": 1,
@@ -135,20 +141,25 @@
 	/// /     "on-click": "wofi-bluetooth"
 	// },
 
-    "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "{volume}% {icon} {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
-      "format-muted": " {format_source}",
-      "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", "", ""]
-      },
-      "on-click": "pavucontrol"
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇸",
+        "format-ru": "🇷🇺",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+
+    "clock": {
+      "format": "{:%H:%M:%S}",
+      "interval": 1,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "hyprland/submap": {
+        //"format": "✌ {}",
+        "format": "️  ",
+        "max-length": 8,
+        "tooltip": false,
+        "on-click": "hyprctl dispatch submap reset"
     },
 }

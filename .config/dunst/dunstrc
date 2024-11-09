@@ -39,7 +39,7 @@
     show_indicators = yes
     icon_position = left
     min_icon_size = 20
-    max_icon_size = 20
+    max_icon_size = 120
     icon_path = $HOME/.local/share/icons/dunst
     sticky_history = yes
     history_length = 20
@@ -84,6 +84,7 @@
 //    offset = 5x-30
     highlight = "#00cccc"
     frame_color = "#222222"
+    max_icon_size = 20
 
 [backlight]
     appname = "Backlight"
@@ -92,31 +93,42 @@
     highlight = "#00cccc"
     min_icon_size = 40
     frame_color = "#222222"
+    max_icon_size = 20
 
 [timer]
     appname = "Timer"
     origin = top-right
-    offset = 5x-30
+    frame_color = "#222222"
+    highlight = "#00cccc"
+    max_icon_size = 20
+
+[timerdone]
+    appname = "Timerdone"
+    origin = top-right
+    frame_color = "#cc0000"
+    highlight = "#00cccc"
+    max_icon_size = 20
 
 [battery]
     appname = "Battery"
     highlight = "#00cccc"
     frame_color = "#222222"
-
+    max_icon_size = 20
 
 [batteryfull]
     appname = "Batteryfull"
     highlight = "#00cc00"
     frame_color = "#00cc00"
-
+    max_icon_size = 20
 
 [batterywarn]
     appname = "Batterywarn"
     highlight = "#cccc00"
     frame_color = "#cccc00"
-
+    max_icon_size = 20
 
 [batterycrit]
     appname = "Batterycrit"
     highlight = "#cc0000"
     frame_color = "#cc0000"
+    max_icon_size = 20

@@ -1,0 +1,20 @@
+{
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            "": "Hyprland",
+            "Telegram (.*)": "   $1",
+            "VK Messenger (.*)": "   $1",
+            "Steam": "   $1",
+            "(.*) — Dolphin": "   $1",
+            "(.*) — Kate": "󱩼  $1",
+            "(.*) - YouTube(.*)": "  $1",
+            "(.*)WhatsApp(.*)": "  $1",
+            "(.*) — Mozilla Firefox": "  $1",
+            "(.*)zsh(.*)": "  $1 $2"
+        },
+        "separate-outputs": true,
+        "on-click": "killall waybar & hyprctl dispatch exec waybar",
+        "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+    }
+}

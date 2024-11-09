@@ -1,9 +1,12 @@
 show=drun
+
 width=40%
 height=50%
+lines=6
 prompt=Search...
-normal_window=true
 location=center
+
+normal_window=true
 gtk-dark=true
 allow_images=true
 image_size=32
@@ -11,5 +14,13 @@ insensitive=true
 allow_markup=true
 no_actions=true
 orientation=vertical
+# orientation=horisontal
 halign=fill
 content_halign=fill
+hide_scroll=true
+
+# matching=fuzzy
+insensitive=true
+columns=5
+
+pre_display_exec=true

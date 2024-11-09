@@ -29,6 +29,8 @@ prepend_previewers = [
 	{ name = "*.toml", run = "bat" },
 	{ name = "*.css", run = "bat" },
 	{ name = "*.conf", run = "bat" },
+	# { name = "*.txt", run = "bat" },
+	# { name = "*.toml", run = "bat" },
 	
 	
   # { name = "*/", run = "folder", sync = true },

@@ -6,11 +6,11 @@ export SSD="/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
 
 export ZSH="/home/artemiy/.oh-my-zsh"
 # export GOROOT="/snap/go/current"
-# export GOPATH=~/WORK/go
+export GOPATH=~/go
 # export GOPRIVATE=""
 export GISMETEO_TOKEN="61f2622cb1aab8.95463029"
 export PATH=$HOME/.local/bin:${PATH}
-# export PATH=$PATH:$(go env GOPATH)/bin
+export PATH=$PATH:$(go env GOPATH)/bin
 export PATH=$PATH:$HOME/.cargo/bin
 export PATH=$PATH:/home/linuxbrew/.linuxbrew/bin
 export PATH=$PATH:/snap/bin

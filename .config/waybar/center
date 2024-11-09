@@ -17,6 +17,9 @@
             "telegram" : "",
             "steam" : "",
             "vk" : "",
+            "krita" : "",
+            "imv" : "",
+            "kdenlive" : "",
 
 
             "title<.*youtube.*>": "", // Windows whose titles contain "youtube"

@@ -15,7 +15,7 @@
 ;;        (metric :label " " :value {EWW_CPU.cores[5].usage} :class "CPU6" )
 ;;        (metric :label " " :value {EWW_CPU.cores[6].usage} :class "CPU7" )
 ;;        (metric :label " " :value {EWW_CPU.cores[7].usage} :class "CPU8" )
-;;        (metric :label " " :value {EWW_RAM.used_mem_perc}  :class "RAM"  )
+        (metric :label " " :value {EWW_RAM.used_mem_perc}  :class "RAM"  )
       ;;  (metric :label "GPU " :value getgpu                   :class "GPU"  )
     )
 )

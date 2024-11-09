@@ -2,5 +2,6 @@
     "colorscheme": "solarized",
     "scrollbar": true,
     "scrollspeed": 4,
-    "softwrap": true
+    "softwrap": true,
+    "mkparents": true
 }

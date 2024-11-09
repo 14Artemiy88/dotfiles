@@ -1,34 +1,28 @@
-console_title_template = '{{ .Shell }} in {{ .Folder }}'
-version = 3
+version = 2
 final_space = true
+console_title_template = '{{ .Shell }} in {{ .Folder }}'
+
+[var]
+  ssh = "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4"
+  time = "15:04:05"
 
 [palette]
   cyan = 'cyan'
   darkcyan = '#00abab'
   gray = '#888888'
 
-[var]
-  ssh = '/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4'
-  time = '15:04:05'
-
-[secondary_prompt]
-  template = '❯ '
-  foreground = 'magenta'
-  background = 'transparent'
-
-[transient_prompt]
-  template = '<p:cyan,transparent> {{ now | date .Var.time }}</> ❯ '
-  background = 'transparent'
-
 [[blocks]]
   type = 'prompt'
   alignment = 'left'
 
   [[blocks.segments]]
+	type = "time"
+	style = "plain"
+	foreground = "p:darkcyan"
     template = '{{ if .Env.TMUX }} {{ .CurrentDate | date .Format }}{{ else }}{{ replaceP .Var.ssh .PWD "󱊟 SSH" }}{{ end }}'
-    foreground = 'p:darkcyan'
-    type = 'time'
-    style = 'plain'
+
+	[properties]
+	time_format = ".Var.time"
 
     [blocks.segments.properties]
       style = 'full'
@@ -38,11 +32,11 @@ final_space = true
   overflow = 'hidden'
 
   [[blocks.segments]]
-    template = '󰚭 {{ .FormattedMs }}'
-    foreground = 'p:gray'
-    background = 'transparent'
     type = 'executiontime'
     style = 'plain'
+    foreground = 'p:gray'
+    background = 'transparent'
+    template = '󰚭 {{ .FormattedMs }}'
 
     [blocks.segments.properties]
       threshold = 1000
@@ -53,7 +47,17 @@ final_space = true
   newline = true
 
   [[blocks.segments]]
-    template = ''
-    background = 'transparent'
     type = 'text'
     style = 'plain'
+    background = 'transparent'
+    template = ''
+
+[transient_prompt]
+  background = 'transparent'
+  template = '<p:cyan,transparent> {{ now | date .Var.time }}</> ❯ '
+
+[secondary_prompt]
+  foreground = 'magenta'
+  background = 'transparent'
+  template = '❯ '
+
