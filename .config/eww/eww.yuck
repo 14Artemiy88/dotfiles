@@ -57,8 +57,8 @@
         :geometry (
             geometry
             :anchor "top left"
-            :x "330"
-            :y "5"
+            :x "320"
+            :y "0"
             :width "0"
             :height "0"
         )
@@ -73,10 +73,10 @@
 
 (defwidget right_stuff []
     (box
-        :space-evenly false
         :orientation "v"
-        :geometry (geometry :x "331" :y "72" :anchor "top left" )
-        :stacking "bg"
+        :space-evenly false
+        :halign "start"
+        :valign "start"
 
 ;;        (volumestuff)
         (weathernow           :weather weather_now)

@@ -1,2 +1,4 @@
 .idea
 .config/waybar*
+.config/nvim/lua/*
+.config/nvim/binaries/*

@@ -115,3 +115,6 @@ eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/14.toml)"
 if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
   tmux attach;
 fi
+
+# плагин скачивания с ютуба  и тп
+# antigen bundle soimort/you-get

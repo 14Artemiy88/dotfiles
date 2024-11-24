@@ -14,6 +14,7 @@ alias lsd="exa -1 --color=always --icons --all"
 
 alias conf="cd ~/Dotfiles/.config"
 alias dots="cd ~/Dotfiles/"
+alias bin="cd ~/Dotfiles/.local/bin"
 
 # alias wget2="wget2 --progress bar "
 
