@@ -21,6 +21,7 @@
             "imv"      : "",
             "kdenlive" : "",
             "konsole"  : "󰞷",
+            "yad"      : "󰋖",
 
 
             "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
