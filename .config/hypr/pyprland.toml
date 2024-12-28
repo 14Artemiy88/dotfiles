@@ -7,18 +7,19 @@ plugins = [
 
 [scratchpads.term]
 animation = "fromTop"
-command = "kitty --class kitty-dropterm"
-class = "kitty-dropterm"
+command = "kitty --class dropterm"
+# command = "exec /usr/bin/warp-terminal --class dropterm"
+class = "dropterm"
 size = "75% 90%"
 position = "13% 6%"
 
 
 [scratchpads.keybind]
-animation = "fromLeft"
+animation = "fromRight"
 command = "~/.local/bin/keyhints --class keybind"
 class = "keybind"
-size = "680px 715px" # width height
-position = "10px 45px" # left top
+size = "440px 715px" # width height
+position = "700px 45px" 
 lazy = true
 
 

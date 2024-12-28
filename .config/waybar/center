@@ -7,6 +7,7 @@
         "window-rewrite": {
             // "kitty" : "",
             "kitty"    : "",
+            "warp"     : "",
             "firefox"  : "",
             "chrome"   : "",
             "wofi"     : "󰮫",
@@ -22,6 +23,7 @@
             "kdenlive" : "",
             "konsole"  : "󰞷",
             "yad"      : "󰋖",
+            "zen"      : "󰰸",
 
 
             "title<.*youtube.*>": "", // Windows whose titles contain "youtube"

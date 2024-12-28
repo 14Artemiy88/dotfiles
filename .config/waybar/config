@@ -30,7 +30,9 @@
             "imv - (.*)": "  $1",
             "tmux(.*)": "  $1",
             "(.*) — Kdenlive": "   $1",
-            "(.*) — Konsole": "󰞷   $1"
+            "(.*) — Konsole": "󰞷   $1",
+            "Zen Browser": "󰰸",
+            "(.*) — Zen Browser": "󰰸   $1",
         },
         "separate-outputs": true,
         "on-click": "killall waybar & hyprctl dispatch exec waybar",

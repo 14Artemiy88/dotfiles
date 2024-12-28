@@ -92,6 +92,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:*' switch-group ',' '.'
 ####################################
 
+
 _fzf_comprun() {
     local command=$1
     shift
@@ -113,7 +114,7 @@ export NVM_DIR="$HOME/.nvm"
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/14.toml)"
 
 if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
-  tmux attach;
+  tmux;
 fi
 
 # плагин скачивания с ютуба  и тп

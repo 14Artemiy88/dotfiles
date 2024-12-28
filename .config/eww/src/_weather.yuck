@@ -1,4 +1,4 @@
-(defpoll weather_now  :interval "29m" "scripts/weather now")
+(defpoll weather_now  :interval "20m" "scripts/weather now")
 (defpoll weather_day  :interval "1h"  "scripts/weather day")
 (defpoll weather_week :interval "1h"  "scripts/weather week")
 (defvar days '["", "Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]')

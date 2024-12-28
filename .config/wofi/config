@@ -26,7 +26,7 @@ content_halign=left
 hide_scroll=true
 # hide_search = true
 
-# matching=fuzzy
+matching=fuzzy
 
 pre_display_exec=true
 
