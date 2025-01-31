@@ -1,11 +1,16 @@
 {
+    "modules-center": [
+      "hyprland/workspaces",
+    ],
+
+
     "hyprland/workspaces": {
         "format": "<sub>{icon}</sub> {windows}",
         // "format": "{windows}",
         "format-window-separator": "  ",
         "window-rewrite-default": "",
         "window-rewrite": {
-            // "kitty" : "",
+            "dropterm" : "",
             "kitty"    : "",
             "warp"     : "",
             "firefox"  : "",
