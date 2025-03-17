@@ -8,11 +8,11 @@ function get_weather() {
     res=$(curl -H "X-Gismeteo-Token: $gismeteo_token" "https://api.gismeteo.net/v2/weather/$type/4517/$params")
 
     echo "$res"  | jq .response
-	echo "$res" |  jq .response.temperature.air.C > /run/user/1000/weather
+#	echo "$res" |  jq .response.temperature.air.C > /run/user/1000/weather
 }
 
 
 if   [[ "$1" == "now" ]];  then get_weather "current" ""
 elif [[ "$1" == "day" ]];  then get_weather "forecast" "?days=2"
-elif [[ "$1" == "week" ]]; then get_weather 'forecast/aggregate' '?days=5'
+elif [[ "$1" == "week" ]]; then get_weather "forecast/aggregate" "?days=5"
 fi
