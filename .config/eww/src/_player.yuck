@@ -19,7 +19,7 @@
         ( box :class "button" :halign "start" :orientation "v"
             (label :text {player.status} )
         )
-        ( box   :class "time"   :halign "end"   "${player.timeleft}" )
+        ( label   :class "time"   :halign "end" :text {player.timeleft}  )
         ( label :class "artist" :halign "start" :text {player.artist} :limit-width 60 )
         ( label :class "title"  :halign "start" :text {player.title}  :limit-width 60 )
         (scale

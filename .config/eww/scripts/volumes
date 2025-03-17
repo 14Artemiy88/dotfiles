@@ -1,6 +1,6 @@
 #!/bin/bash 
 
-readarray -t array <<<"$(pactl list sink-inputs | egrep "№|media.name|Громкость" | sed -e 's\Вход аудиоприёмника №\\' | sed -e 's,.* \([0-9][0-9]*\)%.*,\1,' | cut -d "\"" -f2)"
+readarray -t array <<<"$(pactl list sink-inputs | ag '№|media.name|Громкость' | sed -e 's#Вход аудиоприёмника №##' | sed -e 's#.* \([0-9][0-9]*\)%.*#\1#' | cut -d "\"" -f2)"
 
 if [ -z "${array[*]}" ]; then
     echo "[]"
@@ -9,10 +9,11 @@ fi
 
 json=""
 for (( j=0; j<${#array[@]}; j+=3 )); do
-    if [ "${array[$j+2]}" = "playback" ]; then
+	name="${array[$j+2]}"
+    if [ "$name" = "playback" ]; then
         continue
     fi
-    name=$(echo "${array[$j+2]}" | sed 's#\\#|#g' | sed 's/"/\\"/g')
+    name=$(echo "$name" | sed 's#\\#|#g' | sed 's/"/\\"/g')
 	name_buf=$(echo "$name" | iconv -t latin1)
 	if [[ $? == 0 ]]; then
 		name=$(echo "$name_buf" | iconv -f cp1251)
@@ -22,5 +23,3 @@ for (( j=0; j<${#array[@]}; j+=3 )); do
 done
 
 echo "[${json%,}]"
-name=$(echo "Çàïèñêè ýêñïåäèòîðà" | recode latin1..cp1251)
-echo "$name"

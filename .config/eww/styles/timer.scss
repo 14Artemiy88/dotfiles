@@ -27,13 +27,15 @@
     .set_custom_timer_box {
       border-radius: $br;
       min-height: 33px;
+      min-width: 33px;
       &:hover {
         background-color: $base-color;
       }
       .set_custom_timer {
         margin-right: -125px;
         padding-left: 5px;
-        border-bottom: $border;
+        color: #cccccc;
+        //border-bottom: $border;
 
       }
     }

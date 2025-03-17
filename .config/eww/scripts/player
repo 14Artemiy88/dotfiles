@@ -17,6 +17,12 @@ declare -A icons=(
 )
 
 function get_image() {
+    #    из-за проблем с youtube
+    if [[ "$string" == *"$substring"* ]]; then
+        echo "${DEFAULT_IMG}"
+        exit 0
+    fi
+
     if [[ -z "$1" ]]; then
         img=$(playerctl metadata -f '{{ mpris:artUrl }}')
         if [[ -z "$img" ]]; then
@@ -210,10 +216,14 @@ EOF
 
     local text="${DEFAULT_TEXT}"
     case "$title" in
-        *"Кинопоиск"* ) postfix=" — смотреть онлайн в хорошем качестве — Кинопоиск"; text="kinopoisk";;
-        *"Twitch"* ) postfix=" - Twitch"; text="twitch";;
-        *"VK"* ) postfix="VK Видео — смотрѣть безплатно"; text="vk video";;
-        *"Телемост"* ) get_json "" "" "${DEFAULT_TIMELEFT}" "not_use}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "telemost" "$player" "${DEFAULT_TITLE_CLASS}";;
+        *"Кинопоиск"* )
+            postfix=" — смотреть онлайн в хорошем качестве — Кинопоиск"; text="kinopoisk";;
+        *"Twitch"* )
+            postfix=" - Twitch"; text="twitch";;
+        *"VK"* )
+            postfix="VK Видео — смотрѣть безплатно"; text="vk video";;
+        *"Телемост"* )
+            get_json "" "" "${DEFAULT_TIMELEFT}" "not_use}" "${DEFAULT_POSITION}" "${DEFAULT_LENGTH}" "" "${DEFAULT_IMG}" "telemost" "$player" "${DEFAULT_TITLE_CLASS}";;
     esac
     title=${title//$postfix/};
 

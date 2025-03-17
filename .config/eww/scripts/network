@@ -12,7 +12,7 @@ declare -A icons=(
 )
 str=""
 while IFS=':' read -r name type device; do
-    if [[ $type = "tun" || $type = "bridge" ]]; then continue; fi
+    if [[ $type = "tun" || $type = "bridge" || $type = "loopback" ]]; then continue; fi
     dev="on"
     if [[ $device = "" ]]; then dev="off"; fi
     line="{ \"name\": \"$name\", \"type\": \"${icons[$type]}\", \"status\": \"$dev\" }"

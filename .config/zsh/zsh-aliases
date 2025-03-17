@@ -152,8 +152,9 @@ alias slcom="cd ~/WORK/slcom"
 alias sparta="cd ~/WORK/sparta"
 
 alias vpn="nmcli --ask con up SL_1_Dataline ; nmcli --ask con up SL_2_Оффис"
-alias vpn_on="vpn"
 alias vpn_off="nmcli --ask con down SL_1_Dataline && nmcli --ask con down SL_2_Оффис"
+alias vpn_reload="vpn_off ; vpn"
+
 
 alias start="make start && touch /run/user/1000/$(basename $(pwd))"
 alias stop="make stop && rm /run/user/1000/$(basename $(pwd)) 2>/dev/null"

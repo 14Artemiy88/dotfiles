@@ -4,9 +4,10 @@
     (box
         :orientation "h"
         :class "stuff weathernow"
-        :halign "start"
+        :space-evenly false
 
         (box
+        	:class "left_part"
             :orientation "v"
             :space-evenly false
             :halign "start"
@@ -19,12 +20,15 @@
             :class "weather_icon"
             :halign "center"
             :valign "start"
+            :width 80
             :path "images/gismeteo/new_png/${weather.icon}.png"
             :tooltip {weather.description.full}
         )
         (box
+        	:class "right_part"
             :halign "end"
             :orientation "v"
+            :width 105
             :space-evenly false
 
             (box :orientation "h" :valign "start"  :halign "end"

@@ -5,12 +5,15 @@ declare -r NET_PATH="/run/user/1000/eww_net"
 convert_bytes() {
     local bytes=$1
     local unit="B"
-    if ((bytes >= 1073741824)); then
+    if ((bytes >= 1024*1024*1024*1024)); then
+        unit="TB"
+        bytes=$(bc <<< "scale=2; $bytes / (1024*1024*1024*1024)")
+    elif ((bytes >= 1024*1024*1024)); then
         unit="GB"
-        bytes=$(bc <<< "scale=2; $bytes / 1073741824")
-    elif ((bytes >= 1048576)); then
+        bytes=$(bc <<< "scale=2; $bytes / (1024*1024*1024)")
+    elif ((bytes >= 1024*1024)); then
         unit="MB"
-        bytes=$(bc <<< "scale=2; $bytes / 1048576")
+        bytes=$(bc <<< "scale=2; $bytes / (1024*1024)")
     elif ((bytes >= 1024)); then
         unit="KB"
         bytes=$(bc <<< "scale=2; $bytes / 1024")

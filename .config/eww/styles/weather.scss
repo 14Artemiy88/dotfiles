@@ -3,6 +3,8 @@
   margin-top: 5px;
   padding: 0 14px 0 0;
 
+
+
   .temperature {
     all: unset;
     color: #00cccc;
@@ -25,41 +27,43 @@
     margin-top: 10px;
   }
 
-  .wind_arrow {
-    font-size: 35px;
-    font-family: Arrows, serif;
-    margin: 5px -10px 0 0;
-  }
-
-  .wind_speed {
-    font-family: $LED;
-    font-size: 25px;
-  }
-
-  .wind_unit {
-    font-family: $LED;
-    font-size: 15px;
-    padding: 9px 0 0 3px;
-  }
-
-  .pressure {
-    margin-top: -12px;
-
-    .pressure_value {
-      font-family: $LED;
-      font-size: 20px;
-    }
-
-    .pressure_unit {
-      font-family: $LED;
-      font-size: 10px;
-      padding: 9px 0 0 5px;
-    }
-  }
-
-  .description {
-    margin-top: -3px;
-    margin-left: -155px;
+  .right_part{
+	  .wind_arrow {
+	    font-size: 35px;
+	    font-family: Arrows, serif;
+	    margin: 5px -10px 0 0;
+	  }
+	
+	  .wind_speed {
+	    font-family: $LED;
+	    font-size: 25px;
+	  }
+	
+	  .wind_unit {
+	    font-family: $LED;
+	    font-size: 15px;
+	    padding: 9px 0 0 3px;
+	  }
+	
+	  .pressure {
+	    margin-top: -12px;
+	
+	    .pressure_value {
+	      font-family: $LED;
+	      font-size: 20px;
+	    }
+	
+	    .pressure_unit {
+	      font-family: $LED;
+	      font-size: 10px;
+	      padding: 9px 0 0 5px;
+	    }
+	  }
+	
+	  .description {
+	    margin-top: -3px;
+	    /* margin-left: -55px; */
+	  }
   }
 }
 
