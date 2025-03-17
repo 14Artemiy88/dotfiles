@@ -1,7 +1,7 @@
 local M = {}
 
 function M:peek()
-    local child = Command("batcat")
+    local child = Command("bat")
         :args({
             "--style", "numbers",
             "--color", "always",

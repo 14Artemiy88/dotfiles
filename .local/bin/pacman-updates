@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Script for use in waybar to display # of pacman updates
+
+OUTPUT="$(yay -Qu)"
+
+if [ -n "$OUTPUT" ]; then
+	echo ""
+fi
+
+exit 0

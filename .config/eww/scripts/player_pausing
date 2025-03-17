@@ -28,11 +28,7 @@ function pause() {
                 exit 0
             fi
             ;;
-        "org.telegram.desktop" | "plasma-browser-integration")
-            ${player_commands[$1]}
-            exit 0
-            ;;
-        "mopidy")
+        "org.telegram.desktop" | "plasma-browser-integration" | "mopidy")
             ${player_commands[$1]}
             exit 0
             ;;

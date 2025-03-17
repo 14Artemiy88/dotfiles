@@ -60,7 +60,7 @@ if file --mime-type $realpath | grep -qF directory; then
 elif file --mime-type $realpath | grep -qF image/; then
     chafa $realpath
 else
-    batcat --style=numbers --color=always $realpath || mediainfo $realpath 2>/dev/null
+    bat --style=numbers --color=always $realpath || mediainfo $realpath 2>/dev/null
 fi
 '
 
@@ -92,6 +92,7 @@ zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':fzf-tab:*' switch-group ',' '.'
 ####################################
 
+
 _fzf_comprun() {
     local command=$1
     shift
@@ -111,3 +112,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/14.toml)"
+
+if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
+  tmux;
+fi
+
+# плагин скачивания с ютуба  и тп
+# antigen bundle soimort/you-get

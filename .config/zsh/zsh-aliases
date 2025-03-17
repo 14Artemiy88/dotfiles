@@ -6,14 +6,15 @@ alias zzz="m ~/.zshrc"
 alias ssd="cd $SSD"
 
 # переопределение команд
-alias fd="fdfind"
 # alias lf="lfcd"
 # alias find="fdfind"
 # alias ls="lsd"
 alias lsd="exa -1 --color=always --icons --all"
-alias bat="batcat"
-alias cat="batcat"
-alias htop="btop"
+# alias htop="btop"
+
+alias conf="cd ~/Dotfiles/.config"
+alias dots="cd ~/Dotfiles/"
+alias bin="cd ~/Dotfiles/.local/bin"
 
 # alias wget2="wget2 --progress bar "
 
@@ -28,8 +29,8 @@ alias clear="clear && clear"
 alias s="sudo"
 # alias clean="yes | apt-command autoremove; yes | apt-command autoclean"
 alias clean="yes | apt-command autoremove"
-alias upd="apt-command update; yes | apt-command upgrade; clean"
-# alias apd="upd"
+alias upd="sudo yay -Syu"
+alias apd="upd"
 # alias apd="apt-command upgrade -y"
 # alias apd="pkcon update; clean; flatpak update -y"
 alias brew_apd="brew update; brew upgrade"
@@ -37,14 +38,14 @@ alias flatpack_apd="flatpak update -y"
 alias apd="upd; flatpack_apd"
 # alias apd="upd; flatpack_apd; brew_apd"
 alias del="sudo apt-get -y autoremove --purge"
-alias install="yes | apt-command install -y"
+alias install="sudo yay -S"
 alias inst="install"
 alias pinstall="$HOME/.venvs/MyEnv/bin/python -m pip install --upgrade"
 alias off="sudo shutdown -P"
 alias get_time="while sleep 1;do tput sc;tput cup 0 $(($(tput cols)-29));date;tput rc;done &"
 alias rass="~/Расширения"
 alias rocket="nohup rocketchat-desktop --no-sandbox > /dev/null &"
-alias copy="xclip -i -sel clip"
+alias copy="wl-copy"
 alias m="micro"
 alias n="nvim"
 alias cc="clear"
@@ -84,7 +85,7 @@ alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=sta
     # _describe 'note' options
 # }
 
-# alias notes="ls  ~/Notes | grep '.md' | fzf --preview 'batcat ~/Notes/{}'"
+# alias notes="ls  ~/Notes | grep '.md' | fzf --preview 'bat ~/Notes/{}'"
 
 alias wm_start="qemu-system-x86_64 \
 -enable-kvm \
@@ -120,7 +121,7 @@ alias gmd="gomanagedocker"
 # alias xoff="xrandr --output DVI-D-0 --off"
 
 # Git
-alias gs="git status --short | fzf --preview '((git diff {-1} | diff-so-fancy) ; batcat --style=numbers --color=always {-1})' --preview-window 'right,60%,border-left'"
+alias gs="git status --short | fzf --preview 'git diff {-1} | delta' --preview-window 'right,60%,border-left'"
 alias gd="git diff"
 alias gc="git commit -a -m"
 alias add="git add --all"

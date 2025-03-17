@@ -1,15 +1,36 @@
 show=drun
+
+# y=470
+# x=15
 width=40%
 height=50%
-prompt=Search...
-normal_window=true
+lines=6
+columns=5
+prompt=Поиск...
 location=center
-gtk-dark=true
+
+normal_window=true
+gtk_dark=true
 allow_images=true
 image_size=32
-insensitive=true
+insensitive=false
 allow_markup=true
-no_actions=true
-orientation=vertical
-halign=fill
-content_halign=fill
+no_actions=false
+# orientation=vertical
+orientation=horisontal
+
+halign=left
+valing=top
+content_halign=left
+
+hide_scroll=true
+# hide_search = true
+
+matching=fuzzy
+
+pre_display_exec=true
+
+filter_rate=100
+single_click=true
+
+key_expand=Tab

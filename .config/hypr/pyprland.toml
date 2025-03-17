@@ -1,0 +1,73 @@
+[pyprland]
+
+plugins = [
+  "scratchpads",
+  # "magnify",
+]
+
+[scratchpads.term]
+animation = "fromTop"
+command = "kitty --class dropterm"
+# command = "exec /usr/bin/warp-terminal --class dropterm"
+class = "dropterm"
+size = "75% 90%"
+position = "13% 6%"
+
+
+[scratchpads.keybind]
+animation = "fromRight"
+command = "~/.local/bin/keyhints --class keybind"
+class = "keybind"
+size = "440px 715px" # width height
+position = "700px 45px" 
+lazy = true
+
+
+[scratchpads.tg]
+animation = "fromLeft"
+command = "telegram-desktop --class tg"
+class = "tg"
+size = "680px 715px" # width height
+position = "10px 45px" # left top
+lazy = true
+# unfocus = "hide"
+
+[scratchpads.vk]
+animation = "fromRight"
+command = "vk --class vk"
+class = "vk"
+size = "640px 715px" # width height
+position = "700px 45px" 
+lazy = true
+# unfocus = "hide"
+
+
+#
+#[scratchpads.stb]
+#animation = "fromBottom"
+#command = "kitty --class kitty-stb sstb"
+#class = "kitty-stb"
+#lazy = true
+#size = "75% 45%"
+#
+#[scratchpads.stb-logs]
+#animation = "fromTop"
+#command = "kitty --class kitty-stb-logs stbLog"
+#class = "kitty-stb-logs"
+#lazy = true
+#size = "75% 40%"
+#
+#[scratchpads.term]
+#animation = "fromTop"
+#command = "kitty --class kitty-dropterm"
+#class = "kitty-dropterm"
+#size = "75% 60%"
+#
+#[scratchpads.volume]
+#animation = "fromRight"
+#command = "pavucontrol"
+#class = "org.pulseaudio.pavucontrol"
+#lazy = true
+#size = "40% 90%"
+#unfocus = "hide"
+#

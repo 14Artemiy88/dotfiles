@@ -1,0 +1,120 @@
+{
+ "modules-right": [
+        "custom/pacman",
+        "pulseaudio",
+        "backlight",
+        "cpu",
+        "battery",
+        // "memory",
+        "network",
+        // "bluetooth",
+        // "temperature",
+        "hyprland/language",
+        "clock",
+        "hyprland/submap",
+    ],
+
+    "custom/pacman": {
+    	"format": "{}",
+    	"format-icons": ["", ""],
+    	"interval": 3600,                     // every hour
+    	// "exec": "paru -Qu | wc -l",           // # of updates
+    	"exec": "pacman-updates",          // # of updates
+    	"exec-if": "exit 0",                  // always run; consider advanced run conditions
+    	"on-click": "konsole -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar", // update system
+    	"signal": 8,
+    	"tooltip-format": "{} packages",
+    },
+
+    "pulseaudio": {
+      "format": "{icon}   {volume}%",
+      "format-bluetooth": "{volume}% {icon} {format_source}",
+      "format-bluetooth-muted": " {icon} {format_source}",
+      "format-muted": "<span color='red'> </span>",
+      "format-icons": {
+        "headphone": "",
+        "hands-free": "",
+        "headset": "",
+        "phone": "",
+        "portable": "",
+        "car": "",
+        "default": ["", "", ""]
+      },
+      "on-click": "on-click-right",
+      "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{icon}  {percent}%  ",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "cpu": {
+        "interval": 1,
+        "format": "{icon}  {usage}%",
+        //"format": "{icon}",
+
+        "states": {
+          "critical": 85,
+          "warning": 50,
+          "good": 0
+        },
+        "format-icons": ["󰝦", "󰪞", "󰪟", "󰪠", "󰪡", "󰪢", "󰪣", "󰪤", "󰪥"],
+    },
+
+    "battery": {
+      "states": {
+        "good": 100,
+        "warning": 99,
+        "critical": 15
+      },
+      "format": "{icon}  {capacity}%",
+      "format-full": "{icon}  {capacity}%",
+      "format-charging": "󱐋  {capacity}%",
+      "format-plugged": "  {capacity}%",
+      "format-alt": "{time} {icon}",
+      "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+    },
+
+    "network": {
+      "format-wifi": "   {signalStrength}%",
+      "format-ethernet": "{cidr} ",
+      "tooltip-format": "{essid} / {ifname} / {gwaddr}",
+      "format-linked": "{ifname} (No IP) ",
+      "format-disconnected": " ⚠ ",
+      // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+      "on-click": "nmcli d wifi connect 14-5GHZ",
+    },
+
+	/// / "bluetooth": {
+	/// /     "format": "{icon}",
+	/// /     "format-icons": {
+	/// /         "enabled": "",
+	/// /         "disabled": ""
+	/// /     },
+	/// /     "on-click": "wofi-bluetooth"
+	// },
+
+    "hyprland/language": {
+        "format": "{}",
+        "format-en": "🇺🇸",
+        "format-ru": "🇷🇺",
+        "keyboard-name": "at-translated-set-2-keyboard"
+    },
+
+    "clock": {
+      "format": "{:%H:%M:%S}",
+      "interval": 1,
+      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
+      "format-alt": "{:%Y-%m-%d}"
+    },
+
+    "hyprland/submap": {
+        //"format": "✌ {}",
+        "format": "️  ",
+        "max-length": 8,
+        "tooltip": false,
+        "on-click": "hyprctl dispatch submap reset"
+    },
+}

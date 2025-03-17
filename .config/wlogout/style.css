@@ -1,0 +1,30 @@
+window {
+    font-family: Fira Code Medium;
+    font-size: 16pt;
+    background-color: #111;
+    background-image: url("/home/artemiy/Videos/hg.gif");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+button {
+    all: unset;
+
+    color: #cccccc;
+    /*border: 1px solid #cccccc;*/
+    /* background: rgba(32, 34, 34, 0.7); */
+    text-shadow: #000000 1px 1px 0, #000000 -1px -1px 0, #000000 1px -1px 0, #000000 -1px 1px 0;
+    margin: 30px;
+    
+    font-size: 60px;
+    /* transition: font-size .2s ease-in-out, margin-top .2s ease-in-out, color .2s ease-in-out; */
+}
+
+button:hover {
+    font-size: 60px;
+    margin-top: -30px;
+    color: #00cccc;
+    /*border: 1px solid #cccccc;*/
+}
+

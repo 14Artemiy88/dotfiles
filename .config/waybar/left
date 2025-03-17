@@ -1,0 +1,38 @@
+{
+    "modules-left": [
+      "hyprland/window"
+    ],
+
+    "hyprland/window": {
+        "format": "{}",
+        "rewrite": {
+            // "": " ",
+            // "": "󰣇 rch ",
+            // "": "Hyprl󰣇 nd",
+            // "": "<b>󰫵 󰬆 󰫽 󰫿 󰫹 󰫮 󰫻 󰫱</b>",
+            // "": "𝖍𝖞𝖕𝖗𝖑𝖆𝖓𝖉",
+            // "": "ℍ𝕪𝕡𝕣𝕝𝕒𝕟𝕕",
+            // "": "𝓱𝔂𝓹𝓻𝓵𝓪𝓷𝓭",
+            "": "<b>𝓗𝔂𝓹𝓻𝓵𝓪𝓷𝓭</b>",
+            "Telegram (.*)": "   $1",
+            "VK Messenger (.*)": "   $1",
+            "Steam": "   $1",
+            "Krita": " ",
+            "(.*) — Dolphin": "   $1",
+            "(.*) — Kate": "󱩼  $1",
+            "(.*) - YouTube(.*)": "  $1",
+            "(.*)WhatsApp(.*)": "  $1",
+            "(.*) — Mozilla Firefox": "  $1",
+            "(.*)zsh(.*)": "  $1 $2",
+            "imv - (.*)": "  $1",
+            "tmux(.*)": "  $1",
+            "(.*) — Kdenlive": "   $1",
+            "(.*) — Konsole": "󰞷   $1",
+            "Zen Browser": "󰰸",
+            "(.*) — Zen Browser": "󰰸   $1",
+        },
+        "separate-outputs": true,
+        "on-click": "killall waybar & hyprctl dispatch exec waybar",
+        "on-click-right": "pkill waybar & hyprctl dispatch exec waybar"
+    },
+}

@@ -1,136 +1,14 @@
 {
   "position": "top",
-    "margin-top" : 2,
-    "margin-left": 2,
-    "margin-right": 2,
-    "margin-bottom": 2,
-    "height" : 28,
-    "modules-left": [
-      "hyprland/window"
-    ],
-    "modules-center": [
-      "hyprland/workspaces",
-    ],
-    "modules-right": [
-        "pulseaudio",
-        //"cpu",
-        "battery",
-        // "memory",
-        "network",
-        // "temperature",
-        "hyprland/language",
-        "clock",
-        "hyprland/submap",
-    ],
+    "margin-top" : 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "height" : 20,
 
-    "hyprland/window": {
-      "format": "{}",
-      "rewrite": {
-//        "": "Hyprland"
-      },
-      "rewrite": {
-          "(.*) — Kate": "󱩼  $1",
-          "(.*) — Mozilla Firefox": " $1",
-          "(.*)zsh(.*)": "  $1 $2"
-      },
-      "separate-outputs": true,
-      "on-click": "pkill waybar & hyprctl dispatch exec waybar",
-      "on-click-right": "pkill waybar & hyprctl dispatch exec waybar",
-    },
-
-"hyprland/workspaces": {
-  "format": "<sub>{icon}</sub> {windows}",
-  "format-window-separator": " ",
-  "window-rewrite-default": "",
-  "window-rewrite": {
-    "kitty": "",
-    "firefox": "",
-    "chrome": "",
-    "wofi": "󰮫",
-    "idea" : "󱃖",
-    "dolphin" : "",
-    "kate" : "󱩼",
-
-    "title<.*youtube.*>": "", // Windows whose titles contain "youtube"
-    "class<firefox> title<.*github.*>": "", // Windows whose class is "firefox" and title contains "github". Note that "class" always comes first.
-    "title<.*whatsapp.*>": "", // Windows whose titles contain "youtube"
-
-
-    "foot": "", // Windows that contain "foot" in either class or title. For optimization reasons, it will only match against a title if at least one other window explicitly matches against a title.
-    "code": "󰨞",
-	},
-},
-
-"hyprland/submap": {
-    "format": "✌️ {}",
-    "max-length": 8,
-    "tooltip": false
-},
-
-    "hyprland/language": {
-        "format": "{}",
-        "format-en": "🇺🇸",
-        "format-ru": "🇷🇺",
-        "keyboard-name": "at-translated-set-2-keyboard"
-    },
-
-    "clock": {
-      "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-      "format-alt": "{:%Y-%m-%d}"
-    },
-
-   // "cpu": {
-   //   "format": " {usage}%",
-   //   "tooltip": false
-   // },
-
-   // "memory": {
-   //   "format": "{}% "
-   // },
-
-   // "temperature": {
-   //   "critical-threshold": 80,
-   //   "format": "{icon} {temperatureC}°C",
-   //   "format-icons": ["", "", ""]
-   // },
-
-    "battery": {
-      "states": {
-        "warning": 30,
-        "critical": 15
-      },
-      "format": "{icon}  {capacity}%",
-      "format-full": "{icon}  {capacity}%",
-      "format-charging": "󱐋  {capacity}%",
-      "format-plugged": "  {capacity}%",
-      "format-alt": "{time} {icon}",
-      // "format-icons": ["", "", "", "", ""]
-       "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-    },
-
-    "network": {
-      "format-wifi": "   {signalStrength}%",
-      "format-ethernet": "{cidr} ",
-      "tooltip-format": "{ifname} via {gwaddr} ",
-      "format-linked": "{ifname} (No IP) ",
-      "format-disconnected": " ⚠ ",
-      "format-alt": "{ifname}: {ipaddr}/{cidr}"
-    },
-
-    "pulseaudio": {
-      "format": "{icon}  {volume}%",
-      "format-bluetooth": "{volume}% {icon} {format_source}",
-      "format-bluetooth-muted": " {icon} {format_source}",
-      "format-muted": " {format_source}",
-      "format-icons": {
-        "headphone": "",
-        "hands-free": "",
-        "headset": "",
-        "phone": "",
-        "portable": "",
-        "car": "",
-        "default": ["", "", ""]
-      },
-      "on-click": "pavucontrol"
-    },
+	"include": [
+		"~/.config/waybar/left",
+		"~/.config/waybar/center",
+		"~/.config/waybar/right",
+	],
 }

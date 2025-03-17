@@ -7,3 +7,8 @@ desc = "Cd to 2Tb"
 on   = [ "g", "s" ]
 run  = "cd /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/"
 desc = "Cd to SSD"
+
+[[manager.prepend_keymap]]
+on   = [ "g", "d" ]
+run  = "cd /home/artemiy/Downloads"
+desc = "Downloads"
