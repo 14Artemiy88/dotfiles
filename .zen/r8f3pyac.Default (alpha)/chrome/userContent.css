@@ -1,0 +1,982 @@
+
+@-moz-document domain(sima-land.ru) {
+    body,
+    html {
+        background: #FFFFFF !important;
+    }
+}
+
+
+@-moz-document domain(gitlab.sima-land.ru) {
+    body,
+    html ,
+    .astronav-items,
+    .gl-dark .merge-request-tabs-holder,
+    .right-sidebar:not(.right-sidebar-merge-requests){
+        background: transparent !important;
+    }
+    body {
+        color: #ccc;
+    }
+    .right-sidebar:not(.right-sidebar-merge-requests) {
+        border: none !important;
+    }
+}
+
+@-moz-document domain(hd.kinopoisk.ru) {
+    body,
+    html,
+    .styles_body__XTb_o,
+    .Footer_root__yxLAr {
+        background: transparent !important;
+    }
+}
+
+
+@-moz-document domain(web.whatsapp.com) {
+    body,
+    html ,
+    .two,
+    ._ajx_,
+    .xnpuxes {
+        background: transparent !important;
+    }
+}
+
+@-moz-document domain(vk.com) {
+    body,
+    html,
+    .ProfileWrapper__root.vkui__root,
+    :is(.VKCOMMessenger__integrationRoot .MEAppConfig, .VKCOMMessenger__integrationRoot.MEAppConfig).MEAppConfig__withoutBubbles.MEAppConfig__withoutBubbles {
+        background-color: transparent !important;
+    }
+
+    .FCPanel {
+        display: none;
+    }
+
+    .MEApp__content {
+        margin-left: 20px;
+    }
+
+    .side_bar_inner {
+        margin-top: 42px !important;
+        position: fixed !important;
+        padding: 15px 10px 10px !important;
+        margin-left: -5px !important;
+        top: 0;
+    }
+}
+
+
+@-moz-document domain(telemost.yandex.ru) {
+    body, html {
+        background-color: transparent !important;
+    }
+}
+
+
+
+
+@-moz-document domain(zen-browser.app) {
+    body,
+    html {
+        background: transparent !important;
+    }
+    .astronav-items{
+        background: transparent !important;
+    }
+}
+
+@-moz-document domain(reddit.com) {
+    body,
+    html {
+        background: transparent !important;
+    }
+    #comment-tree {
+        background: transparent !important;
+    }
+    .bg-neutral-background,
+    .bg-neutral-background-weak {
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+    .bg-\[color\:var\(--shreddit-content-background\)\] {
+        background-color: transparent !important;
+    }
+    .threadline,
+    .shreddit-post,
+    aside,
+    comment-body-header,
+    shreddit-comment-tree {
+        background-color: transparent !important;
+    }
+}
+
+@-moz-document domain(chatgpt.com) {
+    body, html,
+    .bg-token-main-surface-primary, /* Navbar */
+    .bg-token-sidebar-surface-primary, /* Sidebar */
+    .bg-token-sidebar-surface-primary * /* All sidebar elements */ {
+        background: transparent !important;
+    }
+}
+
+@-moz-document domain(github.com) {
+    body,
+    html,
+    header,
+    #repository-container-header,
+    .gh-header,
+    .bgColor-muted,
+    section,
+    .feed-background,
+    .color-bg-default {
+        background-color: transparent !important;
+    }
+
+    .feed-item-content,
+    .discussion-timeline-actions {
+        background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+@-moz-document domain(google.com) {
+    .sfbg {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(20px);
+    }
+    body,
+    html,
+    .f6F9Be,
+    div#search > * {
+        background-color: transparent !important;
+    }
+    .g,
+    .appbar {
+        background-color: transparent !important;
+    }
+    div#rso {
+        * {
+            background-color: transparent !important;
+        }
+    }
+    div#cnt > div {
+    }
+    #gb{
+        background-color: transparent !important;
+    }
+    .RNNXgb.RNNXgb{
+        background-color: rgb(179, 200, 207,0.4) !important;
+    }
+}
+
+@-moz-document domain(instagram.com){
+    *{
+        background-color: transparent !important;
+    }
+    div.xixxii4:nth-child(2){
+        background-color: rgba(0, 0, 0, 0.15) !important;
+        border-right: transparent !important;
+        border-radius: 10px !important;
+    }
+    div.x1hnuoi9:nth-child(1) > div:nth-child(1){
+        background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+    .xseo6mj{
+        padding-top: 10px !important;
+        background-color: rgba(0, 0, 0, 0.15) !important;
+        border-radius: 5px !important;
+    }
+    .x1uipg7g{
+        border-left: transparent !important;
+        border-right: transparent !important;
+    }
+    div.xjp7ctv:nth-child(1) > div:nth-child(1) > div:nth-child(2){
+        background-color: rgba(0, 0, 0, 0.1) !important;
+        border-radius: 5px !important;
+    }
+    *{
+        --mwp-message-row-background: transparent !important;
+    }
+    .x1u3tz30{
+        background-color: rgba(0, 0, 0, 0.55) !important;
+        border-radius: 5px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    .xmnaoh6 > div:nth-child(1) > div:nth-child(1){
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        background-color: rgba(0, 0, 0, 0.15) !important;
+        border-radius: 10px !important;
+    }
+    .x1p0ryx0{
+        border-right: 0 !important;
+    }
+    .xq9evs9{
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border-radius: 5px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    .x1l895ks:hover{
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        border-radius: 5px !important;
+    }
+    .x19g9edo{
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        border-radius: 5px !important;
+    }
+    .xrrpcnn{
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        border-radius: 1.5rem !important;
+    }
+    .xpmdkuv{
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-radius: 1.5rem !important;
+    }
+    div.x1afcbsf{
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+    .x1yvgwvq{
+        background-color: rgba(255, 255, 255, 0.2) !important;
+        border-radius: 1rem !important;
+    }
+    .xleuxlb > div:nth-child(1){
+        border-right: transparent !important;
+    }
+    .x1tu34mt{
+        background-color: rgb(var(--ig-primary-button)) !important;
+    }
+
+}
+
+@-moz-document domain(youtube.com) {
+  html[dark], #background {
+          background: var(--content-bg) !important;
+      }
+      #guide-inner-content {
+          scrollbar-width: none !important;
+      }
+      :root {
+          --yt-spec-base-background: var(--stacking-bg) !important;
+          --app-drawer-content-container-background-color: var(--stacking-bg) !important;
+          --dark-theme-background-color: var(--stacking-bg) !important;
+          --efyt-control-bar-background-color: var(--stacking-bg) !important;
+          --efyt-control-bar-tooltip-background-color: var(--stacking-bg) !important;
+          --paper-dialog-background-color: var(--stacking-bg) !important;
+          --paper-listbox-background-color: var(--stacking-bg) !important;
+          --paper-menu-background-color: var(--stacking-bg) !important;
+          --yt-live-chat-action-panel-background-color-transparent: var(--stacking-bg) !important;
+          --yt-live-chat-additional-inline-action-button-background-color: var(--stacking-bg) !important;
+          --yt-live-chat-additional-inline-action-button-background-color-hover: var(--stacking-bg) !important;
+          --yt-live-chat-additive-background-inverse: var(--stacking-bg) !important;
+          --yt-live-chat-author-chip-verified-background-color: var(--stacking-bg) !important;
+          --yt-live-chat-automod-button-background-color: var(--stacking-bg) !important;
+          --yt-live-chat-automod-button-background-color-hover: var(--stacking-bg) !important;
+          --yt-live-chat-background-color: var(--stacking-bg) !important;;
+          --yt-live-chat-button-dark-background-color: var(--stacking-bg) !important;
+          --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
+          --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
+      }
+      #chips-wrapper{
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(10px) !important;
+      }
+  }
+
+@-moz-document domain(threads.net){
+    *{
+        background-color: transparent !important;
+    }
+    .x7c8izy{
+        background-color: rgba(0, 0, 0, 0.15) !important;
+    }
+    .xjbqb8w:hover{
+        background-color: rgba(0, 0, 0, 0.3) !important;
+        border-radius: 10px !important;
+    }
+    div.x1pq812k:nth-child(2){
+        background-color: rgba(0, 0, 0, 0.15) !important;
+        border-radius: 15px !important;
+    }
+    div.x1afcbsf:nth-child(1) > div:nth-child(2){
+        background-color: rgba(0, 0, 0, 0.7) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(8px) !important;
+    }
+    .x1e3a9a0{
+        background-color: rgba(0, 0, 0, 0.4) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(8px) !important;
+    }
+    div.xfex06f:nth-child(2){
+        background-color: rgba(255, 255, 255, 0.15) !important;
+        border-radius: 20px !important;
+        backdrop-filter: blur(20px) !important;
+    }
+    .x1pim928{
+        box-shadow: none !important;
+    }
+    .x13fuv20{
+        border-top-style: none !important;
+    }
+    .xu3j5b3{
+        border-right-style: none !important;
+    }
+    .x26u7qi{
+        border-left-style: none !important;
+    }
+    .x1l19134{
+        border-bottom: transparent !important;
+        margin-top: 8px !important;
+    }
+    div.xz401s1:nth-child(3){
+        background-color: rgba(255, 255, 255, 0.15) !important;
+    }
+}
+
+@-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing), url(chrome://browser/content/browser.xul) {
+    body {
+        width: 100%;
+        height: 100vh;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    body::before {
+        content: "";
+        position: absolute;
+        height: 130vh;
+        width: auto;
+        aspect-ratio: 1/1 !important;
+        transform: translate(-50%, -50%);
+        top:100%;
+        left:100%;
+        background-color: #ffffff; /* Color fill */
+        mask-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>');
+        mask-repeat: no-repeat;
+        mask-position: center;
+        opacity: 5% !important;
+    }
+}
+
+@-moz-document url(about:home), url(about:newtab){
+    :root {
+        --newtab-background-color: rgba(43, 42, 51, 0.0) !important;
+    }
+
+    .search-wrapper {
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top:50% !important;
+        left: 50% !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .logo {
+        aspect-ratio: 1/1 !important;
+
+        background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%237493f1; opacity:90%}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important ;
+
+        background-position: center;
+        background-size: 80px !important;
+        width: fit-content !important;
+        height: 80px !important;
+    }
+
+    .wordmark {
+        opacity: 80%;
+        background-size: 172px !important;
+        width: 172px !important;
+        height: 81px !important;
+    }
+
+    .search-handoff-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-evenly;
+        background-color: rgba(128, 128, 128, 0.2) !important;
+        backdrop-filter: blur(20px) !important;
+    }
+
+    .search-inner-wrapper .fake-editable {
+        opacity: 10% !important;
+        border:1px solid white !important;
+    }
+
+    .search-inner-wrapper {
+        background-color: transparent !important;
+        backdrop-filter: blur(10px) !important;
+        display: none !important;
+    }
+    .search-wrapper .search-inner-wrapper {
+        border-radius: 10px !important;
+    }
+
+    .logo-and-wordmark {
+        margin-block-end: 14px !important;
+    }
+}
+
+@-moz-document domain(monkeytype.com) {
+    body {
+        background: rgba(0, 0, 0, 0.3) !important;
+    }
+}
+
+@-moz-document domain(discord.com) {
+    :root {
+        .layer_cd0de5 :is([role="dialog"], .streamPreview_adbea6) {
+            background: hsl(var(--primary-700-hsl)) !important;
+        }
+
+        --primary-560: rgba(0, 0, 0, 0.05) !important;
+        --primary-600: rgba(0, 0, 0, 0.05) !important;
+        --primary-630: rgba(0, 0, 0, 0.05) !important;
+        --primary-645: rgba(0, 0, 0, 0.05) !important;
+        --primary-660: rgba(0, 0, 0, 0.05) !important;
+        --primary-700: rgba(0, 0, 0, 0.05) !important;
+        --primary-730: rgba(0, 0, 0, 0.05) !important;
+        --primary-760: rgba(0, 0, 0, 0.05) !important;
+        --primary-830: rgba(0, 0, 0, 0.05) !important;
+        --primary-860: rgba(0, 0, 0, 0.05) !important;
+        --primary-900: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    [class^="focusLock_"] {
+        --saturation-factor: 1;
+        --primary-600: hsl(var(--primary-600-hsl) / 1) !important;
+        --primary-600-hsl: 222.857 calc(var(--saturation-factor, 1) * 6.667%)
+        20.588% !important;
+        --modal-background: var(--primary-600);
+    }
+
+    .no-webkit-scrollbar * {
+        scrollbar-width: none !important;
+    }
+}
+
+@-moz-document domain(x.com) {
+    :root {
+        --theme-popup: rgba(0, 0, 0, 0.8);
+        --theme-bg-dim: rgba(0 ,0, 0, 0.4);
+    }
+
+    body {
+        background-color: var(--theme-bg-dim) !important;
+    }
+
+    [data-testid="primaryColumn"],
+    [aria-label="Trending"] > * > *,
+    [aria-label="Home timeline"] > *> *,
+    [aria-label="Search"] > * {
+        background: transparent !important;
+    }
+
+    select,
+    [data-testid="Dropdown"],
+    [data-testid="hoverCardParent"],
+    [data-testid="DMDrawer"] > div,
+    div[role="dialog"],
+    div[role="listbox"],
+    div[role="radio"] {
+        background: var(--theme-popup) !important;
+    }
+
+    .r-kemksi, .r-5zmot {
+        background: transparent !important;
+    }
+}
+
+@-moz-document domain(priv.au) {
+    html {
+        background: transparent !important;
+    }
+}
+
+/* ==== PDF viewer tweaks ====  entierly from natsumi*/
+
+@keyframes pdfjs-appear {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes secondary-appear {
+    0% {
+        opacity: 0;
+        margin-top: -10px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-top: 0;
+    }
+}
+
+@keyframes properties-appear {
+    0% {
+        opacity: 0;
+        top: 50px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+* {
+    /* Colors */
+    --natsumi-primary-color: var(--natsumi-pages-accent-color, #aac7ff);
+    --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+    --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%);
+    --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 2%, white 98%);
+    --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+
+    @media (prefers-color-scheme: dark) {
+        --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #202020 80%);
+        --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #202020 70%);
+        --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 1%, #202020 99%);
+        --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+
+        @media (-moz-bool-pref: 'zen.theme.color-prefs.colorful') {
+            --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%);
+            --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 40%, black 60%);
+            --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 15%, black 85%);
+            --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%);
+        }
+    }
+
+    /* Glass effect */
+    --natsumi-glass-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent);
+    --natsumi-glass-blur-radius: var(--glass-blur-radius, 10px);
+    --natsumi-glass-shadow-size: var(--glass-shadow-size, 10px);
+    --natsumi-glass-shadow-opacity: var(--glass-shadow-opacity, 75%);
+
+    /* pdf.js */
+    --natsumi-pdfjs-topbar-max-width: var(--pdfjs-topbar-max-width, 750px);
+}
+
+@media not (-moz-bool-pref: "natsumi.pdfjs.disabled") {
+    html[mozdisallowselectionprint] {
+        &:has(head link:nth-of-type(1)[href^="resource://pdf.js"]) {
+            --natsumi-colors-border: color-mix(in srgb, var(--natsumi-colors-secondary) 80%, black 20%);
+            --toolbarbutton-active-background: rgba(255, 255, 255, 0.9);
+            --toolbarbutton-hover-background: color-mix(in srgb, #202020 10%, transparent);
+
+            @media (prefers-color-scheme: dark) {
+                --toolbarbutton-active-background: color-mix(in srgb, var(--natsumi-primary-color) 50%, rgba(255, 255, 255, .1));
+                --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent);
+            }
+
+            body {
+                @media (prefers-color-scheme: dark) {
+                    background-color: transparent !important;
+                }
+            }
+            div.page:nth-child(1) > div:nth-child(1) > canvas:nth-child(1){
+
+                border-radius: 5px !important;
+            }
+
+
+            #viewerContainer {
+                inset: 0 !important;
+
+                #viewer .page:first-of-type {
+                    margin-top: 60px !important;
+                }
+            }
+
+            #toolbarContainer, #sidebarContainer {
+                background: var(--natsumi-glass-background) !important;
+                backdrop-filter: blur(10px);
+                border-radius: 10px;
+            }
+
+            #toolbarContainer {
+                position: absolute !important;
+                top: 5px !important;
+                left: 50% !important;
+                transform: translate(-50%, 0);
+                width: calc(100% - 10px) !important;
+                max-width: min(var(--natsumi-pdfjs-topbar-max-width), calc(100% - 10px)) !important;
+                border-radius: 10px;
+                padding-top: 5px !important;
+                padding-bottom: 5px !important;
+                height: calc(var(--toolbar-height) + 10px) !important;
+                border: 1px solid rgba(20, 20, 20, 0.2) !important;
+                box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+                animation: pdfjs-appear 0.3s ease;
+                overflow: hidden !important;
+
+                @media (prefers-color-scheme: dark) {
+                    border-color: rgba(235, 235, 235, 0.3) !important;
+                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
+                }
+
+                &:has(#loadingBar.hidden) {
+                    overflow: visible !important;
+                }
+
+                #toolbarViewer {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+
+                .doorHangerRight {
+                    padding: 5px !important;
+                    top: 40px !important;
+                    right: -7px !important;
+                    background: var(--natsumi-glass-background) !important;
+                    backdrop-filter: blur(10px);
+                    border-radius: 10px !important;
+                    border: 1px solid rgba(20, 20, 20, 0.2) !important;
+                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+                    animation: secondary-appear 0.2s ease;
+
+                    &.hidden {
+                        animation: none !important;
+                    }
+
+                    @media (prefers-color-scheme: dark) {
+                        border-color: rgba(235, 235, 235, 0.3) !important;
+                        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
+                    }
+
+                    &::before, &::after {
+                        display: none !important;
+                    }
+                }
+
+                .thicknessPicker {
+                    &::before, &::after {
+                        @media (prefers-color-scheme: dark) {
+                            background-color: white !important;
+                        }
+                    }
+                }
+
+                #loadingBar {
+                    top: unset !important;
+                    bottom: 0 !important;
+                    border: none !important;
+
+                    .progress {
+                        background-color: var(--natsumi-primary-color) !important;
+                    }
+                }
+            }
+
+            #sidebarContainer {
+                height: calc(100% - 62px) !important;
+                left: -5px !important;
+                top: auto !important;
+                bottom: 5px !important;
+                opacity: 0 !important;
+                transition: left 0.2s ease, opacity 0.2s ease !important;
+                border: 1px solid rgba(20, 20, 20, 0.2) !important;
+                box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+
+                @media (prefers-color-scheme: dark) {
+                    border-color: rgba(235, 235, 235, 0.3) !important;
+                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
+                }
+
+                #toolbarSidebar {
+                    background: transparent !important;
+                    box-shadow: none !important;
+                    padding: 5px !important;
+                    height: calc(var(--toolbar-height) + 10px) !important;
+                }
+
+                #sidebarContent {
+                    margin-top: 10px !important;
+                    box-shadow: none !important;
+                }
+
+                .treeItem {
+                    a, .treeItems {
+                        border-radius: 5px !important;
+                        transition: background-color 0.2s ease;
+                    }
+
+                    .treeItemToggler {
+                        &::before {
+                            background-color: transparent !important;
+                            mask-image: none !important;
+                            background-image: url('chrome://browser/skin/zen-icons/arrow-down.svg') !important;
+
+                            @media (prefers-color-scheme: dark) {
+                                filter: invert();
+                            }
+                        }
+
+                        &.treeItemsHidden::before {
+                            background-image: url('chrome://browser/skin/zen-icons/arrow-right.svg') !important;
+                        }
+                    }
+                }
+
+                .thumbnail {
+                    margin-bottom: 22px !important;
+                    transition: border-color 0.2s ease;
+
+                    &::after {
+                        content: attr(data-page-number);
+                        display: block;
+                        color: black;
+                        width: 100%;
+                        margin-top: 8px;
+                        text-align: center;
+
+                        @media (prefers-color-scheme: dark) {
+                            color: white;
+                        }
+                    }
+                }
+            }
+
+            #outerContainer.sidebarOpen #sidebarContainer {
+                left: 5px !important;
+                opacity: 1 !important;
+            }
+
+            #scaleSelectContainer {
+                border-radius: 4px !important;
+                overflow: hidden !important;
+
+                select {
+                    background-color: #f1f1f1 !important;
+
+                    @media (prefers-color-scheme: dark) {
+                        background-color: #363636 !important;
+                    }
+                }
+            }
+
+            #pageNumber {
+                border-radius: 4px !important;
+                overflow: hidden !important;
+                background-color: #ffffff !important;
+                border-color: var(--natsumi-colors-border) !important;
+
+                @media (prefers-color-scheme: dark) {
+                    background-color: #23222b !important;
+                }
+            }
+
+            .verticalToolbarSeparator, .splitToolbarButtonSeparator, .horizontalToolbarSeparator, .separator {
+                border-color: rgba(20, 20, 20, 0.2) !important;
+
+                @media (prefers-color-scheme: dark) {
+                    border-color: rgba(235, 235, 235, 0.3) !important;
+                }
+            }
+
+            #editorHighlightVisibility .divider {
+                background-color: rgba(20, 20, 20, 0.2) !important;
+
+                @media (prefers-color-scheme: dark) {
+                    background-color: rgba(235, 235, 235, 0.3) !important;
+                }
+            }
+
+            .toolbarButton {
+                border-radius: 6px !important;
+                transition: background-color 0.2s ease;
+
+                &:hover {
+                    background-color: var(--toolbarbutton-hover-background) !important;
+                }
+
+                &.toggled {
+                    background-color: var(--toolbarbutton-active-background) !important;
+                }
+            }
+
+            /* Document properties */
+
+            #documentPropertiesDialog {
+                background: var(--natsumi-glass-background) !important;
+                backdrop-filter: blur(10px);
+                border-radius: 10px !important;
+                border: 1px solid rgba(20, 20, 20, 0.2) !important;
+                box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
+
+                @media (prefers-color-scheme: dark) {
+                    border-color: rgba(235, 235, 235, 0.3) !important;
+                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
+                }
+
+                &:is([open]) {
+                    animation: properties-appear 0.3s ease !important;
+                }
+
+                #documentPropertiesClose {
+                    border-radius: 5px !important;
+                    background-color: #f1f1f1 !important;
+
+                    @media (prefers-color-scheme: dark) {
+                        background-color: #363636 !important;
+                    }
+                }
+            }
+
+            /* Topbar buttons */
+
+            #previous::before {
+                mask-image: url('chrome://browser/skin/zen-icons/arrow-up.svg') !important;
+            }
+
+            #next::before {
+                mask-image: url('chrome://browser/skin/zen-icons/arrow-down.svg') !important;
+            }
+
+            #zoomOutButton::before {
+                mask-image: url('chrome://browser/skin/zen-icons/zoom-out.svg') !important;
+            }
+
+            #zoomInButton::before {
+                mask-image: url('chrome://browser/skin/zen-icons/plus.svg') !important;
+            }
+
+            #sidebarToggleButton::before {
+                mask-image: url('chrome://browser/skin/sidebars.svg') !important;
+            }
+
+            #editorHighlightButton::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-editorHighlight.svg') !important;
+            }
+
+            #editorFreeTextButton::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-editorFreeText.svg') !important;
+            }
+
+            #editorInkButton::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-editorInk.svg') !important;
+            }
+
+            #editorStampButton::before {
+                mask-image: url('chrome://browser/skin/zen-icons/canvas.svg') !important;
+            }
+
+            #secondaryPrint::before, #printButton::before {
+                mask-image: url('chrome://browser/skin/zen-icons/print.svg') !important;
+            }
+
+            #secondaryDownload::before, #downloadButton::before {
+                mask-image: url('chrome://browser/skin/zen-icons/save.svg') !important;
+            }
+
+            #presentationMode::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-presentationMode.svg') !important;
+            }
+
+            #viewBookmark::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-bookmark.svg') !important;
+            }
+
+            #firstPage::before {
+                mask-image: url('chrome://browser/skin/zen-icons/arrow-up.svg') !important;
+            }
+
+            #lastPage::before {
+                mask-image: url('chrome://browser/skin/zen-icons/arrow-down.svg') !important;
+            }
+
+            #pageRotateCw::before {
+                mask-image: url('chrome://browser/skin/zen-icons/reload.svg') !important;
+            }
+
+            #pageRotateCcw::before {
+                transform: scaleX(-1);
+                mask-image: url('chrome://browser/skin/zen-icons/reload.svg') !important;
+            }
+
+            #cursorSelectTool::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-selectTool.svg') !important;
+            }
+
+            #cursorHandTool::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-handTool.svg') !important;
+            }
+
+            #scrollPage::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollPage.svg') !important;
+            }
+
+            #scrollVertical::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollVertical.svg') !important;
+            }
+
+            #scrollHorizontal::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollHorizontal.svg') !important;
+            }
+
+            #scrollWrapped::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollWrapped.svg') !important;
+            }
+
+            #spreadNone::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-spreadNone.svg') !important;
+            }
+
+            #spreadOdd::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-spreadOdd.svg') !important;
+            }
+
+            #spreadEven::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-spreadEven.svg') !important;
+            }
+
+            #documentProperties::before {
+                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-documentProperties.svg') !important;
+            }
+
+            #editorStampAddImage::before {
+                mask-image: url('chrome://browser/skin/zen-icons/plus.svg') !important;
+            }
+
+            #secondaryToolbarToggleButton::before {
+                mask-image: url('chrome://browser/skin/zen-icons/arrow-right.svg') !important;
+            }
+
+            /* Sidebar buttons */
+
+            #viewThumbnail::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewThumbnail.svg') !important;
+            }
+
+            #viewOutline::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewOutline.svg') !important;
+            }
+
+            #viewAttachments::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewAttachments.svg') !important;
+            }
+
+            #viewLayers::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewLayers.svg') !important;
+            }
+
+            #currentOutlineItem::before {
+                mask-image: url('resource://pdf.js/web/images/toolbarButton-currentOutlineItem.svg') !important;
+            }
+
+            /* Checked buttons */
+
+            #secondaryToolbarButtonContainer .toolbarButton[aria-checked="true"]::before {
+                mask-image: url('chrome://browser/skin/zen-icons/checkmark.svg') !important;
+            }
+        }
+    }
+}

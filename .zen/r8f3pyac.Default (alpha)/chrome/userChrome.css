@@ -1,0 +1,225 @@
+/*@import url("tabgroups.css");*/
+
+:root {
+    --zen-main-browser-background: #222222dd !important;
+}
+
+& #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer * {
+    background: transparent !important;
+
+
+    findbar {
+        background: #222222cc !important;
+        border-radius: var(--zen-border-radius);
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
+        border: 1px solid var(--zen-colors-border);
+        padding: var(--zen-toolbox-padding) !important;
+        position: fixed;
+        z-index: 1;
+        width: 90% !important;
+        bottom: 10px !important;
+        left: 0.6vw !important;
+    }
+}
+
+
+/* Better History */
+#sidebar-box[sidebarcommand="viewHistorySidebar"] {
+    background-color: var(--zen-themed-toolbar-bg) !important;
+    border-radius: var(--zen-border-radius);
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
+    border: 1px solid var(--zen-colors-border);
+    padding: var(--zen-toolbox-padding) !important;
+    position: fixed;
+    z-index: 1;
+    height: 80vh !important;
+    width: 20em !important;
+    top: 10vh !important;
+    left: 0.6vw !important;
+}
+
+
+/* Hide Three Dots - Make Transparent, Don't Hide To Enable Panels */
+#PanelUI-button {
+    display: none;
+}
+
+/* Hide Navbar Buttons - Preferences, Sidebar, and Profile */
+/*#preferences-button,*/
+/*#zen-expand-sidebar-button,*/
+#zen-profile-button {
+    display: none;
+}
+
+/* КРЕСТИК */
+.titlebar-button:hover > image {
+    /*background: none !important;*/
+    /*color: #cc0000 !important;*/
+}
+
+
+.tab-context-line {
+    display: none !important;
+}
+
+#unified-extensions-button {
+    display: none !important;
+}
+
+#nav-bar {
+    background: none !important;
+}
+
+#nav-bar {
+    background: none !important;
+
+}
+
+
+#zen-appcontent-navbar-container {
+    padding: 3px !important;
+    width: 80% !important;
+    left: 270px !important;
+}
+
+#urlbar-container {
+    background: none !important;
+}
+
+#urlbar-input {
+    /*padding-left: 10px !important;*/
+}
+
+
+#urlbar:not([focused="true"]):not([breakout-extend="true"]) > #urlbar-background {
+    background: color-mix(
+            in srgb,
+            var(--tab-hover-background-color) 10%,
+            transparent
+    ) !important;
+}
+
+#urlbar [id$="-button"] {
+    display: none;
+}
+
+#urlbar [id$="-container"] {
+    display: none;
+}
+
+#urlbar [id$="-box"] {
+    color: #cccccc !important;
+}
+
+
+#TabsToolbar {
+}
+
+.browserContainer {
+}
+
+
+#tabbrowser-tabs {
+    background: none !important;
+
+    & .tabbrowser-tab {
+        .tab-text {
+            filter: glow(2);
+        }
+
+        .tab-background {
+            background: color-mix(
+                    in srgb,
+                    var(--identity-icon-color) 20%,
+                    transparent
+            ) !important;
+            border-left: 2px solid var(--identity-icon-color) !important;
+        }
+
+        &[selected] {
+            .tab-icon-image {
+                background: none !important;
+            }
+
+            .tab-text {
+                color: #ffffff;
+                border-bottom: none !important;
+            }
+
+            .tab-background {
+                border: 1px solid var(--identity-icon-color, #666666) !important;
+                box-shadow: none !important;
+                border-radius: 5px !important;
+                background: none !important;
+                filter: glow(2);
+            }
+        }
+    }
+}
+
+
+/* ЗАТЕМНЕНИЕ ВЫГРУЖЕНЫХ */
+@media (-moz-bool-pref: "uc.tabs.dim_unloaded") {
+    #tabbrowser-tabs {
+        & .tabbrowser-tab {
+            @media (-moz-bool-pref: "zen.tabs.dim-pending") {
+                &[pending="true"] {
+                    .tab-context-line {
+                        opacity: 1;
+                    }
+
+                    .tab-text {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+#alltabs-button {
+    /*display: none !important;*/
+}
+
+#vertical-tabs-newtab-button {
+    /*display: none !important;*/
+}
+
+#zen-profile-button {
+    /*display: none !important;*/
+}
+
+#zen-expand-sidebar-button {
+    /*display: none !important;*/
+}
+
+#zen-bookmark-button {
+    /*display: none !important;*/
+}
+
+#zen-history-button {
+    /*display: none !important;*/
+}
+
+#zen-preferences-button {
+    /*display: none !important;*/
+}
+
+#zen-sidepanel-button {
+    /*display: none !important;*/
+}
+
+#zen-sidebar-icons-wrapper {
+    padding-top: 0px !important;
+}
+
+#zen-sidebar-icons-wrapper {
+    /*display: none !important;*/
+}
+
+#TabsToolbar-customization-target {
+    /*height: 100%;*/
+    /*min-width: var(--zen-sidebar-action-button-width);*/
+}
+
