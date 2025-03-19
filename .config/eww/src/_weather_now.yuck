@@ -44,7 +44,7 @@
                 :class "description"
                 :halign "end"
                 :valign "start"
-               ;; :limit-width 15
+                :limit-width 15
                 :show-truncated false
                 :tooltip {weather.description.full}
                 :text {weather.description.full}

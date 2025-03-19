@@ -1,4 +1,10 @@
 
+@-moz-document domain(tbank.ru) {
+    body,
+    html {
+        background: #FFFFFF !important;
+    }
+}
 @-moz-document domain(sima-land.ru) {
     body,
     html {
@@ -12,7 +18,8 @@
     html ,
     .astronav-items,
     .gl-dark .merge-request-tabs-holder,
-    .right-sidebar:not(.right-sidebar-merge-requests){
+    .right-sidebar:not(.right-sidebar-merge-requests),
+    .gl-bg-gray-50 {
         background: transparent !important;
     }
     body {
@@ -130,7 +137,8 @@
     .bgColor-muted,
     section,
     .feed-background,
-    .color-bg-default {
+    .color-bg-default,
+    .dxnHPp{
         background-color: transparent !important;
     }
 
