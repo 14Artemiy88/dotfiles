@@ -32,11 +32,3 @@
     )
 )
 
-(
-    defwindow networks
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (geometry :x "331" :y "570" :anchor "top left" )
-    :stacking "bg"
-    
-    (networkstuff)
-)

@@ -8,44 +8,54 @@
         "iconTheme": "material-symbols-rounded",
         "children": [
           {
+            "type": "submenu",
+            "data": {},
+            "name": "MY projects",
+            "icon": "family_star",
+            "iconTheme": "material-symbols-rounded",
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea  /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Dotfiles",
+                  "delayed": false
+                },
+                "name": "Dotfiles",
+                "icon": "svg/dots-circle.svg",
+                "iconTheme": "MaterialDesign",
+                "angle": 45
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/Apps/termPaint",
+                  "delayed": false
+                },
+                "name": "TermPaint",
+                "icon": "brush",
+                "iconTheme": "material-symbols-rounded"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea  ~/.config/eww",
+                  "delayed": false
+                },
+                "name": "eww",
+                "icon": "widgets",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 315
+              }
+            ]
+          },
+          {
             "type": "command",
             "data": {
               "command": "zen \"https://www.google.com/search?q=$(xclip -o)\""
             },
             "name": "Search in Google",
             "icon": "search",
-            "iconTheme": "material-symbols-rounded",
-            "angle": 45
-          },
-          {
-            "type": "submenu",
-            "data": {},
-            "name": "Proto",
-            "icon": "svg/device/projector_line.svg",
-            "iconTheme": "MingCute",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/cart",
-                  "delayed": false
-                },
-                "name": "Cart",
-                "icon": "shopping_basket",
-                "iconTheme": "material-symbols-rounded"
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/orders",
-                  "delayed": false
-                },
-                "name": "Orders",
-                "icon": "order_approve",
-                "iconTheme": "material-symbols-rounded"
-              }
-            ],
-            "angle": 120
+            "iconTheme": "material-symbols-rounded"
           },
           {
             "type": "submenu",
@@ -55,12 +65,92 @@
             "iconTheme": "material-symbols-rounded",
             "children": [
               {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/mobilium",
+                  "delayed": false
+                },
+                "name": "Mobilium",
+                "icon": "phone_iphone",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/orders",
+                  "delayed": false
+                },
+                "name": "Orders",
+                "icon": "order_approve",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 135
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/ilium"
+                },
+                "name": "Ilium",
+                "icon": "trilium",
+                "iconTheme": "simple-icons",
+                "angle": 180
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/PhpStorm-242.20224.175/bin/phpstorm.sh"
+                },
+                "name": "SL",
+                "icon": "php.svg",
+                "iconTheme": "devicons-master",
+                "angle": 225
+              },
+              {
                 "type": "submenu",
                 "data": {},
                 "name": "…",
                 "icon": "more_horiz",
                 "iconTheme": "material-symbols-rounded",
                 "children": [
+                  {
+                    "type": "command",
+                    "data": {
+                      "command": "postman"
+                    },
+                    "name": "Postman",
+                    "icon": "postman",
+                    "iconTheme": "simple-icons"
+                  },
+                  {
+                    "type": "submenu",
+                    "data": {},
+                    "name": "Proto",
+                    "icon": "svg/device/projector_line.svg",
+                    "iconTheme": "MingCute",
+                    "children": [
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/cart",
+                          "delayed": false
+                        },
+                        "name": "Cart",
+                        "icon": "shopping_basket",
+                        "iconTheme": "material-symbols-rounded"
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/orders",
+                          "delayed": false
+                        },
+                        "name": "Orders",
+                        "icon": "order_approve",
+                        "iconTheme": "material-symbols-rounded"
+                      }
+                    ]
+                  },
                   {
                     "type": "command",
                     "data": {
@@ -100,94 +190,10 @@
                     "iconTheme": "material-symbols-rounded"
                   }
                 ],
-                "angle": 90
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/orders",
-                  "delayed": false
-                },
-                "name": "Orders",
-                "icon": "order_approve",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 135
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/PhpStorm-242.20224.175/bin/phpstorm.sh"
-                },
-                "name": "SL",
-                "icon": "php.svg",
-                "iconTheme": "devicons-master",
-                "angle": 180
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/ilium"
-                },
-                "name": "Ilium",
-                "icon": "trilium",
-                "iconTheme": "simple-icons",
-                "angle": 225
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/mobilium",
-                  "delayed": false
-                },
-                "name": "Mobilium",
-                "icon": "phone_iphone",
-                "iconTheme": "material-symbols-rounded",
                 "angle": 270
               }
             ],
             "angle": 180
-          },
-          {
-            "type": "command",
-            "data": {
-              "command": "postman"
-            },
-            "name": "Postman",
-            "icon": "postman",
-            "iconTheme": "simple-icons",
-            "angle": 240
-          },
-          {
-            "type": "submenu",
-            "data": {},
-            "name": "MY projects",
-            "icon": "family_star",
-            "iconTheme": "material-symbols-rounded",
-            "children": [
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea  /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Dotfiles",
-                  "delayed": false
-                },
-                "name": "Dotfiles",
-                "icon": "svg/dots-circle.svg",
-                "iconTheme": "MaterialDesign",
-                "angle": 45
-              },
-              {
-                "type": "command",
-                "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea  ~/.config/eww",
-                  "delayed": false
-                },
-                "name": "eww",
-                "icon": "widgets",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 315
-              }
-            ],
-            "angle": 315
           }
         ]
       },

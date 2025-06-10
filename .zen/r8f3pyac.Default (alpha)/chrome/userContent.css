@@ -1,25 +1,30 @@
-
-@-moz-document domain(tbank.ru) {
-    body,
-    html {
-        background: #FFFFFF !important;
-    }
-}
-@-moz-document domain(sima-land.ru) {
+@-moz-document domain(tbank.ru),
+domain(sima-land.ru),
+domain(gipermarketdom.ru) {
     body,
     html {
         background: #FFFFFF !important;
     }
 }
 
+@-moz-document domain(talk.sima-land.ru) {
+    body,
+    html,
+    #largeVideoContainer,
+    .css-2e5bca-withI18nextTranslation_Tae_-containerBackground {
+        background: transparent !important;
+    }
+}
 
 @-moz-document domain(gitlab.sima-land.ru) {
     body,
-    html ,
+    html,
     .astronav-items,
     .gl-dark .merge-request-tabs-holder,
     .right-sidebar:not(.right-sidebar-merge-requests),
-    .gl-bg-gray-50 {
+    .gl-bg-gray-50,
+    .system-note-commit-list::after,
+    .common-note-form .md-area-wrapper {
         background: transparent !important;
     }
     body {
@@ -28,9 +33,16 @@
     .right-sidebar:not(.right-sidebar-merge-requests) {
         border: none !important;
     }
+    .diff-file-row.is-active {
+        background-color: #28272d00;
+        color: #0cc;
+    }
 }
 
 @-moz-document domain(hd.kinopoisk.ru) {
+    * {
+        color: #ddd !important;
+    }
     body,
     html,
     .styles_body__XTb_o,
@@ -39,14 +51,59 @@
     }
 }
 
+@-moz-document domain(kinopoisk.ru) {
+    body,
+    html,
+    #m6rbr47ajum71h,
+    .styles_root__vsmL9:not(.styles_wideRoot__JrXG9),
+    .styles_ussiy59bm827q8h5k__bi2n2,
+    .styles_wideContentContainer__lu_K3,
+    .styles_rootLight___QD_Q,
+    .styles_root___ruvh,
+    .styles_vb1fnguwg75mmcs2a__bi2n2,
+    .styles_foy254pnmfxvhgahr__bi2n2,
+    .styles_m1nmncyswy22z100d__bi2n2,
+    .styles_ggkblvyp7hw04aoa1__bi2n2,
+    .styles_wideContentContainer__lu_K3,
+    .styles_baseContainer__8XBMw {
+        background: transparent !important;
+    }
+
+    * {
+        color: #ddd !important;
+    }
+    /*#popover-root,*/
+    /*#popover-root > * {*/
+    /*    color: #222 !important;*/
+    /*}*/
+}
 
 @-moz-document domain(web.whatsapp.com) {
     body,
-    html ,
+    html,
     .two,
     ._ajx_,
-    .xnpuxes {
+    .xnpuxes,
+    .x1acz5yr,
+    .xsknx04,
+    .x150wa6m,
+    .x1setqd9::after,
+    _ak72,
+    ._ak9y,
+    ._ak72,
+    ._ai01,
+    .x1ky8ojb,
+    ._ak9t {
         background: transparent !important;
+    }
+
+    ._ak72._ak7p {
+        background-color: var(--background-default-active) !important;
+    }
+
+    .x114d0zl {
+        background-color: rgba(17, 27, 33, 0.59);
+        backdrop-filter: grayscale(10);
     }
 }
 
@@ -54,8 +111,23 @@
     body,
     html,
     .ProfileWrapper__root.vkui__root,
+    #page_header_cont,
+    #page_header,
+    .PanelRounded-panel-o6by8b,
+    .ConvoMain,
+    .ConvoMain__rightPanelContainer,
+    .ConvoHeader,
+    .ConvoList,
+    .ConvoList__item,
+    .ConvoList__folders,
+    .ConvoList__headerContent,
+    .ConvoList__footer,
     :is(.VKCOMMessenger__integrationRoot .MEAppConfig, .VKCOMMessenger__integrationRoot.MEAppConfig).MEAppConfig__withoutBubbles.MEAppConfig__withoutBubbles {
         background-color: transparent !important;
+    }
+
+    #page_header_cont {
+        border: none !important;
     }
 
     .FCPanel {
@@ -76,6 +148,19 @@
 }
 
 
+@-moz-document domain(twitch.tv) {
+    body, html,
+    .ceLdPR,
+    .jqCeVt,
+    .home-header-sticky,
+    .home-header-sticky__inner,
+    .home-header-sticky__wrapper,
+    .channel-root__info .channel-info-content,
+    .channel-root--home {
+        background-color: transparent !important;
+    }
+}
+
 @-moz-document domain(telemost.yandex.ru) {
     body, html {
         background-color: transparent !important;
@@ -83,6 +168,31 @@
 }
 
 
+@-moz-document domain(open.spotify.com) {
+    body,
+    html,
+    .ZQftYELq0aOsg6tPbVbV,
+    .wp7mZFPzV7Qmo51F0NA_,
+    .hgJel0bLlS_1Uf0EIfSA,
+    .lHJd4oSttKLxkxuoZ0Lr,
+    .BdcvqBAid96FaHAmPYw_,
+    .jEMA2gVoLgPQqAFrPhFw,
+    .PkOz5g82CaoKk1J3GX0e,
+    .ffFwfKcPDbmAPLXzxzKq,
+    .Ai_McRq9wJEYK21w8nX_,
+    .PeLrpasyfBW8ql_bmoAi,
+    .ffFwfKcPDbmAPLXzxzKq::before,
+    .aaFQbW0j0N40v_siz0kX::before,
+    .EmeHQXR87mUskYK6xEde,
+    .main-view-container__mh-footer-container,
+    .esBjsh,
+    .jW4eWdr_LUeOXwPpKhWG,
+    .fEvxx8vl3zTNWsuC8lpx,
+    .rezqw3Q4OEPB1m4rmwfw,
+    .T1xI1RTSFU7Wu94UuvE6 {
+        background: transparent !important;
+    }
+}
 
 
 @-moz-document domain(zen-browser.app) {
@@ -90,7 +200,7 @@
     html {
         background: transparent !important;
     }
-    .astronav-items{
+    .astronav-items {
         background: transparent !important;
     }
 }
@@ -123,7 +233,8 @@
     body, html,
     .bg-token-main-surface-primary, /* Navbar */
     .bg-token-sidebar-surface-primary, /* Sidebar */
-    .bg-token-sidebar-surface-primary * /* All sidebar elements */ {
+    .bg-token-sidebar-surface-primary * /* All sidebar elements */
+    {
         background: transparent !important;
     }
 }
@@ -138,13 +249,25 @@
     section,
     .feed-background,
     .color-bg-default,
-    .dxnHPp{
+    .dxnHPp {
         background-color: transparent !important;
     }
 
     .feed-item-content,
     .discussion-timeline-actions {
         background-color: rgba(0, 0, 0, 0.1) !important;
+    }
+}
+
+@-moz-document domain(mail.google.com) {
+    body,
+    html,
+    .aAX,
+    .wl,
+    #loading,
+    .la-i > .la-m,
+    .bkK > .nH {
+        background: transparent !important;
     }
 }
 
@@ -170,180 +293,61 @@
     }
     div#cnt > div {
     }
-    #gb{
+    #gb {
         background-color: transparent !important;
     }
-    .RNNXgb.RNNXgb{
-        background-color: rgb(179, 200, 207,0.4) !important;
+    .RNNXgb.RNNXgb {
+        background-color: rgb(179, 200, 207, 0.4) !important;
     }
-}
-
-@-moz-document domain(instagram.com){
-    *{
-        background-color: transparent !important;
-    }
-    div.xixxii4:nth-child(2){
-        background-color: rgba(0, 0, 0, 0.15) !important;
-        border-right: transparent !important;
-        border-radius: 10px !important;
-    }
-    div.x1hnuoi9:nth-child(1) > div:nth-child(1){
-        background-color: rgba(0, 0, 0, 0.6) !important;
-    }
-    .xseo6mj{
-        padding-top: 10px !important;
-        background-color: rgba(0, 0, 0, 0.15) !important;
-        border-radius: 5px !important;
-    }
-    .x1uipg7g{
-        border-left: transparent !important;
-        border-right: transparent !important;
-    }
-    div.xjp7ctv:nth-child(1) > div:nth-child(1) > div:nth-child(2){
-        background-color: rgba(0, 0, 0, 0.1) !important;
-        border-radius: 5px !important;
-    }
-    *{
-        --mwp-message-row-background: transparent !important;
-    }
-    .x1u3tz30{
-        background-color: rgba(0, 0, 0, 0.55) !important;
-        border-radius: 5px !important;
-        backdrop-filter: blur(10px) !important;
-    }
-    .xmnaoh6 > div:nth-child(1) > div:nth-child(1){
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        background-color: rgba(0, 0, 0, 0.15) !important;
-        border-radius: 10px !important;
-    }
-    .x1p0ryx0{
-        border-right: 0 !important;
-    }
-    .xq9evs9{
-        background-color: rgba(0, 0, 0, 0.4) !important;
-        border-radius: 5px !important;
-        backdrop-filter: blur(10px) !important;
-    }
-    .x1l895ks:hover{
-        background-color: rgba(0, 0, 0, 0.3) !important;
-        border-radius: 5px !important;
-    }
-    .x19g9edo{
-        background-color: rgba(0, 0, 0, 0.3) !important;
-        border-radius: 5px !important;
-    }
-    .xrrpcnn{
-        background-color: rgba(0, 0, 0, 0.3) !important;
-        border-radius: 1.5rem !important;
-    }
-    .xpmdkuv{
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        border-radius: 1.5rem !important;
-    }
-    div.x1afcbsf{
-        background-color: rgba(0, 0, 0, 0.4) !important;
-        border-radius: 10px !important;
-        backdrop-filter: blur(10px) !important;
-    }
-    .x1yvgwvq{
-        background-color: rgba(255, 255, 255, 0.2) !important;
-        border-radius: 1rem !important;
-    }
-    .xleuxlb > div:nth-child(1){
-        border-right: transparent !important;
-    }
-    .x1tu34mt{
-        background-color: rgb(var(--ig-primary-button)) !important;
-    }
-
 }
 
 @-moz-document domain(youtube.com) {
-  html[dark], #background {
-          background: var(--content-bg) !important;
-      }
-      #guide-inner-content {
-          scrollbar-width: none !important;
-      }
-      :root {
-          --yt-spec-base-background: var(--stacking-bg) !important;
-          --app-drawer-content-container-background-color: var(--stacking-bg) !important;
-          --dark-theme-background-color: var(--stacking-bg) !important;
-          --efyt-control-bar-background-color: var(--stacking-bg) !important;
-          --efyt-control-bar-tooltip-background-color: var(--stacking-bg) !important;
-          --paper-dialog-background-color: var(--stacking-bg) !important;
-          --paper-listbox-background-color: var(--stacking-bg) !important;
-          --paper-menu-background-color: var(--stacking-bg) !important;
-          --yt-live-chat-action-panel-background-color-transparent: var(--stacking-bg) !important;
-          --yt-live-chat-additional-inline-action-button-background-color: var(--stacking-bg) !important;
-          --yt-live-chat-additional-inline-action-button-background-color-hover: var(--stacking-bg) !important;
-          --yt-live-chat-additive-background-inverse: var(--stacking-bg) !important;
-          --yt-live-chat-author-chip-verified-background-color: var(--stacking-bg) !important;
-          --yt-live-chat-automod-button-background-color: var(--stacking-bg) !important;
-          --yt-live-chat-automod-button-background-color-hover: var(--stacking-bg) !important;
-          --yt-live-chat-background-color: var(--stacking-bg) !important;;
-          --yt-live-chat-button-dark-background-color: var(--stacking-bg) !important;
-          --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
-          --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
-      }
-      #chips-wrapper{
+    html[dark], #background {
+        background: var(--content-bg) !important;
+    }
+    #guide-inner-content {
+        scrollbar-width: none !important;
+    }
+    :root {
+        --yt-spec-base-background: var(--stacking-bg) !important;
+        --app-drawer-content-container-background-color: var(--stacking-bg) !important;
+        --dark-theme-background-color: var(--stacking-bg) !important;
+        --efyt-control-bar-background-color: var(--stacking-bg) !important;
+        --efyt-control-bar-tooltip-background-color: var(--stacking-bg) !important;
+        --paper-dialog-background-color: var(--stacking-bg) !important;
+        --paper-listbox-background-color: var(--stacking-bg) !important;
+        --paper-menu-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-action-panel-background-color-transparent: var(--stacking-bg) !important;
+        --yt-live-chat-additional-inline-action-button-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-additional-inline-action-button-background-color-hover: var(--stacking-bg) !important;
+        --yt-live-chat-additive-background-inverse: var(--stacking-bg) !important;
+        --yt-live-chat-author-chip-verified-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-automod-button-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-automod-button-background-color-hover: var(--stacking-bg) !important;
+        --yt-live-chat-background-color: var(--stacking-bg) !important;;
+        --yt-live-chat-button-dark-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
+    }
+    #chips-wrapper {
         background-color: rgba(0, 0, 0, 0.2) !important;
         border-radius: 10px !important;
         backdrop-filter: blur(10px) !important;
-      }
-  }
-
-@-moz-document domain(threads.net){
-    *{
-        background-color: transparent !important;
     }
-    .x7c8izy{
-        background-color: rgba(0, 0, 0, 0.15) !important;
+    .html5-video-player:not(.efyt-black-bars),
+    .html5-video-player.unstarted-mode:not(.efyt-black-bars),
+    ytd-watch-flexy[full-bleed-player] #full-bleed-container.ytd-watch-flexy {
+        background: transparent !important;
     }
-    .xjbqb8w:hover{
-        background-color: rgba(0, 0, 0, 0.3) !important;
-        border-radius: 10px !important;
+    .ytd-watch-flexy[flexy] #player-container-inner.ytd-watch-flexy {
+        padding-top: 0;
     }
-    div.x1pq812k:nth-child(2){
-        background-color: rgba(0, 0, 0, 0.15) !important;
-        border-radius: 15px !important;
-    }
-    div.x1afcbsf:nth-child(1) > div:nth-child(2){
-        background-color: rgba(0, 0, 0, 0.7) !important;
-        border-radius: 10px !important;
-        backdrop-filter: blur(8px) !important;
-    }
-    .x1e3a9a0{
-        background-color: rgba(0, 0, 0, 0.4) !important;
-        border-radius: 10px !important;
-        backdrop-filter: blur(8px) !important;
-    }
-    div.xfex06f:nth-child(2){
-        background-color: rgba(255, 255, 255, 0.15) !important;
-        border-radius: 20px !important;
-        backdrop-filter: blur(20px) !important;
-    }
-    .x1pim928{
-        box-shadow: none !important;
-    }
-    .x13fuv20{
-        border-top-style: none !important;
-    }
-    .xu3j5b3{
-        border-right-style: none !important;
-    }
-    .x26u7qi{
-        border-left-style: none !important;
-    }
-    .x1l19134{
-        border-bottom: transparent !important;
-        margin-top: 8px !important;
-    }
-    div.xz401s1:nth-child(3){
-        background-color: rgba(255, 255, 255, 0.15) !important;
+    #shorts-cinematic-container canvas,
+    #cinematics canvas {
+        display: none !important;
     }
 }
+
 
 @-moz-document url(about:home), url(about:newtab), url(about:privatebrowsing), url(chrome://browser/content/browser.xul) {
     body {
@@ -360,8 +364,8 @@
         width: auto;
         aspect-ratio: 1/1 !important;
         transform: translate(-50%, -50%);
-        top:100%;
-        left:100%;
+        top: 100%;
+        left: 100%;
         background-color: #ffffff; /* Color fill */
         mask-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><!-- Generator: Adobe Illustrator 28.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0) --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>');
         mask-repeat: no-repeat;
@@ -370,7 +374,7 @@
     }
 }
 
-@-moz-document url(about:home), url(about:newtab){
+@-moz-document url(about:home), url(about:newtab) {
     :root {
         --newtab-background-color: rgba(43, 42, 51, 0.0) !important;
     }
@@ -378,7 +382,7 @@
     .search-wrapper {
         position: absolute;
         transform: translate(-50%, -50%);
-        top:50% !important;
+        top: 50% !important;
         left: 50% !important;
         display: flex;
         flex-direction: column;
@@ -387,7 +391,7 @@
     .logo {
         aspect-ratio: 1/1 !important;
 
-        background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%237493f1; opacity:90%}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important ;
+        background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%237493f1; opacity:90%}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important;
 
         background-position: center;
         background-size: 80px !important;
@@ -412,7 +416,7 @@
 
     .search-inner-wrapper .fake-editable {
         opacity: 10% !important;
-        border:1px solid white !important;
+        border: 1px solid white !important;
     }
 
     .search-inner-wrapper {
@@ -457,8 +461,7 @@
     [class^="focusLock_"] {
         --saturation-factor: 1;
         --primary-600: hsl(var(--primary-600-hsl) / 1) !important;
-        --primary-600-hsl: 222.857 calc(var(--saturation-factor, 1) * 6.667%)
-        20.588% !important;
+        --primary-600-hsl: 222.857 calc(var(--saturation-factor, 1) * 6.667%) 20.588% !important;
         --modal-background: var(--primary-600);
     }
 
@@ -467,40 +470,10 @@
     }
 }
 
-@-moz-document domain(x.com) {
-    :root {
-        --theme-popup: rgba(0, 0, 0, 0.8);
-        --theme-bg-dim: rgba(0 ,0, 0, 0.4);
-    }
 
-    body {
-        background-color: var(--theme-bg-dim) !important;
-    }
-
-    [data-testid="primaryColumn"],
-    [aria-label="Trending"] > * > *,
-    [aria-label="Home timeline"] > *> *,
-    [aria-label="Search"] > * {
-        background: transparent !important;
-    }
-
-    select,
-    [data-testid="Dropdown"],
-    [data-testid="hoverCardParent"],
-    [data-testid="DMDrawer"] > div,
-    div[role="dialog"],
-    div[role="listbox"],
-    div[role="radio"] {
-        background: var(--theme-popup) !important;
-    }
-
-    .r-kemksi, .r-5zmot {
-        background: transparent !important;
-    }
-}
-
-@-moz-document domain(priv.au) {
-    html {
+@-moz-document domain(xn--e1ajbkccewgd.xn--p1ai) {
+    html,
+    .Game_root__Iny3M {
         background: transparent !important;
     }
 }
@@ -573,418 +546,3 @@
     --natsumi-pdfjs-topbar-max-width: var(--pdfjs-topbar-max-width, 750px);
 }
 
-@media not (-moz-bool-pref: "natsumi.pdfjs.disabled") {
-    html[mozdisallowselectionprint] {
-        &:has(head link:nth-of-type(1)[href^="resource://pdf.js"]) {
-            --natsumi-colors-border: color-mix(in srgb, var(--natsumi-colors-secondary) 80%, black 20%);
-            --toolbarbutton-active-background: rgba(255, 255, 255, 0.9);
-            --toolbarbutton-hover-background: color-mix(in srgb, #202020 10%, transparent);
-
-            @media (prefers-color-scheme: dark) {
-                --toolbarbutton-active-background: color-mix(in srgb, var(--natsumi-primary-color) 50%, rgba(255, 255, 255, .1));
-                --toolbarbutton-hover-background: color-mix(in srgb, #ebebeb 10%, transparent);
-            }
-
-            body {
-                @media (prefers-color-scheme: dark) {
-                    background-color: transparent !important;
-                }
-            }
-            div.page:nth-child(1) > div:nth-child(1) > canvas:nth-child(1){
-
-                border-radius: 5px !important;
-            }
-
-
-            #viewerContainer {
-                inset: 0 !important;
-
-                #viewer .page:first-of-type {
-                    margin-top: 60px !important;
-                }
-            }
-
-            #toolbarContainer, #sidebarContainer {
-                background: var(--natsumi-glass-background) !important;
-                backdrop-filter: blur(10px);
-                border-radius: 10px;
-            }
-
-            #toolbarContainer {
-                position: absolute !important;
-                top: 5px !important;
-                left: 50% !important;
-                transform: translate(-50%, 0);
-                width: calc(100% - 10px) !important;
-                max-width: min(var(--natsumi-pdfjs-topbar-max-width), calc(100% - 10px)) !important;
-                border-radius: 10px;
-                padding-top: 5px !important;
-                padding-bottom: 5px !important;
-                height: calc(var(--toolbar-height) + 10px) !important;
-                border: 1px solid rgba(20, 20, 20, 0.2) !important;
-                box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
-                animation: pdfjs-appear 0.3s ease;
-                overflow: hidden !important;
-
-                @media (prefers-color-scheme: dark) {
-                    border-color: rgba(235, 235, 235, 0.3) !important;
-                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
-                }
-
-                &:has(#loadingBar.hidden) {
-                    overflow: visible !important;
-                }
-
-                #toolbarViewer {
-                    padding-left: 5px;
-                    padding-right: 5px;
-                }
-
-                .doorHangerRight {
-                    padding: 5px !important;
-                    top: 40px !important;
-                    right: -7px !important;
-                    background: var(--natsumi-glass-background) !important;
-                    backdrop-filter: blur(10px);
-                    border-radius: 10px !important;
-                    border: 1px solid rgba(20, 20, 20, 0.2) !important;
-                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
-                    animation: secondary-appear 0.2s ease;
-
-                    &.hidden {
-                        animation: none !important;
-                    }
-
-                    @media (prefers-color-scheme: dark) {
-                        border-color: rgba(235, 235, 235, 0.3) !important;
-                        box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
-                    }
-
-                    &::before, &::after {
-                        display: none !important;
-                    }
-                }
-
-                .thicknessPicker {
-                    &::before, &::after {
-                        @media (prefers-color-scheme: dark) {
-                            background-color: white !important;
-                        }
-                    }
-                }
-
-                #loadingBar {
-                    top: unset !important;
-                    bottom: 0 !important;
-                    border: none !important;
-
-                    .progress {
-                        background-color: var(--natsumi-primary-color) !important;
-                    }
-                }
-            }
-
-            #sidebarContainer {
-                height: calc(100% - 62px) !important;
-                left: -5px !important;
-                top: auto !important;
-                bottom: 5px !important;
-                opacity: 0 !important;
-                transition: left 0.2s ease, opacity 0.2s ease !important;
-                border: 1px solid rgba(20, 20, 20, 0.2) !important;
-                box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
-
-                @media (prefers-color-scheme: dark) {
-                    border-color: rgba(235, 235, 235, 0.3) !important;
-                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
-                }
-
-                #toolbarSidebar {
-                    background: transparent !important;
-                    box-shadow: none !important;
-                    padding: 5px !important;
-                    height: calc(var(--toolbar-height) + 10px) !important;
-                }
-
-                #sidebarContent {
-                    margin-top: 10px !important;
-                    box-shadow: none !important;
-                }
-
-                .treeItem {
-                    a, .treeItems {
-                        border-radius: 5px !important;
-                        transition: background-color 0.2s ease;
-                    }
-
-                    .treeItemToggler {
-                        &::before {
-                            background-color: transparent !important;
-                            mask-image: none !important;
-                            background-image: url('chrome://browser/skin/zen-icons/arrow-down.svg') !important;
-
-                            @media (prefers-color-scheme: dark) {
-                                filter: invert();
-                            }
-                        }
-
-                        &.treeItemsHidden::before {
-                            background-image: url('chrome://browser/skin/zen-icons/arrow-right.svg') !important;
-                        }
-                    }
-                }
-
-                .thumbnail {
-                    margin-bottom: 22px !important;
-                    transition: border-color 0.2s ease;
-
-                    &::after {
-                        content: attr(data-page-number);
-                        display: block;
-                        color: black;
-                        width: 100%;
-                        margin-top: 8px;
-                        text-align: center;
-
-                        @media (prefers-color-scheme: dark) {
-                            color: white;
-                        }
-                    }
-                }
-            }
-
-            #outerContainer.sidebarOpen #sidebarContainer {
-                left: 5px !important;
-                opacity: 1 !important;
-            }
-
-            #scaleSelectContainer {
-                border-radius: 4px !important;
-                overflow: hidden !important;
-
-                select {
-                    background-color: #f1f1f1 !important;
-
-                    @media (prefers-color-scheme: dark) {
-                        background-color: #363636 !important;
-                    }
-                }
-            }
-
-            #pageNumber {
-                border-radius: 4px !important;
-                overflow: hidden !important;
-                background-color: #ffffff !important;
-                border-color: var(--natsumi-colors-border) !important;
-
-                @media (prefers-color-scheme: dark) {
-                    background-color: #23222b !important;
-                }
-            }
-
-            .verticalToolbarSeparator, .splitToolbarButtonSeparator, .horizontalToolbarSeparator, .separator {
-                border-color: rgba(20, 20, 20, 0.2) !important;
-
-                @media (prefers-color-scheme: dark) {
-                    border-color: rgba(235, 235, 235, 0.3) !important;
-                }
-            }
-
-            #editorHighlightVisibility .divider {
-                background-color: rgba(20, 20, 20, 0.2) !important;
-
-                @media (prefers-color-scheme: dark) {
-                    background-color: rgba(235, 235, 235, 0.3) !important;
-                }
-            }
-
-            .toolbarButton {
-                border-radius: 6px !important;
-                transition: background-color 0.2s ease;
-
-                &:hover {
-                    background-color: var(--toolbarbutton-hover-background) !important;
-                }
-
-                &.toggled {
-                    background-color: var(--toolbarbutton-active-background) !important;
-                }
-            }
-
-            /* Document properties */
-
-            #documentPropertiesDialog {
-                background: var(--natsumi-glass-background) !important;
-                backdrop-filter: blur(10px);
-                border-radius: 10px !important;
-                border: 1px solid rgba(20, 20, 20, 0.2) !important;
-                box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), black) !important;
-
-                @media (prefers-color-scheme: dark) {
-                    border-color: rgba(235, 235, 235, 0.3) !important;
-                    box-shadow: 0 0 var(--natsumi-glass-shadow-size) color-mix(in srgb, var(--natsumi-colors-secondary) var(--natsumi-glass-shadow-opacity), white) !important;
-                }
-
-                &:is([open]) {
-                    animation: properties-appear 0.3s ease !important;
-                }
-
-                #documentPropertiesClose {
-                    border-radius: 5px !important;
-                    background-color: #f1f1f1 !important;
-
-                    @media (prefers-color-scheme: dark) {
-                        background-color: #363636 !important;
-                    }
-                }
-            }
-
-            /* Topbar buttons */
-
-            #previous::before {
-                mask-image: url('chrome://browser/skin/zen-icons/arrow-up.svg') !important;
-            }
-
-            #next::before {
-                mask-image: url('chrome://browser/skin/zen-icons/arrow-down.svg') !important;
-            }
-
-            #zoomOutButton::before {
-                mask-image: url('chrome://browser/skin/zen-icons/zoom-out.svg') !important;
-            }
-
-            #zoomInButton::before {
-                mask-image: url('chrome://browser/skin/zen-icons/plus.svg') !important;
-            }
-
-            #sidebarToggleButton::before {
-                mask-image: url('chrome://browser/skin/sidebars.svg') !important;
-            }
-
-            #editorHighlightButton::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-editorHighlight.svg') !important;
-            }
-
-            #editorFreeTextButton::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-editorFreeText.svg') !important;
-            }
-
-            #editorInkButton::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-editorInk.svg') !important;
-            }
-
-            #editorStampButton::before {
-                mask-image: url('chrome://browser/skin/zen-icons/canvas.svg') !important;
-            }
-
-            #secondaryPrint::before, #printButton::before {
-                mask-image: url('chrome://browser/skin/zen-icons/print.svg') !important;
-            }
-
-            #secondaryDownload::before, #downloadButton::before {
-                mask-image: url('chrome://browser/skin/zen-icons/save.svg') !important;
-            }
-
-            #presentationMode::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-presentationMode.svg') !important;
-            }
-
-            #viewBookmark::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-bookmark.svg') !important;
-            }
-
-            #firstPage::before {
-                mask-image: url('chrome://browser/skin/zen-icons/arrow-up.svg') !important;
-            }
-
-            #lastPage::before {
-                mask-image: url('chrome://browser/skin/zen-icons/arrow-down.svg') !important;
-            }
-
-            #pageRotateCw::before {
-                mask-image: url('chrome://browser/skin/zen-icons/reload.svg') !important;
-            }
-
-            #pageRotateCcw::before {
-                transform: scaleX(-1);
-                mask-image: url('chrome://browser/skin/zen-icons/reload.svg') !important;
-            }
-
-            #cursorSelectTool::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-selectTool.svg') !important;
-            }
-
-            #cursorHandTool::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-handTool.svg') !important;
-            }
-
-            #scrollPage::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollPage.svg') !important;
-            }
-
-            #scrollVertical::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollVertical.svg') !important;
-            }
-
-            #scrollHorizontal::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollHorizontal.svg') !important;
-            }
-
-            #scrollWrapped::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-scrollWrapped.svg') !important;
-            }
-
-            #spreadNone::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-spreadNone.svg') !important;
-            }
-
-            #spreadOdd::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-spreadOdd.svg') !important;
-            }
-
-            #spreadEven::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-spreadEven.svg') !important;
-            }
-
-            #documentProperties::before {
-                mask-image: url('resource://pdf.js/web/images/secondaryToolbarButton-documentProperties.svg') !important;
-            }
-
-            #editorStampAddImage::before {
-                mask-image: url('chrome://browser/skin/zen-icons/plus.svg') !important;
-            }
-
-            #secondaryToolbarToggleButton::before {
-                mask-image: url('chrome://browser/skin/zen-icons/arrow-right.svg') !important;
-            }
-
-            /* Sidebar buttons */
-
-            #viewThumbnail::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewThumbnail.svg') !important;
-            }
-
-            #viewOutline::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewOutline.svg') !important;
-            }
-
-            #viewAttachments::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewAttachments.svg') !important;
-            }
-
-            #viewLayers::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-viewLayers.svg') !important;
-            }
-
-            #currentOutlineItem::before {
-                mask-image: url('resource://pdf.js/web/images/toolbarButton-currentOutlineItem.svg') !important;
-            }
-
-            /* Checked buttons */
-
-            #secondaryToolbarButtonContainer .toolbarButton[aria-checked="true"]::before {
-                mask-image: url('chrome://browser/skin/zen-icons/checkmark.svg') !important;
-            }
-        }
-    }
-}

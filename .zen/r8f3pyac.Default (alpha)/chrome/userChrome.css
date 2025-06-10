@@ -1,12 +1,25 @@
 @import url("tabgroups.css");
+@import url("tabPreview.css");
 
 :root {
-    --zen-main-browser-background: #222222dd !important;
+    /*--zen-main-browser-background: #222222dd !important;*/
+    --zen-themed-toolbar-bg-transparent: transparent !important;
+    --zen-main-browser-background: rgba(21, 31, 31, 0.75) !important;
+    --in-content-page-background: #1e1e1e !important;
+    --in-content-box-background: #1e1e1e !important;
+    --newtab-background-color: rgba(30, 30, 30, 0) !important;
+    --newtab-background-color-secondary: rgba(66, 65, 77, 0) !important;
+}
+
+#zen-main-app-wrapper {
+    background: var(--zen-themed-toolbar-bg-transparent);
+    /*background: rgba(21, 31, 31, 0) !important;*/
+    overflow: hidden;
+    backdrop-filter: blur(40px);
 }
 
 & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer * {
     background: transparent !important;
-
 
     findbar {
         background: #222222cc !important;
@@ -22,6 +35,10 @@
     }
 }
 
+/*.zen-current-workspace-indicator {*/
+/*    margin-top: 0 !important;*/
+/*    height: 0 !important;*/
+/*}*/
 
 /* Better History */
 #sidebar-box[sidebarcommand="viewHistorySidebar"] {

@@ -12,51 +12,27 @@
 (include "src/_timer.yuck")
 
 
-(
-    defwindow time
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "3"
-        :y "5"
-        :width "315"
-        :height "0"
-    )
+( defwindow time
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "3" :y "5" :width "315" :height "0" )
     :stacking "bg"
 
     (datestuff)
 )
 
 
-(
-    defwindow cpu
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "5"
-        :y "65"
-        :width "315"
-        :height "0"
-    )
+( defwindow cpu
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "5" :y "65" :width "315" :height "0" )
     :stacking "bg"
 
     (cpustuff)
 )
 
 
-(
-    defwindow cpugraph
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "5"
-        :y "233"
-        :width "315"
-        :height "0"
-    )
+( defwindow cpugraph
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "5" :y "233" :width "315" :height "0" )
     :stacking "bg"
 
     (cpugraphstuff)
@@ -64,17 +40,9 @@
 
 
 
-(
-    defwindow top
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "5"
-        :y "320"
-        :width "315"
-        :height "0"
-    )
+( defwindow top
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "5" :y "320" :width "315" :height "0" )
     :stacking "bg"
 
     (topstuff)
@@ -82,87 +50,68 @@
 
 
 
-(
-    defwindow networkstat
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "5"
-        :y "525"
-        :width "315"
-        :height "0"
-    )
+( defwindow networkstat
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "5" :y "525" :width "315" :height "0" )
     :stacking "bg"
 
     (networkstatstuff)
 )
 
 
-(
-    defwindow weather_now
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "3"
-        :y "584"
-        :width "315"
-        :height "0"
-    )
+( defwindow weather_now
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "3" :y "584" :width "315" :height "0" )
     :stacking "bg"
 
     (weathernow :weather weather_now)
 )
 
-(
-    defwindow weather_day
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "3"
-        :y "663"
-        :width "315"
-        :height "0"
-    )
+( defwindow weather_day
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "3" :y "663" :width "315" :height "0" )
     :stacking "bg"
 
     (weather_by_time_list :weather weather_day)
 )
 
-(
-    defwindow weather_week
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "3"
-        :y "770"
-        :width "0"
-        :height "0"
-    )
+( defwindow weather_week
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "3" :y "770" :width "0" :height "0" )
     :stacking "bg"
 
     (weather_by_days_list :weather weather_week)
 )
 
-(
-    defwindow timer
-    :monitor "LCD195VXM+/7YP18445NB"
-    :geometry (
-        geometry
-        :anchor "top left"
-        :x "3"
-        :y "888"
-        :width "0"
-        :height "0"
-    )
+( defwindow timer
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :anchor "top left" :x "3" :y "888" :width "0" :height "0" )
     :stacking "bg"
 
     (timerstuff)
 )
 
+( defwindow volumes
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :x "331" :y "72" :anchor "top left" )
+    :stacking "bg"
+
+    (volumestuff)
+)
 
 
+( defwindow networks
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :x "331" :y "570" :anchor "top left" )
+    :stacking "bg"
 
+    (networkstuff)
+)
+
+( defwindow player
+    :monitor "LCD195VXM+"
+    :geometry ( geometry :x "330" :y "405" :anchor "top left" )
+    :stacking "bg"
+
+    (playerstuff)
+)
