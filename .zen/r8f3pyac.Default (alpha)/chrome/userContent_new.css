@@ -1,0 +1,368 @@
+/* === Общие стили для нескольких доменов === */
+@-moz-document domain(tbank.ru),
+domain(sima-land.ru),
+domain(gipermarketdom.ru) {
+    body, html {
+        background: #FFFFFF !important;
+    }
+}
+
+@-moz-document domain(talk.sima-land.ru),
+domain(gitlab.sima-land.ru),
+domain(hd.kinopoisk.ru),
+domain(kinopoisk.ru),
+domain(web.whatsapp.com),
+domain(vkvideo.ru),
+domain(vk.com),
+domain(twitch.tv),
+domain(telemost.yandex.ru),
+domain(open.spotify.com),
+domain(zen-browser.app),
+domain(reddit.com),
+domain(chatgpt.com),
+domain(github.com),
+domain(mail.google.com),
+domain(google.com),
+domain(youtube.com),
+domain(discord.com),
+domain(xn--e1ajbkccewgd.xn--p1ai),
+domain(monkeytype.com) {
+    body, html {
+        background: transparent !important;
+    }
+}
+
+/* === Специфичные стили по доменам === */
+/* talk.sima-land.ru */
+@-moz-document domain(talk.sima-land.ru) {
+    #largeVideoContainer,
+    .css-2e5bca-withI18nextTranslation_Tae_-containerBackground {
+        background: transparent !important;
+    }
+}
+
+/* gitlab.sima-land.ru */
+@-moz-document domain(gitlab.sima-land.ru) {
+    .astronav-items,
+    .gl-dark .merge-request-tabs-holder,
+    .right-sidebar:not(.right-sidebar-merge-requests),
+    .gl-bg-gray-50,
+    .system-note-commit-list::after,
+    .common-note-form .md-area-wrapper {
+        background: transparent !important;
+    }
+    body {
+        color: #ccc !important;
+    }
+    .right-sidebar:not(.right-sidebar-merge-requests) {
+        border: none !important;
+    }
+    .diff-file-row.is-active {
+        background-color: #28272d00 !important;
+        color: #0cc !important;
+    }
+}
+
+/* kinopoisk.ru и hd.kinopoisk.ru */
+@-moz-document domain(kinopoisk.ru), domain(hd.kinopoisk.ru) {
+    * {
+        color: #ddd !important;
+    }
+    .styles_root__bomOd,
+    #popover-root > div {
+        background: #000000a6 !important;
+    }
+}
+
+@-moz-document domain(kinopoisk.ru) {
+    .styles_root__ti07r:hover {
+        background-color: #f7f7f71c !important;
+    }
+}
+
+/* web.whatsapp.com */
+@-moz-document domain(web.whatsapp.com) {
+    .x114d0zl {
+        background-color: rgba(17, 27, 33, 0.59) !important;
+        backdrop-filter: grayscale(10) !important;
+    }
+    ._aigw._as6h.xevlxbw.x9f619.x1n2onr6.x5yr21d {
+        background: #22222222 !important;
+    }
+}
+
+/* vk.com */
+@-moz-document domain(vk.com) {
+    #page_header_cont {
+        border: none !important;
+    }
+    .FCPanel {
+        display: none !important;
+    }
+    .MEApp__content {
+        margin-left: 20px !important;
+    }
+    .side_bar_inner {
+        margin-top: 42px !important;
+        position: fixed !important;
+        padding: 15px 10px 10px !important;
+        margin-left: -5px !important;
+        top: 0 !important;
+    }
+}
+
+/* twitch.tv */
+@-moz-document domain(twitch.tv) {
+    .ceLdPR, .jqCeVt, .kHqXhd,
+    .home-header-sticky, .home-header-sticky__inner,
+    .home-header-sticky__wrapper, .channel-root__info .channel-info-content,
+    .channel-root--home {
+        background-color: transparent !important;
+    }
+}
+
+/* open.spotify.com */
+@-moz-document domain(open.spotify.com) {
+    .ZQftYELq0aOsg6tPbVbV, .wp7mZFPzV7Qmo51F0NA_,
+    .hgJel0bLlS_1Uf0EIfSA, .lHJd4oSttKLxkxuoZ0Lr,
+    .BdcvqBAid96FaHAmPYw_, .jEMA2gVoLgPQqAFrPhFw,
+    .PkOz5g82CaoKk1J3GX0e, .ffFwfKcPDbmAPLXzxzKq,
+    .Ai_McRq9wJEYK21w8nX_, .PeLrpasyfBW8ql_bmoAi,
+    .ffFwfKcPDbmAPLXzxzKq::before, .aaFQbW0j0N40v_siz0kX::before,
+    .EmeHQXR87mUskYK6xEde, .main-view-container__mh-footer-container,
+    .esBjsh, .jW4eWdr_LUeOXwPpKhWG, .fEvxx8vl3zTNWsuC8lpx,
+    .rezqw3Q4OEPB1m4rmwfw, .T1xI1RTSFU7Wu94UuvE6 {
+        background: transparent !important;
+    }
+}
+
+/* reddit.com */
+@-moz-document domain(reddit.com) {
+    #comment-tree, .threadline, .shreddit-post,
+    aside, comment-body-header, shreddit-comment-tree {
+        background-color: transparent !important;
+    }
+    .bg-neutral-background, .bg-neutral-background-weak {
+        background: rgba(0, 0, 0, 0.1) !important;
+    }
+    .bg-\[color\:var\(--shreddit-content-background\)\] {
+        background-color: transparent !important;
+    }
+}
+
+/* google.com */
+@-moz-document domain(google.com) {
+    .sfbg {
+        background-color: rgba(255, 255, 255, 0.1) !important;
+        backdrop-filter: blur(20px) !important;
+    }
+    .f6F9Be, div#search > *, .g, .appbar, #gb {
+        background-color: transparent !important;
+    }
+    .RNNXgb.RNNXgb {
+        background-color: rgba(179, 200, 207, 0.4) !important;
+    }
+}
+
+/* youtube.com */
+@-moz-document domain(youtube.com) {
+    :root {
+        --yt-spec-base-background: var(--stacking-bg) !important;
+        --app-drawer-content-container-background-color: var(--stacking-bg) !important;
+        --dark-theme-background-color: var(--stacking-bg) !important;
+        --efyt-control-bar-background-color: var(--stacking-bg) !important;
+        --efyt-control-bar-tooltip-background-color: var(--stacking-bg) !important;
+        --paper-dialog-background-color: var(--stacking-bg) !important;
+        --paper-listbox-background-color: var(--stacking-bg) !important;
+        --paper-menu-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-action-panel-background-color-transparent: var(--stacking-bg) !important;
+        --yt-live-chat-additional-inline-action-button-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-additional-inline-action-button-background-color-hover: var(--stacking-bg) !important;
+        --yt-live-chat-additive-background-inverse: var(--stacking-bg) !important;
+        --yt-live-chat-author-chip-verified-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-automod-button-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-automod-button-background-color-hover: var(--stacking-bg) !important;
+        --yt-live-chat-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-button-dark-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
+        --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
+    }
+
+    #chips-wrapper {
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        border-radius: 10px !important;
+        backdrop-filter: blur(10px) !important;
+    }
+}
+
+/* about-страницы */
+@-moz-document url(about:home),
+url(about:newtab),
+url(about:privatebrowsing),
+url(chrome://browser/content/browser.xul) {
+    body {
+        width: 100% !important;
+        height: 100vh !important;
+        position: relative !important;
+        overflow: hidden !important;
+    }
+
+    body::before {
+        content: "" !important;
+        position: absolute !important;
+        height: 130vh !important;
+        width: auto !important;
+        aspect-ratio: 1/1 !important;
+        transform: translate(-50%, -50%) !important;
+        top: 100% !important;
+        left: 100% !important;
+        background-color: #ffffff !important;
+        mask-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style>.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%23FFFFFF;}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important;
+        mask-repeat: no-repeat !important;
+        mask-position: center !important;
+        opacity: 0.05 !important;
+    }
+}
+
+/* about:home и about:newtab */
+@-moz-document url(about:home), url(about:newtab) {
+    :root {
+        --newtab-background-color: rgba(43, 42, 51, 0.0) !important;
+    }
+
+    .search-wrapper {
+        position: absolute !important;
+        transform: translate(-50%, -50%) !important;
+        top: 50% !important;
+        left: 50% !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    .logo {
+        aspect-ratio: 1/1 !important;
+        background-image: url('data:image/svg+xml,<%3Fxml version="1.0" encoding="utf-8"%3F><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style>.st0{fill-rule:evenodd;clip-rule:evenodd;fill:%237493f1; opacity:90%}</style><path class="st0" d="M16,22.2c3.4,0,6.2-2.8,6.2-6.2c0-3.4-2.8-6.2-6.2-6.2c-3.4,0-6.2,2.8-6.2,6.2C9.8,19.4,12.6,22.2,16,22.2z M20.9,16c0,2.7-2.2,4.9-4.9,4.9s-4.9-2.2-4.9-4.9s2.2-4.9,4.9-4.9S20.9,13.3,20.9,16z"/><path class="st0" d="M26.7,16c0,5.9-4.8,10.7-10.7,10.7S5.3,21.9,5.3,16S10.1,5.3,16,5.3S26.7,10.1,26.7,16z M16,24.6c4.8,0,8.6-3.9,8.6-8.6S20.8,7.4,16,7.4S7.4,11.2,7.4,16S11.2,24.6,16,24.6z"/><path class="st0" d="M32,16c0,8.8-7.2,16-16,16S0,24.8,0,16S7.2,0,16,0S32,7.2,32,16z M16,29.1c7.3,0,13.1-5.9,13.1-13.1S23.3,2.9,16,2.9S2.9,8.7,2.9,16S8.7,29.1,16,29.1z"/></svg>') !important;
+        background-position: center !important;
+        background-size: 80px !important;
+        width: fit-content !important;
+        height: 80px !important;
+    }
+
+    .wordmark {
+        opacity: 0.8 !important;
+        background-size: 172px !important;
+        width: 172px !important;
+        height: 81px !important;
+    }
+
+    .search-handoff-button {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-evenly !important;
+        background-color: rgba(128, 128, 128, 0.2) !important;
+        backdrop-filter: blur(20px) !important;
+    }
+
+    .search-inner-wrapper .fake-editable {
+        opacity: 0.1 !important;
+        border: 1px solid white !important;
+    }
+
+    .search-inner-wrapper {
+        background-color: transparent !important;
+        backdrop-filter: blur(10px) !important;
+        display: none !important;
+    }
+
+    .search-wrapper .search-inner-wrapper {
+        border-radius: 10px !important;
+    }
+
+    .logo-and-wordmark {
+        margin-block-end: 14px !important;
+    }
+}
+
+/* discord.com */
+@-moz-document domain(discord.com) {
+    :root {
+        --primary-560: rgba(0, 0, 0, 0.05) !important;
+        --primary-600: rgba(0, 0, 0, 0.05) !important;
+        --primary-630: rgba(0, 0, 0, 0.05) !important;
+        --primary-645: rgba(0, 0, 0, 0.05) !important;
+        --primary-660: rgba(0, 0, 0, 0.05) !important;
+        --primary-700: rgba(0, 0, 0, 0.05) !important;
+        --primary-730: rgba(0, 0, 0, 0.05) !important;
+        --primary-760: rgba(0, 0, 0, 0.05) !important;
+        --primary-830: rgba(0, 0, 0, 0.05) !important;
+        --primary-860: rgba(0, 0, 0, 0.05) !important;
+        --primary-900: rgba(0, 0, 0, 0.05) !important;
+    }
+
+    [class^="focusLock_"] {
+        --saturation-factor: 1 !important;
+        --primary-600: hsl(var(--primary-600-hsl) / 1) !important;
+        --primary-600-hsl: 222.857 calc(var(--saturation-factor, 1) * 6.667%) 20.588% !important;
+        --modal-background: var(--primary-600) !important;
+    }
+
+    .no-webkit-scrollbar * {
+        scrollbar-width: none !important;
+    }
+}
+
+/* PDF viewer tweaks */
+@keyframes pdfjs-appear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes secondary-appear {
+    0% { opacity: 0; margin-top: -10px; }
+    100% { opacity: 1; margin-top: 0; }
+}
+
+@keyframes properties-appear {
+    0% { opacity: 0; top: 50px; }
+    100% { opacity: 1; top: 0; }
+}
+
+/* Глобальные переменные */
+* {
+    --natsumi-primary-color: var(--natsumi-pages-accent-color, #aac7ff) !important;
+    --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%) !important;
+    --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-colors-primary) 20%, white 80%) !important;
+    --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 2%, white 98%) !important;
+    --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%) !important;
+    --natsumi-glass-background: color-mix(in srgb, var(--natsumi-colors-secondary) 75%, transparent) !important;
+    --natsumi-glass-blur-radius: var(--glass-blur-radius, 10px) !important;
+    --natsumi-glass-shadow-size: var(--glass-shadow-size, 10px) !important;
+    --natsumi-glass-shadow-opacity: var(--glass-shadow-opacity, 75%) !important;
+    --natsumi-pdfjs-topbar-max-width: var(--pdfjs-topbar-max-width, 750px) !important;
+
+    --vkui--color_background_content: transparent !important;
+    --panel-background-lighter: transparent !important;
+    --WDS-surface-default: transparent !important;
+    --in-content-page-background: transparent !important;
+    --vkui--color_background: transparent !important;
+}
+
+/* Темная тема для PDF */
+@media (prefers-color-scheme: dark) {
+    * {
+        --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 20%, #202020 80%) !important;
+        --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 30%, #202020 70%) !important;
+        --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 1%, #202020 99%) !important;
+        --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%) !important;
+    }
+}
+
+/* Яркая тема для PDF */
+@media (-moz-bool-pref: 'zen.theme.color-prefs.colorful') and (prefers-color-scheme: dark) {
+    * {
+        --natsumi-colors-primary: color-mix(in srgb, var(--natsumi-primary-color) 50%, black 50%) !important;
+        --natsumi-colors-secondary: color-mix(in srgb, var(--natsumi-primary-color) 40%, black 60%) !important;
+        --natsumi-colors-tertiary: color-mix(in srgb, var(--natsumi-primary-color) 15%, black 85%) !important;
+        --natsumi-colors-primary-foreground: color-mix(in srgb, var(--natsumi-primary-color) 80%, white 20%) !important;
+    }
+}

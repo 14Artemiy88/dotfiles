@@ -49,6 +49,9 @@ domain(gipermarketdom.ru) {
     .Footer_root__yxLAr {
         background: transparent !important;
     }
+    .styles_root__bomOd {
+        background: #000000a6 !important;
+    }
 }
 
 @-moz-document domain(kinopoisk.ru) {
@@ -65,12 +68,27 @@ domain(gipermarketdom.ru) {
     .styles_m1nmncyswy22z100d__bi2n2,
     .styles_ggkblvyp7hw04aoa1__bi2n2,
     .styles_wideContentContainer__lu_K3,
-    .styles_baseContainer__8XBMw {
+    .styles_baseContainer__8XBMw,
+    .styles_jq6d4iicgh8zgcu9n__bi2n2,
+    .styles_jlcv2qqjaewmym__8XBMw,
+    .styles_middleContainer__vJjLN,
+    .styles_jlcv2qqjaewmym__bGRTT,
+    .styles_root__goB3B,
+    .styles_root__vsmL9 > div{
         background: transparent !important;
+    }
+
+    .styles_root__ti07r:hover {
+        background-color: #f7f7f71c;
     }
 
     * {
         color: #ddd !important;
+    }
+
+    .styles_root__bomOd,
+    #popover-root > * {
+        background: #000000a6 !important;
     }
     /*#popover-root,*/
     /*#popover-root > * {*/
@@ -79,6 +97,10 @@ domain(gipermarketdom.ru) {
 }
 
 @-moz-document domain(web.whatsapp.com) {
+    /*.x1iek97a {*/
+    /*    background-color: var(--panel-background-lighter);*/
+    /*}*/
+
     body,
     html,
     .two,
@@ -93,7 +115,10 @@ domain(gipermarketdom.ru) {
     ._ak72,
     ._ai01,
     .x1ky8ojb,
-    ._ak9t {
+    ._ak9t,
+    #side,
+    .x1280gxy, /* header */
+    .x114d0zl {
         background: transparent !important;
     }
 
@@ -104,6 +129,16 @@ domain(gipermarketdom.ru) {
     .x114d0zl {
         background-color: rgba(17, 27, 33, 0.59);
         backdrop-filter: grayscale(10);
+    }
+    ._aigw._as6h.xevlxbw.x9f619.x1n2onr6.x5yr21d {
+        background: #22222222 !important;
+    }
+}
+
+@-moz-document domain(vkvideo.ru) {
+    body,
+    html{
+        background: transparent !important;
     }
 }
 
@@ -152,6 +187,7 @@ domain(gipermarketdom.ru) {
     body, html,
     .ceLdPR,
     .jqCeVt,
+    .kHqXhd,
     .home-header-sticky,
     .home-header-sticky__inner,
     .home-header-sticky__wrapper,
@@ -544,5 +580,11 @@ domain(gipermarketdom.ru) {
 
     /* pdf.js */
     --natsumi-pdfjs-topbar-max-width: var(--pdfjs-topbar-max-width, 750px);
-}
 
+
+    --vkui--color_background_content: transparent !important;
+    --panel-background-lighter: transparent !important;
+    --WDS-surface-default: transparent !important;
+    --in-content-page-background: transparent !important;
+    --vkui--color_background: transparent !important;
+}

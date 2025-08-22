@@ -1,3 +1,0 @@
-#!/bin/bash
-
-printf "[general]\nframerate=10\nbars = 51\n[output]\nmethod = raw\nraw_target = /dev/stdout\ndata_format = ascii\nascii_max_range = 70\nchannels = mono\nnoise_reduction = 0\n" | cava -p /dev/stdin
