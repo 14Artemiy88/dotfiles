@@ -12,7 +12,8 @@
 }
 
 #zen-main-app-wrapper {
-    background: var(--zen-themed-toolbar-bg-transparent);
+    background: transparent !important;
+    /*background: var(--zen-themed-toolbar-bg-transparent);*/
     /*background: rgba(21, 31, 31, 0) !important;*/
     overflow: hidden;
     backdrop-filter: blur(40px);
@@ -85,11 +86,6 @@
 
 #nav-bar {
     background: none !important;
-}
-
-#nav-bar {
-    background: none !important;
-
 }
 
 

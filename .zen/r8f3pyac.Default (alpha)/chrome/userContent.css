@@ -37,6 +37,9 @@ domain(gipermarketdom.ru) {
         background-color: #28272d00;
         color: #0cc;
     }
+    /*#super-sidebar {*/
+    /*    background: #111a !important;*/
+    /*}*/
 }
 
 @-moz-document domain(hd.kinopoisk.ru) {
@@ -74,7 +77,7 @@ domain(gipermarketdom.ru) {
     .styles_middleContainer__vJjLN,
     .styles_jlcv2qqjaewmym__bGRTT,
     .styles_root__goB3B,
-    .styles_root__vsmL9 > div{
+    .styles_root__vsmL9 > div {
         background: transparent !important;
     }
 
@@ -87,8 +90,9 @@ domain(gipermarketdom.ru) {
     }
 
     .styles_root__bomOd,
-    #popover-root > * {
-        background: #000000a6 !important;
+    #popover-root *,
+    [class^=styles_popover__] {
+        background: rgba(21, 31, 31, 0.75) !important;
     }
     /*#popover-root,*/
     /*#popover-root > * {*/
@@ -137,7 +141,7 @@ domain(gipermarketdom.ru) {
 
 @-moz-document domain(vkvideo.ru) {
     body,
-    html{
+    html {
         background: transparent !important;
     }
 }
@@ -587,4 +591,8 @@ domain(gipermarketdom.ru) {
     --WDS-surface-default: transparent !important;
     --in-content-page-background: transparent !important;
     --vkui--color_background: transparent !important;
+    --gl-background-color-subtle: transparent !important;
+    --user-contribution-graph-cell-level-0: transparent !important;
+    /*--gl-color-neutral-900: transparent !important;*/
+    /*--gl-color-neutral-900: #111a !important;*/
 }

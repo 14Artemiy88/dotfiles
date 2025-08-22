@@ -14,6 +14,12 @@ tab-group:not([split-view-group]) {
     margin: 2px 2px 2px 2px;
     transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden !important;
+    /*border-left: 2px solid var(--tab-group-color-invert)  !important;*/
+    /*background: color-mix(*/
+    /*        in srgb,*/
+    /*        var(--tab-group-color-invert) 10%,*/
+    /*        transparent*/
+    /*) !important;*/
 
     & .tab-group-label-container {
         flex: 0 0 auto !important;
@@ -26,7 +32,7 @@ tab-group:not([split-view-group]) {
         height: 36px !important;
         border-radius: calc(var(--border-radius-medium) + 2px) !important;
         transition: transform 0.2s ease;
-        transition: background-color 0.2s ease;
+        /*transition: background-color 0.2s ease;*/
         @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
             width: var(--tab-min-width) !important;
         }
@@ -70,11 +76,11 @@ tab-group:not([split-view-group]) {
         }
     }
 
-
+    /*вкладки в группе*/
     & tab:not([zen-glance-tab]) {
         width: calc(var(--zen-sidebar-width) - 18px) !important;
         opacity: 1 !important;
-        margin-left: 18px !important;
+        margin-left: 5px !important;
         transition: opacity 0.25s ease-in, font-size 0.25s ease-out,
         margin 0.25s ease-out, padding 0.25s ease-out !important;
         overflow: visible !important;
@@ -105,6 +111,12 @@ tab-group:not([split-view-group]) {
         max-height: 500px !important;
         overflow: scroll !important;
         scrollbar-width: none !important;
+        /*border-left: 2px solid var(--tab-group-color-invert)  !important;*/
+
+        /*& .tab-group-label-container {*/
+        /*    transition: transform 0.2s ease;*/
+        /*    margin-left: 10px !important;*/
+        /*}*/
     }
 
     tab-group:has(tab[hidden]) {

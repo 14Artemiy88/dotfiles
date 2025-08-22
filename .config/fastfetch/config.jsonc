@@ -6,11 +6,9 @@
     "logo": {
         "padding": {
             "top": 1
-        }
-        // "type": "kitty",
-        // "source": "~/Downloads/neon.txt",
-        // "width": 32,
-        // "height": 15
+        },
+        "color": {"1": "38;2;248;179;193"},
+        "source": "~/.config/fastfetch/logo.txt"
     },
 
     "display": {
@@ -62,6 +60,12 @@
         {
             "type": "wm",
             "key": " DE/WM",
+            "outputColor": "white",
+            "keyColor": "blue"
+        },
+        {
+            "type": "de",
+            "key": "   ",
             "outputColor": "white",
             "keyColor": "blue"
         },

@@ -1,5 +1,6 @@
 .gigaide
 .idea
+.config/eww
 .config/waybar*
 .config/nvim/lua/*
-.config/nvim/binaries/*
+.config/nvim/binaries/*с

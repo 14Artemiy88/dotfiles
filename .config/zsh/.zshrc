@@ -112,10 +112,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/14.toml)"
+eval "$(alman init zsh)"
 
-if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
-  tmux;
-fi
+# if [ -z "$TMUX" ] && [ "$TERM" = "xterm-kitty" ]; then
+  # tmux;
+# fi
 
 # плагин скачивания с ютуба  и тп
 # antigen bundle soimort/you-get
+
+export PATH="$HOME/.local/bin:$PATH"

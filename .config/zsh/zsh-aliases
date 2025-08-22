@@ -184,6 +184,7 @@ alias dbmate2="bdmate2"
 
 # alias webdev="tail -3 ~/Notes/$(ls -1 ~/Notes | grep webdev)"
 alias webdev_id="webdev | head -1 | xclip -selection clipboard; echo 'скопирвоано'"
+alias reviuvers="bat /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Notes/reviuvers.md | copy"
 
 # alias vol="amixer -D pulse sset Master"
 vol() {
@@ -197,4 +198,13 @@ say() {
 get() {
 	# echo $(printf '%q' "$1")
 	http GET $(printf '%q' "$1")
+}
+
+grpco() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/orders/ -proto ~/WORK/_proto/orders/$1.proto -d $2 127.0.0.1:50051 simaland.orders.proto.$3 | jq 
+}
+
+
+grpcr() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/reouter/ -proto ~/WORK/_proto/router/router.proto -d $1 127.0.0.1:50001 simaland.router.proto.$2 | jq
 }

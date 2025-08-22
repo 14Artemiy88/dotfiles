@@ -22,8 +22,7 @@
                 },
                 "name": "Dotfiles",
                 "icon": "svg/dots-circle.svg",
-                "iconTheme": "MaterialDesign",
-                "angle": 45
+                "iconTheme": "MaterialDesign"
               },
               {
                 "type": "command",
@@ -38,13 +37,12 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea  ~/.config/eww",
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea ~/.config/eww",
                   "delayed": false
                 },
                 "name": "eww",
                 "icon": "widgets",
-                "iconTheme": "material-symbols-rounded",
-                "angle": 315
+                "iconTheme": "material-symbols-rounded"
               }
             ]
           },
@@ -99,11 +97,11 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/PhpStorm-242.20224.175/bin/phpstorm.sh"
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/PhpStorm/bin/phpstorm"
                 },
                 "name": "SL",
-                "icon": "php.svg",
-                "iconTheme": "devicons-master",
+                "icon": "🐬",
+                "iconTheme": "emoji",
                 "angle": 225
               },
               {
@@ -113,15 +111,6 @@
                 "icon": "more_horiz",
                 "iconTheme": "material-symbols-rounded",
                 "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "postman"
-                    },
-                    "name": "Postman",
-                    "icon": "postman",
-                    "iconTheme": "simple-icons"
-                  },
                   {
                     "type": "submenu",
                     "data": {},
@@ -137,7 +126,21 @@
                         },
                         "name": "Cart",
                         "icon": "shopping_basket",
-                        "iconTheme": "material-symbols-rounded"
+                        "iconTheme": "material-symbols-rounded",
+                        "angle": 300
+                      },
+                      {
+                        "type": "command",
+                        "name": "router",
+                        "icon": "router",
+                        "iconTheme": "material-symbols-rounded",
+                        "data": {
+                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/router",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        },
+                        "angle": 345
                       },
                       {
                         "type": "command",
@@ -147,7 +150,8 @@
                         },
                         "name": "Orders",
                         "icon": "order_approve",
-                        "iconTheme": "material-symbols-rounded"
+                        "iconTheme": "material-symbols-rounded",
+                        "angle": 615
                       }
                     ]
                   },
@@ -192,8 +196,49 @@
                 ],
                 "angle": 270
               }
-            ],
-            "angle": 180
+            ]
+          },
+          {
+            "type": "submenu",
+            "name": "Приложения",
+            "icon": "apps",
+            "iconTheme": "material-symbols-rounded",
+            "data": {},
+            "children": [
+              {
+                "type": "command",
+                "name": "Transmission",
+                "icon": "transmission",
+                "iconTheme": "simple-icons",
+                "data": {
+                  "command": "transmission-gtk",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                }
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "postman"
+                },
+                "name": "Postman",
+                "icon": "postman",
+                "iconTheme": "simple-icons"
+              },
+              {
+                "type": "command",
+                "name": "Deadbeef",
+                "icon": "play_circle",
+                "iconTheme": "material-symbols-rounded",
+                "data": {
+                  "command": "deadbeef",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                }
+              }
+            ]
           }
         ]
       },
@@ -203,214 +248,14 @@
       "anchored": true
     }
   ],
-  "templates": [
+  "collections": [
     {
-      "type": "submenu",
-      "data": {},
-      "name": "Apps",
-      "icon": "apps",
+      "name": "Favorites",
+      "icon": "favorite",
       "iconTheme": "material-symbols-rounded",
-      "children": [
-        {
-          "type": "command",
-          "data": {
-            "command": "flatpak run org.telegram.desktop"
-          },
-          "name": "Telegramm",
-          "icon": "telegram",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "steam"
-          },
-          "name": "Steam",
-          "icon": "steam",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "google-chrome-stable"
-          },
-          "name": "Chrome",
-          "icon": "googlechrome",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "firefox"
-          },
-          "name": "Firefox",
-          "icon": "firefoxbrowser",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "authy"
-          },
-          "name": "Authy",
-          "icon": "authy",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "transmission-gtk"
-          },
-          "name": "Transmission",
-          "icon": "transmission",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "vk-messenger"
-          },
-          "name": "VK",
-          "icon": "vk",
-          "iconTheme": "simple-icons"
-        }
+      "tags": [
+        "favs"
       ]
-    },
-    {
-      "type": "command",
-      "data": {
-        "command": "krunner"
-      },
-      "name": "Krunner",
-      "icon": "keyboard_keys",
-      "iconTheme": "material-symbols-rounded"
-    },
-    {
-      "type": "hotkey",
-      "data": {
-        "hotkey": "AltLeft+KeyT",
-        "delayed": false
-      },
-      "name": "Simulate Hotkey",
-      "icon": "text_ad",
-      "iconTheme": "material-symbols-rounded"
-    },
-    {
-      "type": "command",
-      "data": {
-        "command": "firefox \"https://www.google.com/search?q=$(xclip -o)\""
-      },
-      "name": "Search in Google",
-      "icon": "search",
-      "iconTheme": "material-symbols-rounded"
-    },
-    {
-      "type": "command",
-      "data": {
-        "command": "firefox $(xclip -o)"
-      },
-      "name": "Open URL",
-      "icon": "turn_slight_right",
-      "iconTheme": "material-symbols-rounded"
-    },
-    {
-      "type": "submenu",
-      "data": {},
-      "name": "Work",
-      "icon": "computer",
-      "iconTheme": "material-symbols-rounded",
-      "children": [
-        {
-          "type": "command",
-          "data": {
-            "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand-242.20224.106/bin/goland ~/WORK/router"
-          },
-          "name": "Router",
-          "icon": "router",
-          "iconTheme": "material-symbols-rounded"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand-242.20224.106/bin/goland ~/WORK/control-api"
-          },
-          "name": "Control API",
-          "icon": "stadia_controller",
-          "iconTheme": "material-symbols-rounded"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand-242.20224.106/bin/goland ~/WORK/search"
-          },
-          "name": "Search",
-          "icon": "search",
-          "iconTheme": "material-symbols-rounded"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand-242.20224.106/bin/goland ~/WORK/ilium"
-          },
-          "name": "Ilium",
-          "icon": "cilium",
-          "iconTheme": "simple-icons"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/PhpStorm-241.18034.69/bin/phpstorm.sh"
-          },
-          "name": "Launch Application",
-          "icon": "php.svg",
-          "iconTheme": "SVG"
-        },
-        {
-          "type": "command",
-          "data": {
-            "command": "postman"
-          },
-          "name": "Postman",
-          "icon": "postman",
-          "iconTheme": "simple-icons"
-        }
-      ]
-    },
-    {
-      "type": "command",
-      "data": {
-        "command": "postman"
-      },
-      "name": "Postman",
-      "icon": "postman",
-      "iconTheme": "simple-icons"
-    },
-    {
-      "type": "submenu",
-      "data": {},
-      "name": "MY projects",
-      "icon": "family_star",
-      "iconTheme": "material-symbols-rounded",
-      "children": [
-        {
-          "type": "command",
-          "data": {
-            "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU-242.20224.91/bin/idea.sh"
-          },
-          "name": "Launch Application",
-          "icon": "widgets",
-          "iconTheme": "material-symbols-rounded"
-        }
-      ]
-    },
-    {
-      "type": "command",
-      "data": {
-        "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/search"
-      },
-      "name": "Search",
-      "icon": "search",
-      "iconTheme": "material-symbols-rounded"
     }
   ]
 }
