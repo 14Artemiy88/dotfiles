@@ -37,9 +37,10 @@ domain(gipermarketdom.ru) {
         background-color: #28272d00;
         color: #0cc;
     }
-    /*#super-sidebar {*/
-    /*    background: #111a !important;*/
-    /*}*/
+    #super-sidebar {
+        /*background: #111a !important;*/
+        background: var(--gl-color-neutral-900) !important;
+    }
 }
 
 @-moz-document domain(hd.kinopoisk.ru) {

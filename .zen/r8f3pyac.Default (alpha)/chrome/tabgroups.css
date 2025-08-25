@@ -1,136 +1,122 @@
 tab-group:not(:has(tab:not([hidden]))) {
     display: none !important;
-    @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+}
+
+@media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+    tab-group:not(:has(tab:not([hidden]))) {
         width: var(--tab-min-width) !important;
     }
 }
 
 tab-group:not([split-view-group]) {
-    /* Visual Hierarchy Improvements */
     display: flex !important;
     flex-direction: column !important;
-
     border-radius: calc(var(--border-radius-medium) + 2px) !important;
-    margin: 2px 2px 2px 2px;
+    margin: 2px;
     transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden !important;
-    /*border-left: 2px solid var(--tab-group-color-invert)  !important;*/
-    /*background: color-mix(*/
-    /*        in srgb,*/
-    /*        var(--tab-group-color-invert) 10%,*/
-    /*        transparent*/
-    /*) !important;*/
+    border: 1px solid color-mix(in srgb, var(--tab-group-color-invert) 75%, transparent) !important;
+    padding: 5px !important;
+}
 
-    & .tab-group-label-container {
-        flex: 0 0 auto !important;
-        position: sticky !important;
-        top: 0 !important;
-        z-index: 1000 !important;
-        --tab-group-color-pale: transparent !important;
-        --tab-group-color: transparent !important;
-        margin: 0 !important;
-        height: 36px !important;
-        border-radius: calc(var(--border-radius-medium) + 2px) !important;
-        transition: transform 0.2s ease;
-        /*transition: background-color 0.2s ease;*/
-        @media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
-            width: var(--tab-min-width) !important;
-        }
+tab-group:not([split-view-group]) .tab-group-label-container {
+    flex: 0 0 auto !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1000 !important;
+    --tab-group-color-pale: transparent !important;
+    --tab-group-color: transparent !important;
+    margin: 0 !important;
+    height: 26px !important;
+    border-radius: calc(var(--border-radius-medium) + 2px) !important;
+    transition: transform 0.2s ease;
+}
 
-        &:hover {
-            /*background-color: var(--tab-hover-background-color) !important;*/
-            label {
-                /*color: var(--tab-group-color-invert) !important;*/
-                color: #eeeeee !important;
-            }
-        }
-
-        &:before {
-            font-family: "DejaVuSansM Nerd Font Mono", sans-serif !important;
-            font-size: 25px !important;
-            content: "󰉋 " !important;
-            position: absolute !important;
-            top: 4px !important;
-            left: 0 !important;
-            color: var(--tab-group-color-invert) !important;
-        }
-
-        &:after {
-            display: none;
-        }
-
-        & > label {
-            width: 100% !important;
-            background: transparent !important;
-            border: none !important;
-            font-weight: 400 !important;
-            text-align: center !important;
-            color: #cccccc !important;
-            margin: 0 !important;
-            display: flex !important;
-            justify-content: flex-start !important;
-            align-content: flex-start !important;
-            padding-left: 25px !important;
-            font-size: 12px !important;
-            margin-top: 3px !important;
-        }
-    }
-
-    /*вкладки в группе*/
-    & tab:not([zen-glance-tab]) {
-        width: calc(var(--zen-sidebar-width) - 18px) !important;
-        opacity: 1 !important;
-        margin-left: 5px !important;
-        transition: opacity 0.25s ease-in, font-size 0.25s ease-out,
-        margin 0.25s ease-out, padding 0.25s ease-out !important;
-        overflow: visible !important;
-    }
-
-
-    @media not (-moz-bool-pref: "tab.groups.display-tab-range") {
-        tab::before {
-            background: none !important;
-        }
-    }
-
-    &[collapsed] {
-        max-height: 36px !important;
-        transition: max-height 0.25s ease-out;
-
-        & tab {
-            z-index: -1 !important;
-            display: flex !important;
-            opacity: 0.1 !important;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-    }
-
-    /* Expand when NOT collapsed */
-    &:not([collapsed]) {
-        max-height: 500px !important;
-        overflow: scroll !important;
-        scrollbar-width: none !important;
-        /*border-left: 2px solid var(--tab-group-color-invert)  !important;*/
-
-        /*& .tab-group-label-container {*/
-        /*    transition: transform 0.2s ease;*/
-        /*    margin-left: 10px !important;*/
-        /*}*/
-    }
-
-    tab-group:has(tab[hidden]) {
-        display: none !important;
+@media not (-moz-bool-pref: "zen.view.sidebar-expanded") {
+    tab-group:not([split-view-group]) .tab-group-label-container {
+        width: var(--tab-min-width) !important;
     }
 }
 
+tab-group:not([split-view-group]) .tab-group-label-container:hover label {
+    color: #eeeeee !important;
+}
 
-#tabbrowser-tabs {
-    & .tabbrowser-tab {
-        &:active {
-            transition: scale 0.03s !important;
-            scale: 0.98;
-        }
+tab-group:not([split-view-group]) .tab-group-label-container::before {
+    font-family: "DejaVuSansM Nerd Font Mono", sans-serif !important;
+    font-size: 25px !important;
+    content: "󰉋 " !important;
+    position: absolute !important;
+    top: -2px !important;
+    left: 10px !important;
+    color: var(--tab-group-color-invert) !important;
+}
+
+tab-group:not([split-view-group]) .tab-group-label-container::after {
+    display: none;
+}
+
+tab-group:not([split-view-group]) .tab-group-label-container > label {
+    width: 100% !important;
+    background: transparent !important;
+    border: none !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+    color: #cccccc !important;
+    margin: 0 !important;
+    margin-left: 10px !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-content: flex-start !important;
+    padding-left: 25px !important;
+    font-size: 12px !important;
+}
+
+/* вкладка внутри группы */
+tab-group:not([split-view-group]) tab:not([zen-glance-tab]) {
+    width: calc(var(--zen-sidebar-width) - 18px) !important;
+    opacity: 1 !important;
+    transition: opacity 0.25s ease-in, font-size 0.25s ease-out, margin 0.25s ease-out, padding 0.25s ease-out !important;
+    overflow: visible !important;
+}
+
+@media not (-moz-bool-pref: "tab.groups.display-tab-range") {
+    tab-group:not([split-view-group]) tab::before {
+        background: none !important;
     }
 }
 
+tab-group:not([split-view-group])[collapsed] {
+    max-height: 36px !important;
+    transition: max-height 0.25s ease-out;
+}
+
+tab-group:not([split-view-group])[collapsed] tab {
+    z-index: -1 !important;
+    display: flex !important;
+    opacity: 0.1 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+tab-group:not([split-view-group]):not([collapsed]) {
+    max-height: 500px !important;
+    overflow: scroll !important;
+    scrollbar-width: none !important;
+}
+
+tab-group:not([split-view-group]):not([collapsed]) .tab-group-label-container::before {
+    content: "󰝰 " !important;
+}
+tab-group:not([split-view-group]):not([collapsed]) .tab-group-label-container > label {
+    color: var(--tab-group-color-invert) !important;
+}
+
+tab-group:has(tab[hidden]) {
+    display: none !important;
+}
+
+#tabbrowser-tabs .tabbrowser-tab:active {
+    transition: scale 0.03s !important;
+    scale: 0.98;
+}

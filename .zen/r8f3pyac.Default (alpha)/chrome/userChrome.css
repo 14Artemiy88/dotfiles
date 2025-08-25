@@ -1,5 +1,6 @@
 @import url("tabgroups.css");
-@import url("tabPreview.css");
+/*@import url("tabPreview.css");*/
+/*@import url("ctrlTab.css");*/
 
 :root {
     /*--zen-main-browser-background: #222222dd !important;*/

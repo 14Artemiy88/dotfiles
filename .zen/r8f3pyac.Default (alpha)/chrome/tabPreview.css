@@ -1,5 +1,6 @@
-@-moz-document url-prefix("chrome:") {
+
     #tab-preview-panel {
+        background: #ffff00 !important;
         /* Matches Zen main background color, also supports gradients */
         @media (-moz-bool-pref: "zen.mods.TabPreviewEnhanced.enabledBackgroundNative") {
             --panel-background: var(
@@ -77,4 +78,3 @@
             }
         }
     }
-}
