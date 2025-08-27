@@ -100,8 +100,8 @@
                   "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/PhpStorm/bin/phpstorm"
                 },
                 "name": "SL",
-                "icon": "🐬",
-                "iconTheme": "emoji",
+                "icon": "https://www.sima-land.ru/favicon/apple-touch-icon.png",
+                "iconTheme": "base64",
                 "angle": 225
               },
               {

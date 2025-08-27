@@ -47,7 +47,7 @@ tab-group:not([split-view-group]) .tab-group-label-container::before {
     font-size: 25px !important;
     content: "󰉋 " !important;
     position: absolute !important;
-    top: -2px !important;
+    top: -6px !important;
     left: 10px !important;
     color: var(--tab-group-color-invert) !important;
 }
@@ -70,6 +70,8 @@ tab-group:not([split-view-group]) .tab-group-label-container > label {
     align-content: flex-start !important;
     padding-left: 25px !important;
     font-size: 12px !important;
+    position: absolute !important;
+    top: -4px !important;
 }
 
 /* вкладка внутри группы */
@@ -87,7 +89,7 @@ tab-group:not([split-view-group]) tab:not([zen-glance-tab]) {
 }
 
 tab-group:not([split-view-group])[collapsed] {
-    max-height: 36px !important;
+    max-height: 30px !important;
     transition: max-height 0.25s ease-out;
 }
 
@@ -103,13 +105,16 @@ tab-group:not([split-view-group]):not([collapsed]) {
     max-height: 500px !important;
     overflow: scroll !important;
     scrollbar-width: none !important;
+
+    background: linear-gradient(to bottom, var(--tab-group-color-invert) 26px, transparent 26px);
 }
 
 tab-group:not([split-view-group]):not([collapsed]) .tab-group-label-container::before {
     content: "󰝰 " !important;
+    color: #1e1e1e !important;
 }
 tab-group:not([split-view-group]):not([collapsed]) .tab-group-label-container > label {
-    color: var(--tab-group-color-invert) !important;
+    color: #1e1e1e !important;
 }
 
 tab-group:has(tab[hidden]) {
