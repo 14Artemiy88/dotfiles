@@ -76,7 +76,7 @@ tab-group:not([split-view-group]) .tab-group-label-container > label {
 
 /* вкладка внутри группы */
 tab-group:not([split-view-group]) tab:not([zen-glance-tab]) {
-    width: calc(var(--zen-sidebar-width) - 18px) !important;
+    width: calc(var(--zen-sidebar-width) - 35px) !important;
     opacity: 1 !important;
     transition: opacity 0.25s ease-in, font-size 0.25s ease-out, margin 0.25s ease-out, padding 0.25s ease-out !important;
     overflow: visible !important;

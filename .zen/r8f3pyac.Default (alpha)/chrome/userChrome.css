@@ -3,7 +3,6 @@
 /*@import url("ctrlTab.css");*/
 
 :root {
-    /*--zen-main-browser-background: #222222dd !important;*/
     --zen-themed-toolbar-bg-transparent: transparent !important;
     --zen-main-browser-background: rgba(21, 31, 31, 0.75) !important;
     --in-content-page-background: #1e1e1e !important;
@@ -12,12 +11,10 @@
     --newtab-background-color-secondary: rgba(66, 65, 77, 0) !important;
 }
 
+/* сам фон браузера */
 #zen-main-app-wrapper {
     background: transparent !important;
-    /*background: var(--zen-themed-toolbar-bg-transparent);*/
-    /*background: rgba(21, 31, 31, 0) !important;*/
     overflow: hidden;
-    backdrop-filter: blur(40px);
 }
 
 & #tabbrowser-tabbox #tabbrowser-tabpanels .browserSidebarContainer * {
@@ -37,14 +34,9 @@
     }
 }
 
-/*.zen-current-workspace-indicator {*/
-/*    margin-top: 0 !important;*/
-/*    height: 0 !important;*/
-/*}*/
 
 /* Better History */
 #sidebar-box[sidebarcommand="viewHistorySidebar"] {
-    background-color: var(--zen-themed-toolbar-bg) !important;
     border-radius: var(--zen-border-radius);
     box-shadow: 0 0 2px 2px rgba(0, 0, 0, .1);
     border: 1px solid var(--zen-colors-border);
@@ -59,28 +51,12 @@
 
 
 /* Hide Three Dots - Make Transparent, Don't Hide To Enable Panels */
-#PanelUI-button {
-    display: none;
-}
-
 /* Hide Navbar Buttons - Preferences, Sidebar, and Profile */
 /*#preferences-button,*/
 /*#zen-expand-sidebar-button,*/
-#zen-profile-button {
-    display: none;
-}
-
-/* КРЕСТИК */
-.titlebar-button:hover > image {
-    /*background: none !important;*/
-    /*color: #cc0000 !important;*/
-}
-
-
-.tab-context-line {
-    display: none !important;
-}
-
+#PanelUI-button,
+zen-profile-button,
+.tab-context-line,
 #unified-extensions-button {
     display: none !important;
 }
@@ -88,7 +64,6 @@
 #nav-bar {
     background: none !important;
 }
-
 
 #zen-appcontent-navbar-container {
     padding: 3px !important;
@@ -100,11 +75,6 @@
     background: none !important;
 }
 
-#urlbar-input {
-    /*padding-left: 10px !important;*/
-}
-
-
 #urlbar:not([focused="true"]):not([breakout-extend="true"]) > #urlbar-background {
     background: color-mix(
             in srgb,
@@ -113,10 +83,7 @@
     ) !important;
 }
 
-#urlbar [id$="-button"] {
-    display: none;
-}
-
+#urlbar [id$="-button"],
 #urlbar [id$="-container"] {
     display: none;
 }
@@ -124,14 +91,6 @@
 #urlbar [id$="-box"] {
     color: #cccccc !important;
 }
-
-
-#TabsToolbar {
-}
-
-.browserContainer {
-}
-
 
 #tabbrowser-tabs {
     background: none !important;
@@ -191,49 +150,24 @@
     }
 }
 
-
-#alltabs-button {
-    /*display: none !important;*/
-}
-
-#vertical-tabs-newtab-button {
-    /*display: none !important;*/
-}
-
-#zen-profile-button {
-    /*display: none !important;*/
-}
-
-#zen-expand-sidebar-button {
-    /*display: none !important;*/
-}
-
-#zen-bookmark-button {
-    /*display: none !important;*/
-}
-
-#zen-history-button {
-    /*display: none !important;*/
-}
-
-#zen-preferences-button {
-    /*display: none !important;*/
-}
-
-#zen-sidepanel-button {
-    /*display: none !important;*/
-}
-
 #zen-sidebar-icons-wrapper {
-    padding-top: 0px !important;
+    padding-top: 0 !important;
 }
 
-#zen-sidebar-icons-wrapper {
-    /*display: none !important;*/
-}
-
+#urlbar-input,
+#TabsToolbar,
+.browserContainer,
+#alltabs-button,
+#vertical-tabs-newtab-button,
+#zen-profile-button,
+#zen-expand-sidebar-button,
+#zen-bookmark-button,
+#zen-history-button,
+#zen-preferences-button,
+#zen-sidepanel-button,
+#zen-sidebar-icons-wrapper,
 #TabsToolbar-customization-target {
-    /*height: 100%;*/
-    /*min-width: var(--zen-sidebar-action-button-width);*/
 }
+
+
 
