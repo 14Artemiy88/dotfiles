@@ -21,10 +21,10 @@
              "type": 9
         },
         "bar": {
-            "borderLeft": "",
-            "borderRight": "",
-            "charElapsed": "━",
-            "charTotal": " ",
+            "border.Left": "",
+            "border.Right": "",
+            "char.Elapsed": "━",
+            "char.Total": " ",
             "width": 40
         },
         "constants": [

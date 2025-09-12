@@ -53,7 +53,7 @@ domain(gipermarketdom.ru) {
     .Footer_root__yxLAr {
         background: transparent !important;
     }
-    .styles_root__bomOd {
+    [class^="styles_root__"] {
         background: #000000a6 !important;
     }
 }
@@ -62,11 +62,12 @@ domain(gipermarketdom.ru) {
     body,
     html,
     #m6rbr47ajum71h,
+    [class^="styles_root__"],
     .styles_root__vsmL9:not(.styles_wideRoot__JrXG9),
+    [class^="styles_root__"]:not([class^="styles_wideRoot__"]),
     .styles_ussiy59bm827q8h5k__bi2n2,
     .styles_wideContentContainer__lu_K3,
     .styles_rootLight___QD_Q,
-    .styles_root___ruvh,
     .styles_vb1fnguwg75mmcs2a__bi2n2,
     .styles_foy254pnmfxvhgahr__bi2n2,
     .styles_m1nmncyswy22z100d__bi2n2,
@@ -77,8 +78,7 @@ domain(gipermarketdom.ru) {
     .styles_jlcv2qqjaewmym__8XBMw,
     .styles_middleContainer__vJjLN,
     .styles_jlcv2qqjaewmym__bGRTT,
-    .styles_root__goB3B,
-    .styles_root__vsmL9 > div {
+    [class^="styles_root__"] > div {
         background: transparent !important;
     }
 

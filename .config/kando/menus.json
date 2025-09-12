@@ -112,50 +112,6 @@
                 "iconTheme": "material-symbols-rounded",
                 "children": [
                   {
-                    "type": "submenu",
-                    "data": {},
-                    "name": "Proto",
-                    "icon": "svg/device/projector_line.svg",
-                    "iconTheme": "MingCute",
-                    "children": [
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/cart",
-                          "delayed": false
-                        },
-                        "name": "Cart",
-                        "icon": "shopping_basket",
-                        "iconTheme": "material-symbols-rounded",
-                        "angle": 300
-                      },
-                      {
-                        "type": "command",
-                        "name": "router",
-                        "icon": "router",
-                        "iconTheme": "material-symbols-rounded",
-                        "data": {
-                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/router",
-                          "detached": true,
-                          "isolated": false,
-                          "delayed": false
-                        },
-                        "angle": 345
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/orders",
-                          "delayed": false
-                        },
-                        "name": "Orders",
-                        "icon": "order_approve",
-                        "iconTheme": "material-symbols-rounded",
-                        "angle": 615
-                      }
-                    ]
-                  },
-                  {
                     "type": "command",
                     "data": {
                       "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/control-api"
@@ -182,6 +138,47 @@
                     "name": "Layout",
                     "icon": "svg/layers-triple-outline.svg",
                     "iconTheme": "MaterialDesign"
+                  },
+                  {
+                    "type": "submenu",
+                    "data": {},
+                    "name": "Proto",
+                    "icon": "svg/device/projector_line.svg",
+                    "iconTheme": "MingCute",
+                    "children": [
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/cart",
+                          "delayed": false
+                        },
+                        "name": "Cart",
+                        "icon": "shopping_basket",
+                        "iconTheme": "material-symbols-rounded"
+                      },
+                      {
+                        "type": "command",
+                        "name": "router",
+                        "icon": "router",
+                        "iconTheme": "material-symbols-rounded",
+                        "data": {
+                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/router",
+                          "detached": true,
+                          "isolated": false,
+                          "delayed": false
+                        }
+                      },
+                      {
+                        "type": "command",
+                        "data": {
+                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/orders",
+                          "delayed": false
+                        },
+                        "name": "Orders",
+                        "icon": "order_approve",
+                        "iconTheme": "material-symbols-rounded"
+                      }
+                    ]
                   },
                   {
                     "type": "command",
