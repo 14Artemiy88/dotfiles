@@ -1,4 +1,5 @@
 {
+  "version": "2.2.0",
   "menus": [
     {
       "root": {
@@ -44,16 +45,54 @@
                 "icon": "widgets",
                 "iconTheme": "material-symbols-rounded"
               }
-            ]
+            ],
+            "angle": 0
           },
           {
-            "type": "command",
-            "data": {
-              "command": "zen \"https://www.google.com/search?q=$(xclip -o)\""
-            },
-            "name": "Search in Google",
-            "icon": "search",
-            "iconTheme": "material-symbols-rounded"
+            "type": "submenu",
+            "name": "Zen",
+            "icon": "zenbrowser",
+            "iconTheme": "simple-icons",
+            "data": {},
+            "children": [
+              {
+                "type": "command",
+                "data": {
+                  "command": "zen \"https://translate.google.ru/?sl=auto&tl=ru&text=$(xclip -o)&op=translate\"",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Перевести",
+                "icon": "translate",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 45
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "zen \"$(xclip -o)\"",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Открыть ссылку",
+                "icon": "nest_heat_link_e",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 90
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "zen \"https://www.google.com/search?q=$(xclip -o)\""
+                },
+                "name": "Search in Google",
+                "icon": "search",
+                "iconTheme": "material-symbols-rounded",
+                "angle": 135
+              }
+            ],
+            "angle": 90
           },
           {
             "type": "submenu",
@@ -158,15 +197,15 @@
                       },
                       {
                         "type": "command",
-                        "name": "router",
-                        "icon": "router",
-                        "iconTheme": "material-symbols-rounded",
                         "data": {
                           "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/router",
                           "detached": true,
                           "isolated": false,
                           "delayed": false
-                        }
+                        },
+                        "name": "router",
+                        "icon": "router",
+                        "iconTheme": "material-symbols-rounded"
                       },
                       {
                         "type": "command",
@@ -193,26 +232,27 @@
                 ],
                 "angle": 270
               }
-            ]
+            ],
+            "angle": 180
           },
           {
             "type": "submenu",
+            "data": {},
             "name": "Приложения",
             "icon": "apps",
             "iconTheme": "material-symbols-rounded",
-            "data": {},
             "children": [
               {
                 "type": "command",
-                "name": "Transmission",
-                "icon": "transmission",
-                "iconTheme": "simple-icons",
                 "data": {
                   "command": "transmission-gtk",
                   "detached": true,
                   "isolated": false,
                   "delayed": false
-                }
+                },
+                "name": "Transmission",
+                "icon": "transmission",
+                "iconTheme": "simple-icons"
               },
               {
                 "type": "command",
@@ -225,24 +265,27 @@
               },
               {
                 "type": "command",
-                "name": "Deadbeef",
-                "icon": "play_circle",
-                "iconTheme": "material-symbols-rounded",
                 "data": {
                   "command": "deadbeef",
                   "detached": true,
                   "isolated": false,
                   "delayed": false
-                }
+                },
+                "name": "Deadbeef",
+                "icon": "play_circle",
+                "iconTheme": "material-symbols-rounded"
               }
-            ]
+            ],
+            "angle": 270
           }
         ]
       },
       "shortcut": "Control+Space",
       "shortcutID": "example-menu",
       "centered": false,
-      "anchored": true
+      "anchored": true,
+      "hoverMode": false,
+      "tags": []
     }
   ],
   "collections": [

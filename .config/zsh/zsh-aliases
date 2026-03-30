@@ -6,38 +6,26 @@ alias zzz="m ~/.zshrc"
 alias ssd="cd $SSD"
 
 # переопределение команд
-# alias lf="lfcd"
 alias fd="fdfind"
-# alias ls="lsd"
-alias lsd="exa -1 --color=always --icons --all"
-# alias htop="btop"
+alias lsd="exa -1 --color=always --icons --all -s type"
 
 alias conf="cd ~/Dotfiles/.config"
 alias dots="cd ~/Dotfiles/"
 alias bin="cd ~/Dotfiles/.local/bin"
 
-# alias wget2="wget2 --progress bar "
-
 # alias mopidy="nohup mopidy > /dev/null &"
 
 # MY alias
-# alias apt-command="sudo apt"
-# alias apt-command="sudo apt-fast"
-# alias apt-command="sudo apt"
 alias apt-command="sudo nala"
 alias clear="clear && clear"
 alias s="sudo"
 # alias clean="yes | apt-command autoremove; yes | apt-command autoclean"
 alias clean="yes | apt-command autoremove"
-# alias apd="upd"
-# alias apd="pkcon update; clean; flatpak update -y"
 alias upd="apt-command upgrade -y"
 alias brew_apd="brew update; brew upgrade"
 alias flatpack_apd="flatpak update -y"
-# alias apd="upd; flatpack_apd"
 alias apd="upd; clean; flatpack_apd; brew_apd"
 alias del="sudo apt-get -y autoremove --purge"
-# alias install="sudo yay -S"
 alias install="sudo nala install"
 alias inst="install"
 alias pinstall="$HOME/.venvs/MyEnv/bin/python -m pip install --upgrade"
@@ -55,7 +43,8 @@ alias exports="m ~/.config/zsh/zsh-exports"
 alias t="timer"
 alias bat="batcat"
 alias ff="fastfetch"
-
+alias m2="sudo mount /dev/sdb1 /media/artemiy/2Tb"
+alias sf="superfile"
 
 alias docker_clean_images='docker rmi $(docker images -a --filter=dangling=true -q)'
 alias docker_clean_ps='docker rm $(docker ps --filter=status=exited --filter=status=created -q)'
@@ -185,6 +174,7 @@ alias dbmate2="bdmate2"
 # alias webdev="tail -3 ~/Notes/$(ls -1 ~/Notes | grep webdev)"
 alias webdev_id="webdev | head -1 | xclip -selection clipboard; echo 'скопирвоано'"
 alias reviuvers="bat /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Notes/reviuvers.md | copy"
+alias testers="bat /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Notes/testers.md | fzf | copy"
 
 # alias vol="amixer -D pulse sset Master"
 vol() {
@@ -204,7 +194,36 @@ grpco() {
 	grpcurl -plaintext -import-path ~/WORK/_proto/orders/ -proto ~/WORK/_proto/orders/$1.proto -d $2 127.0.0.1:50051 simaland.orders.proto.$3 | jq 
 }
 
+grpco_stage() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/orders/ -proto ~/WORK/_proto/orders/$1.proto -d $2 -H "grpc-service: orders-2688" stage-svc.sima-land.ru:8080 simaland.orders.proto.$3 | jq
+}
+
+
+grpcof() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/order-files/ -proto ~/WORK/_proto/order-files/$1.proto -d $2 127.0.0.1:50051 simaland.order_files.proto.$3 | jq 
+}
 
 grpcr() {
 	grpcurl -plaintext -import-path ~/WORK/_proto/reouter/ -proto ~/WORK/_proto/router/router.proto -d $1 127.0.0.1:50001 simaland.router.proto.$2 | jq
+}
+
+grpcs() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/shipments-proto/ -proto ~/WORK/_proto/shipments-proto/shipment-server.proto -d $1 127.0.0.1:50001 simaland.shipments-proto.proto.$2 | jq
+}
+
+
+
+
+
+
+get_storm() {
+	curl --output-dir /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/IDE -O https://download-cdn.jetbrains.com/webide/PhpStorm-"$1".tar.gz
+}
+
+get_goland() {
+	curl --output-dir /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/IDE -O https://download-cdn.jetbrains.com/go/goland-"$1".tar.gz
+}
+
+get_intelj() {
+	curl --output-dir /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/IDE -O https://download-cdn.jetbrains.com/idea/idea-"$1".tar.gz
 }

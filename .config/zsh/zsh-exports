@@ -24,12 +24,13 @@ export UPDATE_ZSH_DAYS=30
 export FZF_DEFAULT_OPTS="
 --cycle
 --info=inline
---height=50%
+--tmux=center,80%,60%
 --layout=reverse
 --preview '((chafa --size=50x50 {}) ; batcat --style=numbers --color=always {}) 2>/dev/null'
 --prompt='∼ '
 --pointer='❯'
 --marker='✓ '
+--preview-border=none
 "
 
 # # HEADER
@@ -47,11 +48,11 @@ export FZF_DEFAULT_OPTS="
 # "
 
 # HEADER
-# export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
 # --header 'CTRL-D Directories / CTRL-F Files'
-# --header-lines=2
-# --header-first
-# "
+export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
+--header-border=rounded
+--header-first
+"
 
 # BINDS
 # --bind 'ctrl-f:change-prompt(Files> )+reload(find * -type f)'
@@ -66,6 +67,7 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
 --bind 'alt-m:execute(micro {})'
 --bind 'alt-c:execute(cd -- {})+abort'
 "
+
 # COLORS
 export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
 --color=fg:#d0d0d0,bg:-1;hl:#5f87af
@@ -75,22 +77,18 @@ export FZF_DEFAULT_OPTS="$FZF_DEFAULT_OPTS
 
 # CTRL-/ to toggle small preview window to see the full command
 # CTRL-Y to copy the command into clipboard using pbcopy
-export FZF_CTRL_R_OPTS="
-  --preview 'echo {}' --preview-window up:3:hidden:wrap
-  --bind 'ctrl-/:toggle-preview'
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
-  --color header:italic
---header '┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ CTRL-Y      Скопировать в буфер  ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛'
-"
+# export FZF_CTRL_R_OPTS="
+#   --preview 'echo {}' --preview-window up:3:hidden:wrap
+#   --bind 'ctrl-/:toggle-preview'
+#   --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+#   --color header:italic
+# --header 'CTRL-Y      Скопировать в буфер'
+# "
 
 # Print tree structure in the preview window
 export FZF_ALT_C_OPTS="
 --preview 'lsd {} --color always -l'
---header '┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┃ Press CTRL-M Перейти в директорию ┃
-┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛'
+--header 'CTRL-M      Перейти в директорию'
 "
 
 HISTFILE="$HOME/.zsh_history"

@@ -7,10 +7,21 @@ domain(gipermarketdom.ru) {
     }
 }
 
+
+@-moz-document domain(vkvideo.ru),
+domain(telemost.yandex.ru),
+domain(steamcommunity.com) {
+    body,
+    html {
+        background: transparent !important;
+    }
+}
+
 @-moz-document domain(talk.sima-land.ru) {
     body,
     html,
     #largeVideoContainer,
+    .css-1u0mgid-container,
     .css-2e5bca-withI18nextTranslation_Tae_-containerBackground {
         background: transparent !important;
     }
@@ -41,6 +52,16 @@ domain(gipermarketdom.ru) {
         /*background: #111a !important;*/
         background: var(--gl-color-neutral-900) !important;
     }
+    .code.code-syntax-highlight-theme {
+        background-color: #1d1f2188 !important;
+    }
+
+    /*.modal-content */
+    .gl-modal .modal-content {
+        background-color: #181818aa !important;
+        border: solid 1px #666666 !important;
+        backdrop-filter: blur(10px) !important;;
+    }
 }
 
 @-moz-document domain(hd.kinopoisk.ru) {
@@ -63,6 +84,7 @@ domain(gipermarketdom.ru) {
     html,
     #m6rbr47ajum71h,
     [class^="styles_root__"],
+    [class="styles_rootLight__"],
     .styles_root__vsmL9:not(.styles_wideRoot__JrXG9),
     [class^="styles_root__"]:not([class^="styles_wideRoot__"]),
     .styles_ussiy59bm827q8h5k__bi2n2,
@@ -72,7 +94,6 @@ domain(gipermarketdom.ru) {
     .styles_foy254pnmfxvhgahr__bi2n2,
     .styles_m1nmncyswy22z100d__bi2n2,
     .styles_ggkblvyp7hw04aoa1__bi2n2,
-    .styles_wideContentContainer__lu_K3,
     .styles_baseContainer__8XBMw,
     .styles_jq6d4iicgh8zgcu9n__bi2n2,
     .styles_jlcv2qqjaewmym__8XBMw,
@@ -100,6 +121,23 @@ domain(gipermarketdom.ru) {
     /*    color: #222 !important;*/
     /*}*/
 }
+
+@-moz-document domain(web.max.ru) {
+    :root {
+        --background-primary: transparent !important;
+    }
+
+    body,
+    html,
+    .layer-base.svelte-1afbb1c {
+        background: transparent !important;
+    }
+
+    div[class="layer layer-pattern svelte-1afbb1c"] {
+        display: none;
+    }
+}
+
 
 @-moz-document domain(web.whatsapp.com) {
     /*.x1iek97a {*/
@@ -140,12 +178,6 @@ domain(gipermarketdom.ru) {
     }
 }
 
-@-moz-document domain(vkvideo.ru) {
-    body,
-    html {
-        background: transparent !important;
-    }
-}
 
 @-moz-document domain(vk.com) {
     body,
@@ -202,12 +234,6 @@ domain(gipermarketdom.ru) {
     }
 }
 
-@-moz-document domain(telemost.yandex.ru) {
-    body, html {
-        background-color: transparent !important;
-    }
-}
-
 
 @-moz-document domain(open.spotify.com) {
     body,
@@ -238,9 +264,7 @@ domain(gipermarketdom.ru) {
 
 @-moz-document domain(zen-browser.app) {
     body,
-    html {
-        background: transparent !important;
-    }
+    html,
     .astronav-items {
         background: transparent !important;
     }
@@ -596,4 +620,10 @@ domain(gipermarketdom.ru) {
     --user-contribution-graph-cell-level-0: transparent !important;
     /*--gl-color-neutral-900: transparent !important;*/
     /*--gl-color-neutral-900: #111a !important;*/
+    --body-bg-color: transparent !important;
+    --theme-background-color: transparent !important;
+    --gl-background-color-default: transparent !important;
+    --gl-color-neutral-900: #1d1f2188 !important;
+    --gl-background-color-overlay: transparent !important;
+
 }

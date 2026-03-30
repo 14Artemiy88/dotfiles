@@ -1,20 +1,33 @@
 {
+  "version": "2.2.0",
   "locale": "auto",
   "showIntroductionDialog": false,
   "menuTheme": "rainbow-labels",
   "darkMenuTheme": "default",
-  "menuThemeColors": {},
+  "menuThemeColors": {
+    "nether-labels": {
+      "accent-color": "rgb(150 150 150)",
+      "hover-color": "rgb(150 150 150)",
+      "connector-color": "rgb(150 150 150)",
+      "shrinked-outline-color": "rgb(150 150 150)",
+      "submenu-items-hover-color": "rgb(150 150 150)"
+    }
+  },
   "darkMenuThemeColors": {},
   "enableDarkModeForMenuThemes": false,
+  "enableSelectionWedges": false,
   "soundTheme": "none",
   "soundVolume": 0.5,
+  "enableVersionCheck": true,
   "ignoreWriteProtectedConfigFiles": false,
   "settingsWindowColorScheme": "system",
   "settingsWindowFlavor": "transparent-dark",
   "trayIconFlavor": "none",
+  "hardwareAcceleration": true,
   "lazyInitialization": false,
-  "enableVersionCheck": true,
   "zoomFactor": 1,
+  "hideSettingsButton": false,
+  "settingsButtonPosition": "bottom-right",
   "centerDeadZone": 50,
   "minParentDistance": 150,
   "dragThreshold": 15,
@@ -31,14 +44,10 @@
   "gesturePauseTimeout": 100,
   "fixedStrokeLength": 0,
   "rmbSelectsParent": true,
+  "enableGamepad": true,
   "gamepadBackButton": 1,
   "gamepadCloseButton": 2,
   "sameShortcutBehavior": "close",
   "useDefaultOsShowSettingsHotkey": true,
-  "hideSettingsButton": false,
-  "settingsButtonPosition": "bottom-right",
-  "editorOptions": {
-    "showSidebarButtonVisible": true,
-    "showEditorButtonVisible": true
-  }
+  "enableAchievements": true
 }

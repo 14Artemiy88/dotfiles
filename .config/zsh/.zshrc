@@ -122,3 +122,7 @@ eval "$(alman init zsh)"
 # antigen bundle soimort/you-get
 
 export PATH="$HOME/.local/bin:$PATH"
+
+source /home/artemiy/.config/broot/launcher/bash/br
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
