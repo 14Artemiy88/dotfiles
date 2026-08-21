@@ -1,5 +1,5 @@
 {
-  "version": "2.2.0",
+  "version": "2.3.0",
   "menus": [
     {
       "root": {
@@ -38,7 +38,19 @@
               {
                 "type": "command",
                 "data": {
-                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/idea-IU/bin/idea ~/.config/eww",
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/MY_rim_mod",
+                  "detached": true,
+                  "isolated": false,
+                  "delayed": false
+                },
+                "name": "Rim mod",
+                "icon": "mootools_badge.svg",
+                "iconTheme": "devicons-master"
+              },
+              {
+                "type": "command",
+                "data": {
+                  "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/.config/eww",
                   "delayed": false
                 },
                 "name": "eww",
@@ -50,10 +62,10 @@
           },
           {
             "type": "submenu",
+            "data": {},
             "name": "Zen",
             "icon": "zenbrowser",
             "iconTheme": "simple-icons",
-            "data": {},
             "children": [
               {
                 "type": "command",
@@ -100,6 +112,7 @@
             "name": "Work",
             "icon": "computer",
             "iconTheme": "material-symbols-rounded",
+            "quickSelectKey": "W",
             "children": [
               {
                 "type": "command",
@@ -110,7 +123,7 @@
                 "name": "Mobilium",
                 "icon": "phone_iphone",
                 "iconTheme": "material-symbols-rounded",
-                "angle": 90
+                "quickSelectKey": "M"
               },
               {
                 "type": "command",
@@ -121,7 +134,7 @@
                 "name": "Orders",
                 "icon": "order_approve",
                 "iconTheme": "material-symbols-rounded",
-                "angle": 135
+                "quickSelectKey": "O"
               },
               {
                 "type": "command",
@@ -131,7 +144,7 @@
                 "name": "Ilium",
                 "icon": "trilium",
                 "iconTheme": "simple-icons",
-                "angle": 180
+                "quickSelectKey": "I"
               },
               {
                 "type": "command",
@@ -141,96 +154,7 @@
                 "name": "SL",
                 "icon": "https://www.sima-land.ru/favicon/apple-touch-icon.png",
                 "iconTheme": "base64",
-                "angle": 225
-              },
-              {
-                "type": "submenu",
-                "data": {},
-                "name": "…",
-                "icon": "more_horiz",
-                "iconTheme": "material-symbols-rounded",
-                "children": [
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/control-api"
-                    },
-                    "name": "Control API",
-                    "icon": "stadia_controller",
-                    "iconTheme": "material-symbols-rounded"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/router"
-                    },
-                    "name": "Router",
-                    "icon": "router",
-                    "iconTheme": "material-symbols-rounded"
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/layout",
-                      "delayed": false
-                    },
-                    "name": "Layout",
-                    "icon": "svg/layers-triple-outline.svg",
-                    "iconTheme": "MaterialDesign"
-                  },
-                  {
-                    "type": "submenu",
-                    "data": {},
-                    "name": "Proto",
-                    "icon": "svg/device/projector_line.svg",
-                    "iconTheme": "MingCute",
-                    "children": [
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/cart",
-                          "delayed": false
-                        },
-                        "name": "Cart",
-                        "icon": "shopping_basket",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/router",
-                          "detached": true,
-                          "isolated": false,
-                          "delayed": false
-                        },
-                        "name": "router",
-                        "icon": "router",
-                        "iconTheme": "material-symbols-rounded"
-                      },
-                      {
-                        "type": "command",
-                        "data": {
-                          "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/_proto/orders",
-                          "delayed": false
-                        },
-                        "name": "Orders",
-                        "icon": "order_approve",
-                        "iconTheme": "material-symbols-rounded"
-                      }
-                    ]
-                  },
-                  {
-                    "type": "command",
-                    "data": {
-                      "command": "/media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/GoLand/bin/goland ~/WORK/cart",
-                      "delayed": false
-                    },
-                    "name": "Cart",
-                    "icon": "shopping_basket",
-                    "iconTheme": "material-symbols-rounded"
-                  }
-                ],
-                "angle": 270
+                "quickSelectKey": "S"
               }
             ],
             "angle": 180

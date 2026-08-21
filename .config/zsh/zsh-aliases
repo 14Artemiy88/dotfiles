@@ -1,6 +1,7 @@
 #!/bin/sh
 
 alias zz=". ~/.zshrc"
+# alias zz="source /home/artemiy/.config/zsh/.zshrc"
 alias zzz="m ~/.zshrc"
 
 alias ssd="cd $SSD"
@@ -8,6 +9,7 @@ alias ssd="cd $SSD"
 # переопределение команд
 alias fd="fdfind"
 alias lsd="exa -1 --color=always --icons --all -s type"
+alias ls="exa -1 --color=always --icons --all -s type"
 
 alias conf="cd ~/Dotfiles/.config"
 alias dots="cd ~/Dotfiles/"
@@ -118,6 +120,8 @@ alias gc="git commit -a -m"
 alias add="git add --all"
 alias clone="git clone"
 alias master="git checkout master"
+alias lg="lazygit"
+
 
 # запуск тестов
 alias ct="composer test -- console"
@@ -176,6 +180,129 @@ alias webdev_id="webdev | head -1 | xclip -selection clipboard; echo 'скопи
 alias reviuvers="bat /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Notes/reviuvers.md | copy"
 alias testers="bat /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/Notes/testers.md | fzf | copy"
 
+kafka_topic_add() {
+	docker exec -it kafka-local /opt/kafka/bin/kafka-topics.sh --create --topic $1 --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+}
+
+kafka_topic_del() {
+	docker exec -it kafka-local /opt/kafka/bin/kafka-topics.sh --delete --topic $1 --bootstrap-server localhost:9092
+}
+
+kafka_topic_reset() {
+	kafka_topic_del $1 && kafka_topic_add $1
+}
+
+gen_gac() {
+	# Цветовые коды для оформления вывода
+	local bold="\033[1m"
+	local green="\033[32m"
+	local blue="\033[34m"
+	local red="\033[31m"
+	local gray="\033[90m"
+	local reset="\033[0m"
+
+	# 1. Проверяем, существует ли целевая директория
+	if [ ! -d "app/$1" ]; then
+		echo -e "${red}❌ Ошибка:${reset} Директория ${bold}app/$1${reset} не найдена."
+		return 1
+	fi
+
+	# Переходим в папку проекта
+	cd "app/$1" && echo -e "${blue}➜${reset} Зашли в: ${gray}(pwd)${reset}"
+
+	# 2. Проверяем наличие исходного файла main.go
+	if [ ! -f "main.go" ]; then
+		echo -e "${red}❌ Ошибка:${reset} Файл ${bold}main.go${reset} не найден в этой директории."
+		cd - > /dev/null
+		return 1
+	fi
+
+	# 3. Считываем первую строку файла main.go
+	local first_line=$(head -n 1 main.go)
+
+	# Проверяем, является ли строка валидной директивой генерации Go
+	if [[ "$first_line" != "//go:generate "* ]]; then
+		echo -e "${red}❌ Ошибка:${reset} Первая строка не содержит директиву ${bold}//go:generate${reset}"
+		cd - > /dev/null
+		return 1
+	fi
+
+	# Безопасно обрезаем префикс "//go:generate ", оставляя чистую команду
+	local gen_command="${first_line#//go:generate }"
+
+	echo -e "${blue}🔍 Найдена команда:${reset} ${bold}$gen_command${reset}"
+	echo -e "${blue}⚙${reset} Запуск генерации ..."
+
+	# Экспортируем необходимые флаги окружения для Go
+	export GOFLAGS="-mod=mod"
+
+	# 4. Выполняем команду, отрезаем мусор через sed и пишем результат в main_gen.go
+	# Шаблон /^package / делает фильтр универсальным для любых пакетов (main, consumer и т.д.)
+	if eval "$gen_command" | sed -n '/^package /,$p' > main_gen.go; then
+		echo -e "${blue}⚙${reset} Очистка вывода"
+
+		# Проверяем, не пустой ли файл (на случай, если ключевое слово package не нашлось)
+		if [ ! -s main_gen.go ]; then
+			echo -e "${red}⚠ Предупреждение:${reset} Файл создан, но ключевое слово ${bold}package${reset} не найдено (файл пуст)."
+		else
+			echo -e "${green}✔ Успех!${reset} Файл ${bold}main_gen.go${reset} очищен от мусора и успешно сохранен.\n"
+		fi
+	else
+		echo -e "${red}✘ Ошибка выполнения команды генерации!${reset}\n"
+		cd - > /dev/null
+		return 1
+	fi
+
+	# 5. Возвращаемся в исходную рабочую директорию, скрывая системный вывод cd -
+	echo -e "${gray}🔙 Возвращаемся в исходный каталог...${reset}"
+	cd - > /dev/null
+}
+
+
+
+alias gac_gen="gen_gac"
+
+myrew_fzf() {
+  # Переменная заставляет glab сразу смотреть в сеть, игнорируя локальную папку с @
+  local GITLAB_HOST="gitlab.sima-land.ru" # Если у вас корпоративный GitLab, замените на ваш домен, например "gitlab.company.ru"
+
+  GITLAB_HOST=$GITLAB_HOST glab api "groups/264/merge_requests?state=opened&reviewer_username=misyurov_aa&per_page=100" | \
+  jq -c '.[] | select(.work_in_progress == false and .draft == false and (.title | startswith("Draft:") | not))' | \
+  while read -r mr; do
+    project_id=$(echo "$mr" | jq -r '.project_id')
+    mr_iid=$(echo "$mr" | jq -r '.iid')
+
+    # Проверяем наличие вашего апрува в этом конкретном МР
+    is_approved=$(GITLAB_HOST=$GITLAB_HOST glab api "projects/$project_id/merge_requests/$mr_iid/approvals" 2>/dev/null | jq --arg user "misyurov_aa" '.approved_by[].user.username == $user' 2>/dev/null | grep true)
+
+    if [ -z "$is_approved" ]; then
+      # echo "$mr" | jq -r '"[\(.references.full)] \(.title) \t \(.web_url)"'
+      echo "$mr" | jq -r '"\(.author.name) - \(.title) \t \(.web_url)"'
+    fi
+  done | fzf --delimiter='\t' --with-nth=1 --preview-window hidden | awk -F'\t' '{print $2}' | xargs -r xdg-open
+}
+
+
+myrew() {
+  local GITLAB_HOST="gitlab.sima-land.ru" # Если у вас корпоративный GitLab, замените на ваш домен, например "gitlab.company.ru"
+
+  GITLAB_HOST=$GITLAB_HOST glab api "groups/264/merge_requests?state=opened&reviewer_username=misyurov_aa&per_page=100" | \
+  jq -c '.[] | select(.work_in_progress == false and .draft == false and (.title | startswith("Draft:") | not))' | \
+  while read -r mr; do
+
+    project_id=$(echo "$mr" | jq -r '.project_id' 2>/dev/null)
+    mr_iid=$(echo "$mr" | jq -r '.iid' 2>/dev/null)
+
+    # Проверяем наличие вашего апрува в этом конкретном МР
+    is_approved=$(GITLAB_HOST=$GITLAB_HOST glab api "projects/$project_id/merge_requests/$mr_iid/approvals" 2>/dev/null | jq --arg user "misyurov_aa" '.approved_by[].user.username == $user' 2>/dev/null | grep true)
+
+    if [ -z "$is_approved" ]; then
+      echo "$mr" | jq -r '"\u001b[1;36m    \(.references.full)\u001b[0m\n \u001b[1;35m   \(.author.name)\u001b[0m\n    \u001b[1;37m\(.title)\u001b[0m\n\u001b[34m    \u001b[4m\(.web_url)\u001b[0m\n\u001b[38;5;238m────────────────────────────────────────\u001b[0m"' 2>/dev/null
+    fi
+  done
+}
+
+
 # alias vol="amixer -D pulse sset Master"
 vol() {
 	amixer -D pulse sset Master $1%
@@ -190,6 +317,8 @@ get() {
 	http GET $(printf '%q' "$1")
 }
 
+
+# ORDERS
 grpco() {
 	grpcurl -plaintext -import-path ~/WORK/_proto/orders/ -proto ~/WORK/_proto/orders/$1.proto -d $2 127.0.0.1:50051 simaland.orders.proto.$3 | jq 
 }
@@ -198,15 +327,31 @@ grpco_stage() {
 	grpcurl -plaintext -import-path ~/WORK/_proto/orders/ -proto ~/WORK/_proto/orders/$1.proto -d $2 -H "grpc-service: orders-2688" stage-svc.sima-land.ru:8080 simaland.orders.proto.$3 | jq
 }
 
+grpco_prod() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/orders/ -proto ~/WORK/_proto/orders/$1.proto -d $2 -H "grpc-service: orders-2688" prod-svc.sima-land.ru:8080 simaland.orders.proto.$3 | jq
+}
 
+
+# ORDER FILES
 grpcof() {
 	grpcurl -plaintext -import-path ~/WORK/_proto/order-files/ -proto ~/WORK/_proto/order-files/$1.proto -d $2 127.0.0.1:50051 simaland.order_files.proto.$3 | jq 
 }
 
-grpcr() {
-	grpcurl -plaintext -import-path ~/WORK/_proto/reouter/ -proto ~/WORK/_proto/router/router.proto -d $1 127.0.0.1:50001 simaland.router.proto.$2 | jq
+grpcof_stage() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/order-files/ -proto ~/WORK/_proto/order-files/$1.proto -d $2 -H "grpc-service: orders-files-4933" stage-svc.sima-land.ru:8080 simaland.order_files.proto.$3 | jq 
 }
 
+grpcof_prod() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/order-files/ -proto ~/WORK/_proto/order-files/$1.proto -d $2 -H "grpc-service: orders-files-4933" prod-svc.sima-land.ru:8080 simaland.order_files.proto.$3 | jq 
+}
+
+
+# ROUTER
+grpcr() {
+	grpcurl -plaintext -import-path ~/WORK/_proto/router/ -proto ~/WORK/_proto/router/router.proto -d $1 127.0.0.1:50001 simaland.app.router.proto.$2 | jq
+}
+
+# SHIPMENTS
 grpcs() {
 	grpcurl -plaintext -import-path ~/WORK/_proto/shipments-proto/ -proto ~/WORK/_proto/shipments-proto/shipment-server.proto -d $1 127.0.0.1:50001 simaland.shipments-proto.proto.$2 | jq
 }
@@ -227,3 +372,4 @@ get_goland() {
 get_intelj() {
 	curl --output-dir /media/artemiy/3fe68576-1a13-42fc-94c3-a6e34f218cf4/IDE -O https://download-cdn.jetbrains.com/idea/idea-"$1".tar.gz
 }
+

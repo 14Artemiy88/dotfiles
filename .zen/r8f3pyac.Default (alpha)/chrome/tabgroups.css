@@ -15,7 +15,7 @@ tab-group:not([split-view-group]) {
     margin: 2px;
     transition: max-height 0.75s cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden !important;
-    border: 1px solid color-mix(in srgb, var(--tab-group-color-invert) 75%, transparent) !important;
+    border: 1px solid color-mix(in srgb, var(--tab-group-color-invert) 50%, white 50%) !important;
     padding: 5px !important;
 }
 
@@ -49,7 +49,7 @@ tab-group:not([split-view-group]) .tab-group-label-container::before {
     position: absolute !important;
     top: -6px !important;
     left: 10px !important;
-    color: var(--tab-group-color-invert) !important;
+    color: color-mix(in srgb, var(--tab-group-color-invert) 50%, white 50%) !important;
 }
 
 tab-group:not([split-view-group]) .tab-group-label-container::after {
@@ -106,7 +106,11 @@ tab-group:not([split-view-group]):not([collapsed]) {
     overflow: scroll !important;
     scrollbar-width: none !important;
 
-    background: linear-gradient(to bottom, var(--tab-group-color-invert) 26px, transparent 26px);
+    background: linear-gradient(
+            to bottom,
+            color-mix(in srgb, var(--tab-group-color-invert) 50%, white 50%) 26px,
+            transparent 26px);
+    /*background: color-mix(in srgb, var(--tab-group-color-invert) 40%, white 60%);*/
 }
 
 tab-group:not([split-view-group]):not([collapsed]) .tab-group-label-container::before {

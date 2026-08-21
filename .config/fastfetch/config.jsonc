@@ -12,10 +12,6 @@
     },
 
     "display": {
-        // "pipe": true,
-        // "key": {
-            // "width": 16
-        // },
         "separator": " ",
         "percent": {
              "type": 9
@@ -40,7 +36,8 @@
             "type": "os",
             "key": "{icon} OS",
             "outputColor": "white",
-            "keyColor": "yellow"
+            "keyColor": "yellow",
+            "format": "{name} {version-id}"
         },
         {
             "type": "kernel",
@@ -147,7 +144,6 @@
 
         "break",
 
-
         {
             "key": "󰌗 LAN",
             "type": "localip",
@@ -170,6 +166,10 @@
             "timeout": 1000
         },
 
+
+        "break",
+
+        "colors",
 
         "break",
 

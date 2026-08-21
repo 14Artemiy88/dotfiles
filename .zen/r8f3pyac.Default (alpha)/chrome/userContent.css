@@ -71,6 +71,7 @@ domain(steamcommunity.com) {
     body,
     html,
     .styles_body__XTb_o,
+    .style_root__Rt2mK,
     .Footer_root__yxLAr {
         background: transparent !important;
     }
@@ -83,10 +84,6 @@ domain(steamcommunity.com) {
     body,
     html,
     #m6rbr47ajum71h,
-    [class^="styles_root__"],
-    [class="styles_rootLight__"],
-    .styles_root__vsmL9:not(.styles_wideRoot__JrXG9),
-    [class^="styles_root__"]:not([class^="styles_wideRoot__"]),
     .styles_ussiy59bm827q8h5k__bi2n2,
     .styles_wideContentContainer__lu_K3,
     .styles_rootLight___QD_Q,
@@ -99,6 +96,10 @@ domain(steamcommunity.com) {
     .styles_jlcv2qqjaewmym__8XBMw,
     .styles_middleContainer__vJjLN,
     .styles_jlcv2qqjaewmym__bGRTT,
+    [class^="style_root__"],
+    [class^="styles_root__"],
+    [class="styles_rootLight__"],
+    [class^="styles_root__"]:not([class^="styles_wideRoot__"]),
     [class^="styles_root__"] > div {
         background: transparent !important;
     }
@@ -393,6 +394,8 @@ domain(steamcommunity.com) {
         --yt-live-chat-button-dark-background-color: var(--stacking-bg) !important;
         --yt-live-chat-button-default-background-color: var(--stacking-bg) !important;
         --yt-live-chat-dialog-background-color: var(--stacking-bg) !important;
+        --yt-sys-color-baseline--base-background: transparent !important;
+        --t3e41d7b17b187f69: transparent !important;
     }
     #chips-wrapper {
         background-color: rgba(0, 0, 0, 0.2) !important;

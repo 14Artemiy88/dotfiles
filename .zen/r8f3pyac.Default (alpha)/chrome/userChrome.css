@@ -4,7 +4,8 @@
 
 :root {
     --zen-themed-toolbar-bg-transparent: transparent !important;
-    --zen-main-browser-background: rgba(18, 18, 18, 0.75) !important;
+    /*--zen-main-browser-background: rgba(18, 18, 18, 0.75) !important;*/
+    --zen-main-browser-background: rgba(8, 8, 8, 0) !important;
     --in-content-page-background: #1e1e1e !important;
     --in-content-box-background: #1e1e1e !important;
     --newtab-background-color: rgba(30, 30, 30, 0) !important;

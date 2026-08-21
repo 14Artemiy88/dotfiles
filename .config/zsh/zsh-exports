@@ -30,6 +30,7 @@ export FZF_DEFAULT_OPTS="
 --prompt='∼ '
 --pointer='❯'
 --marker='✓ '
+--preview-window=hidden
 --preview-border=none
 "
 
